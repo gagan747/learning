@@ -1,0 +1,15 @@
+docker images //for showing docker images
+docker run image-name(eg-hello-world) //searches for images installed locally else download from internet
+docker run image-id//for running images with id
+docker pull image-name//to directly pull image from docker hub and save in local
+docker pull image:version//specific version of img
+docker search img-name//for serching imgname from docker hub ,can also use gui of docker hub
+docker ps -a //shows logs of all containers with status(running,stopped,etc)
+docker ps //shows only running containers
+docker run --name xyz img-name //now run docker ps -a ,you will see name column on your container with xyz name
+docker run -it img-name/img-id //for eg if you run docker run python and then run docker ps -a , you see that python container has run and then stopped immediately,to don't stop immediately and want to run python forever until you manually stop it you have to give -it command,with -it command you get entered inside the container ,in case of this eg , we get inside python interface , we have to manually exit from that
+docker run -it -d img-name/img-id//it is the same command as command 10 above but using -d flag runs cmd in detcahed mode means if you run docker run -it -d python , you dont get inside python interface ,but -it command then makes python forever running until  you stop, only difference is you not get entered inside that container, you have to manually do that with cmds studied below
+  docker exec containerID command(from column)//we use docker run to run images and docker exec to execute containers.Note:-docker exec can only run if container is in running state.if We have to execute specific command we have two ways either direct use (docker run -it python) or use (docker run -it -d python and then get datas of containerid(column) and command(column) from docker ps -a and then enter docker exec containerId command
+  use docker exec -it containerid command//to stop execution of container from immediately exiting after performng our command,in short to freeze execution so that we can play with container.Eg-(we use python containerid and comand) docker exec -it ewcwed12e1e python3 will land us to python interface  
+  docker inspect containerName/containerId//gives info about container such as when it is created ,or which port it is running for eg inspect on postgres container can give us port number so that we can connect it with pgAdmin 
+  docker run -e -d -it imageName/Id//-e is used for setting environment before initializing containers for eg docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql ,in this command we have set mysql root password which it ask to enter when i get inside container
