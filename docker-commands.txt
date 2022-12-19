@@ -13,3 +13,46 @@ docker run -it -d img-name/img-id//it is the same command as command 10 above bu
   use docker exec -it containerid command//to stop execution of container from immediately exiting after performng our command,in short to freeze execution so that we can play with container.Eg-(we use python containerid and comand) docker exec -it ewcwed12e1e python3 will land us to python interface  
   docker inspect containerName/containerId//gives info about container such as when it is created ,or which port it is running for eg inspect on postgres container can give us port number so that we can connect it with pgAdmin 
   docker run -e -d -it imageName/Id//-e is used for setting environment before initializing containers for eg docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql ,in this command we have set mysql root password which it ask to enter when i get inside container
+  
+  docker rmi imagename//for removing images
+  docker rmi imagename//for removing image forefully if having a dependecy in container
+  * jese m agr dockerfile s ek image banata hu or usme mene expose m port suppose 3000 de rakha h or jis project ki m image build kr rha hu wo suppose ek node project h and usme server 5000 port p chlta h , to expose m 3000 dene se port 3000 p nhi chlne lagega , wo 5000 p hi chlega , islie hm generally expose m whi port dete h jo hamara project use kr rha hota h and haan run krte waqt env m bhi m port 5000 hi dunga
+  
+  mayank's notes
+
+1. docker -v || docker --version                  --> for check the docker version
+2. docker pull <image_name>                       --> pull the image from docker hub
+3. docker pull <image_name>:<version>             --> pull the image from docker hub of a specific version
+4. docker run <image_name> || <image_id>          --> run a container (this command just start the container and also stop the container by default)
+5. docker rmi <image_name> || <image_id>          --> remove a image
+6. docker ps                                      --> to see all the running containers
+7. docker ps -a                                   --> to see all the containers (running + stopped)
+8. docker start <container_id> || <container_name>                 --> start the stopped container
+9. docker run --name <give any name> <image_name> || <image_id>    --> to give a name to the container
+10. docker run -d <image_name> || <image_id>                       --> run a container in detach mode (run in background)
+11. docker run -it <image_name> || <image_id>                      --> now the container is running and we also enter in the container
+12. docker exec -it <container_name> || <container_id> <command>   --> by this we can run any command inside the container (but this container should be in a running state)
+13. docker inspect <container_id>                              --> to see all the information about the container
+14. docker stop  <container_name> || <container_id>            --> to stop the running container
+15. docker rm <container_name> || <container_id>               -->  to remove the stopped container
+16. docker restart <container_name> || <container_id>          --> restart the container
+17. docker login                               --> login docker hub from terminal
+18. docker commit                              --> it is used to save the changes that we do in a image
+19. docker push <image_name>                   --> push a image to docker hub
+20. docker history <image_name> || <image_id>           --> see the history of image
+21. docker copy                                         --> copy a file to docker
+22. docker logs <container_name> || <container_id>      --> see all the logs of the container
+23. docker build .                          --> build a custom image
+24. docker build -t <any image name> .      --> build a custom image with tagging means give a name
+25. docker volume create <volume_name>      --> create a volume
+26. docker volume ls                        --> list all the available volumes
+27. docker volume inspect <volume_name>     --> get all information about the volume
+28. docker volume rm <volume_name>          --> remove a volume
+29. docker volume prune                     --> removed all the unused volumes
+30. docker network create <network_name>    --> create a network
+31. docker network ls                       --> list all the available networks
+32. docker network rm <network_name>        --> remove a network
+33. docker-compose -f <yaml file> up        --> start all the containers that are present in the yaml file
+34. docker-compose -f <yaml file> down      --> stop all the containers that are present in the yaml file
+
+  
