@@ -1,0 +1,51 @@
+you have seen that array's reduce is synchronous ,but the challenge is when we try to await something inside reduce's callback  and return that await's result and so that the  previous value has some dependency on that result but we may cant acheive that as whenever there is await inside reduce's callback promise pending is returned instead of waiting for await and returning resolved promise value,pending promise is returned and bcoz reduce is synchronous ,next previous value contain pending promise and hmara result gadbada jaega.
+solution :-//overriding array's reduce and making it asynchronous
+first see how to make own array reduce if arr reduce not existed :- Array.prototype.reduce= function (cb,pr) {
+    for(var i=0;i<this.length;i++){
+        pr =  cb(pr,this[i])
+       
+    }   return pr; }
+    now making it async :-
+    Array.prototype.reduce=async function (cb,pr) {
+    for(var i=0;i<this.length;i++){
+        pr = await cb(pr,this[i])
+       
+    }
+     return pr;
+}
+ab hamne cb se phele await lagaya h so that reduce ka synchronous for loop ko wait krna padega jb tk await ka result nhi aata isse hm asynchronous chij bhi acheive kr rhe  h and synchronous(for loop bhi)
+note:- ab arr.reduce se direct kisi result to initialize krenege to promise pending aaega us var m kyuki ab arr reduce async h to promise return krega wo bhi pending and wo pending promise tb tk resolve nhi hga jb tk line no 14 ka return pr nhi chlta,ab ya to await ya .then() use krlio arr reduce ki value dekhne k lie;
+
+an example:-
+function  xyz(){
+    return new Promise((res,rej)=>{
+        setTimeout(()=>res(1),  1000)
+    })
+}
+
+Array.prototype.reduce=async function (cb,pr) {
+    for(var i=0;i<this.length;i++){
+        pr = await cb(pr,this[i])
+       
+    }
+     return pr;
+}
+let arr=[1,2,3,4,5];
+let g = arr.reduce(async (p,b)=>{
+    console.log('p is',p)
+    p=p+await xyz();
+    return p;
+},0);
+g.then((d)=>{
+    console.log('output is ',d)
+}).catch((e)=>{console.log(e)})
+
+
+
+output:-
+p is 0 //after one seconds
+p is 1//after one seconds
+p is 2//after one seconds
+p is 3//after one seconds
+p is 4//after one seconds
+output is  5

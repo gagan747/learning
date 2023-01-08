@@ -17,7 +17,7 @@ docker run -it -d img-name/img-id//it is the same command as command 10 above bu
   docker rmi imagename//for removing images
   docker rmi imagename//for removing image forefully if having a dependecy in container
   * jese m agr dockerfile s ek image banata hu or usme mene expose m port suppose 3000 de rakha h or jis project ki m image build kr rha hu wo suppose ek node project h and usme server 5000 port p chlta h , to expose m 3000 dene se port 3000 p nhi chlne lagega , wo 5000 p hi chlega , islie hm generally expose m whi port dete h jo hamara project use kr rha hota h and haan run krte waqt env m bhi m port 5000 hi dunga
-  
+  docker run -it myimage /bin/sh  //overrides default CMD of image and run command /bin/sh
   mayank's notes
 
 1. docker -v || docker --version                  --> for check the docker version
