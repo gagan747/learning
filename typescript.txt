@@ -1,0 +1,45 @@
+Note:- please watch typescrpt notes before watching this notes
+
+function xyz({a}:String){} //syntax to give destructured property type
+xyz({a:'gagan'})
+
+
+function xyz(obj:{a:String,b:Number}){} giving objects , type inside function
+xyz({a:"gagan',b:2})
+
+function xyz():{a:String}{   //syntax for returning objects giving type
+return {a:2}
+}
+
+function xyz(obj:{a:String}){}
+xyz()    //gives error as it expects one obj as a parm
+
+function xyz(obj?:{a:String}){}
+xyz()    //dont give error as '?' is used in args
+
+function xyz(obj:{a:String,b:Number}){
+    return {a:2}
+}
+xyz({a:"gagan"}) //gives error as b is not passed in obj's key
+
+function xyz(obj:{a:String,b?:Number}){
+    return {a:2}
+}
+xyz({a:"gagan"}) //runs fine as b is optional
+
+
+bug in ts:-
+function xyz(b:{a:String}){
+    return {a:2}
+}
+const obj = {a:"gagan",b:'hello'} 
+xyz(obj) //(no error)if we write xyz({a:'gagan',b:'hello'}) , it gives error as b is not defined as a type in args but if we assign it to var obj and then pass no error is shown whereas we are doing the same thing but in another way , why  it has diff behaviour?obviously it is  bug
+
+type alias in ts:-
+type meow={
+a:String
+}
+function xyz(a:meow):meow{
+return {a:"gagan"}
+}
+xyz({a:"gagan"}) // no error

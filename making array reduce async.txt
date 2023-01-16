@@ -37,7 +37,7 @@ let g = arr.reduce(async (p,b)=>{
     return p;
 },0);
 g.then((d)=>{
-    console.log('output is ',d)
+    console.log('meow ',d)
 }).catch((e)=>{console.log(e)})
 
 
@@ -48,4 +48,4 @@ p is 1//after one seconds
 p is 2//after one seconds
 p is 3//after one seconds
 p is 4//after one seconds
-output is  5
+meow  5
