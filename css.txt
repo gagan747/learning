@@ -1,0 +1,74 @@
+*display flex width auto krdeta h and multiple child hone pr overflow na krne k bajae width auto shrink krdeta kyuki wo apne childs p flex shrink laga deta h over flow k waqt and over flow hone k bajae shrinking hoti h ,ye case tha direction row ka pr jb direction column hoti h or manlo parent ki height 100vh h and flex k chils div h to sab childs ki width 100% rhegi and column m align rhenge is case m vertically scroll auto rheta h bajae k height shrink ho jesa flex direction row m hua tha , pr han flex -column m align-items center krte waqt width 100% se reduce hokr auto ho jati h 
+
+* display flex s sare children flex ke ek hi line (horizintal wali) m align ho jate h bhale hi kisi child ki width 100% ho ya 1000% ,display flex jb bhi ho sare flex k children ek hi line m aa jate h or unki width auto shrink ho jati h kyuki unhe ek hi line m fit hona h pr flex-shrink(on child) 0 krne s rehnge to tab bhi ek hi line m prantu scroll hone lagenge  and width maintain rhegi shrink nhi hogi and flex wrap na hone k karan navi line mbhi nhi gya ,kyuki flex wrap jb hota h tb shrink nhi hote tb navi linem chale jate h */
+
+*css m div ki width hmesha 100% hoti h and height auto and span ki width and height dono auto hoti h pr agr div kisi flexbox ka child h to to tujhe pata hi h width auto bhi hoti h and flex shrink alag laga hota h usme ,agr div ki wdth auto krni h to display:'inline-block" krna padega
+flex:1 flex parent ke child ko krne se flex:1 wale child ki width full hojaegi agr wo akela child h to kyuki tujhe pata h display flex krne pr child ki width auto ho jati h and height 100% and flex shrink bhi lag jata h mtlb width s overflow hone hi nhi deta flex ,pr agr single child h flex ka to uski width auto hogi pr flex:1 krne pr wo poori width cover krlega  or agr or childs bhi h to flex:1 wale ki width thode jada hogi yani or child ane pr wo kam shrink hoga
+flex:1 agr child p laga h jiska display ki fle direction column h to flex:1 height full krdega instead of width
+
+* height ya width auto bhi h to extend krte krte parent tk hi jaegi (agr inner content usko implicityly extend kre to), parent se extend kbhi nhi kregi,ha gar parent ki bhi height auto(default) h to agr inner wala element height ko increase kre to parent ki height auto increase ho jaegi
+* agr parent ki height fix h to bhale hi inner ki max height bhi dede work nhi kregi kyuki wo parent ki height ko todhe ga nhi prantu max height parent ko jarur de skta h tb inner element height ko extend kr paega
+
+
+* max height or height generally saath nhi dete agrmax height wala chakkr h to  to sirf max height do
+
+
+*.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+ab m navbar k kisi bhi anchor m hover krunga to hover wali css apply hogi pr home ki class active h to uspe nhi hogi kyuki active wali ki css hover k niche h mtlb css m order matter krta h jo sbse niche aaega wo upr wali ko override kr jaega agr home p bhoi hover wali css chahiye to hover wali css active wali k niche define kro
+
+
+* eg:-
+<div>
+<span>
+<p>grand child</p></span>
+<p>child</p>
+</div>
+
+style={
+          div p{
+                    //styles
+          }
+}
+isse ye hoga ki div ke andas recursively (including grandchilds) jitne bhi <p> aaenge un sabpe css lagegi pr tu chahta h agr span ke andar wale p(grandchild) pe na lage to ese likh:-
+div >p {
+
+}//prevent to include p recursively
+
+
+
+*div > span:not(div span:nth-child(1)){
+          //styles
+} //isse ye hoga ki div k jitne span h sabpe ye wala style apply hoga pr 1st child wale span k nhi('>' ye isliye use kiya taki recursive wale span k a ho
+div > span:not(div>span li){} //ye galat h kyuki not m bhai-bhai(siblings) aa skte h as compared to left(left to outside not) which is div>span ,or mene not m likha h div>span ke andar wale li mtlb div>span li ka parent div>span hua joki not ke left m likha h ,ab not kaam nhi krega ,not tbhi kaam krega jb not ka bhar left mein and not k andar siblings ho
+
+
+
+*css m ek element k hover krne pr dusre element ki css bhi change kr skte h pr dono elemnt to target krne klie id ka istmal krio kyuki class wgera s ho nhi rha tha ,eg:- #sidebar-items:hover + #icon {
+display:block
+} // '+' ki jaga ~,>,etc symbols bhi use hote h google it
+
+
+*agr parent ki height 100vh h and child ki height di nhi h to overflow scrol nhi chlega kyuki child ki height thodi na pata h and  jb tk height exceed nhi hogi overflow nhi hoga, ya to child ki height 100% dedo ab wo parent ki 100% hone k karan overflow scroll ho paega 
+next eg:- agr chahta h child ki height auto extend hoti rhe and parent ki height fix kr rakhi h to parent ki height tk aake child ki height ruk jeagi soln ye h ki parent ki height auto ho and child ki 100% jisse child jese hi [parent tk pochega parent ki height badne lagegi] 
+eg3:- see gurman_proj repo where i have given min height and max height of child and parents height automatically adjusts to it as parents height is auto and scroll only comes when childs max height reaches ,parents height copies child height bcoz parents height is auto (see sidebar with media query in gurman_proj)
+
+*agr kisi element ko bgColor na de to by default wo transparent rheta h
+
+*kitni baar esa hota h modal banana padta h or background ko opacity deni padti h pr manlo banckground ko opacity dene se modal ko bhi opacity lag jati h kyuki modal jisko opacity di h uska child niklata h to iska solution ye h ki gurman_proj (kaleere) me product description wala component jo ki ek modal h usko dekhamene kya kiya h (mene rgba(255,255,255,0.8 ka use kiya h ,vistar k lie jo code mene bola h wo dekh))

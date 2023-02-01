@@ -35,6 +35,16 @@ function xyz(b:{a:String}){
 const obj = {a:"gagan",b:'hello'} 
 xyz(obj) //(no error)if we write xyz({a:'gagan',b:'hello'}) , it gives error as b is not defined as a type in args but if we assign it to var obj and then pass no error is shown whereas we are doing the same thing but in another way , why  it has diff behaviour?obviously it is  bug
 
+
+
+
+
+
+
+
+
+
+
 type alias in ts:-
 type meow={
 a:String
@@ -43,3 +53,49 @@ function xyz(a:meow):meow{
 return {a:"gagan"}
 }
 xyz({a:"gagan"}) // no error
+
+
+readonly:-
+type xyz={
+    readonly _id:String,
+    a:Number
+}
+let a:xyz={
+    _id:'1233',
+    a:2
+}
+a.a=8;//correct
+a._id = 'meow' // cant modiify readonly
+
+type abc = xyz & {
+    m:Number,
+    v?:Number//field can be optional
+} //type combination
+let g :abc= {
+    _id:'1',
+    a:1,
+    m:2
+}//correct
+
+
+union types
+let a:NUMBER|String =2;
+type user{
+    id:String,
+    name:String
+}
+type admin {
+    username:String,
+    id:String
+}
+let user :admin | user ={
+    username:'xyz',
+    id:'1234'
+} 
+function xyz(id:Number | String){
+    if(typeof id ==='string')
+    id.toLowerCase()
+    else if (typeof id === "number"){
+        id.toExponential()
+    }
+}//wese agr m id.tolowercase likhta to ts error deta kyuki usko kya pta number h ki string but ese krne s(if lagane s) ts ko pata lag jata h or tb error nhi deta blki . lagane pr apne aap sare functions aate h number/string k respectively

@@ -1,0 +1,27 @@
+ab tk m sochta tha ki promise async hota h pr nhi new promise ka instance synchronous hi hota h jb tk us new promise k instance k andar koi async wali chij na aaye 
+promise ka .then wala handle async hi hota h
+phele m ye bhi sochta tha ki phele await k baad await k neeche ka content event loop m chale jata h pr wo tabhi hoga jb await k right wali item jo promise return krega uske callback me koi async event ho agr promise k callback m sb synchro hi h to await k neeche wala event loop m nhi jaega balki await ke right wala chij bhi main thread(single thread) m hi chlegi
+eg:-function pro(milliseconds){
+    return new Promise((res,rej)=>{
+        console.log('from promise')
+        const date = Date.now(); let currentDate = null; do { currentDate = Date.now(); } while (currentDate - date < milliseconds);
+    res(4)
+    })
+}
+console.log('before');
+
+console.log(pro(4000))
+console.log('after')
+
+output:-
+before
+from promise
+Promise { 4 }//print after 4 s
+after //print after 4 s
+phele tu ese expect krra hoga
+before
+from promise
+Promise pending
+after 
+but khud soch promise pending bhi tabhi aaega na jb promise ka callback kux return krega pr wo to khud synchronus chlra h or baad m resolve hi ho jaega 4 sec baad isliye after bhi 4 sec baad print hua kyuki koi cheej event loop m gyi hi nhi pr promise k callback  m agr kux event loop m jane layak hota to promise pending return hojata jesebagr settimout hota to 
+ek aur cheej agr console.log(pro()) ki jaga pro().then() krta to promise {4} and after hote to dono hi 4   sec baad print pr after phele hota promise {4 } se kyuki .then event loop m jata h and then jb event loop m jaye usse phele pro() likha h uske baad likha h .then() yani jb pro poora synchronously chlega tb tk 4 sec hojange and tb .then chlega jo ki event loop m jaega and after tb instant chlega(pr after chala to pro() k baad hi yani after total 4 sec baad chala pr then k event loop m jane k instant baad chala) uske baad instant then wala part 

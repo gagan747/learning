@@ -1,0 +1,84 @@
+*agr useState ko previous state(primitive) ke comparison m nai memory de tab bhi agr values same h to useState rendering nhi krega but agr array/object ke case m bhale hi dono array equal ho pr memory alag ho to bhi react rendering krega(primitives ke case m hale hi  memory same h pr values alag h tabhi rendering hogi pr array/obj k case m memory ka alag hona jaroori h ) 
+s
+
+
+* agr input type= file m specific format hi dena h to validation kagane k jarurat nhi,(accept="image/png)//bs ye likhdo input tag k andar and accept m format mention krdo jese m  chahat hu only png img to browse krte waqt only png files dikhaega or dikhaega hi nhi 
+
+*jese ki tuje pata h useref rendering nhi krta h ,koi logic sochna padhta h jese useState,forecerender jese methods but agr useref kisi element ki css ya style change kr rha h to rendering ki jarurat nhih kyuki jese hi css change hoti h wo apni jaga reflect ho jati h to us case m rendering nhi krni padti 
+
+
+*redux m ek baat yaad rakhio generally hm reducer m default case  m state hi return krate h, mene galti se initial state wali value return kra di wo bhi ese {...initialstate}(kyuki redux m mutate nhi krte h) default case m ,usse  koi bhi agr reducer call hota tha to mera ye wala reducer bhi call hota tha jesa ki tujhe pata hi h but isme dikkt ye hui ki ye bhi koi action.type match na hone ke karan default state to return kr hi rha tha jisse na chahte hue jin component ne iski state ko subscribe kiya tha unhe bhi render hona padha kyuki nai memory mili h state ki to redux to render krega hi tabhi hm  default case m state retun krte h naki {...state} kyuki agr state return krenge to whi value return hogi and redux rendering nhi karega isse ye hoga ki whi  comp render honge jinki actual m nai state return hui h and immutate state dene k karan rendering bhi hogi ,ab tujhe pata laga hoga ki default case  state kyu dete h and {...state} kyu nhi kyuki reducer to sare hi call honge to sare reducer agr nai state return krne lag jae to na chahte hue sare compo ko render hona padega and jo mene galti kri thi ki m {...initialstate} de rha tha usse ye bhi  ho rha tha ki kisi or action dispatch k karan meri wo state phir s initial state s initialize hogi resulting in loss of state for that subscriber
+
+
+
+* agr react m jsx m andar html dunga to wo tags k sath es a string executi hogi eg:-
+myHtml='<i>hello</i>'
+render(){
+
+          return<>
+          {myHTML}
+          </>
+}
+output:-<i>hello</i>
+to also execute html use:-
+ return<  dangerouslySetInnerHTML={{ __html: myHtml }}/>
+ output:-
+ hello(in italics)
+
+*jb use <Link to />xyz</Link> use krte h to link kisi bhi component ka ho poora app.js render hota h eg:-
+function App() {
+  const state = useSelector((state) => state.Header);
+  return (
+    <>
+      <Navbar />
+   <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Boxes />}>
+        </Route>
+        <Route path="/collection" element={<Products />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    </>
+
+  );
+}
+is case m Navbar browser router s bhar h tabhi bhi render hoga jb 'link to' p click hoga kyuki app.js render hoga and wo navbar ko karega
+pr jb browser ke jo left or right arrow hote h usse chahe to forward wala click kr chahe back wala tab app.js render nhi hogi ,app.js tabhi render hogi jb 'link to' wale element p click kiya ho or uske through forward ya backward gye ho
+haan pr left arrow and forward arrow click krne pr Boxes and products jarror render honge kyunki wo routing m part lere h agr path ='/' ye h to Boxes render hoga and mount bhi hoga or agr boxes k andar button p 'Link to' laga h uspe click krke m path='/collection' m jata hu boxes unmount hoga and products mount and mount p render to hoga hi agr nhi bbhi hota to Link to wale element p click krke phoche h isliye wese bhi app.js ne render hona tha , ab jb hm back krenge to path = '/' p wapas aajaenge to app.js to render nhi  hoga  tujhe pata hi h kyuki hm Link to wale element p click krke back nhi aae is bar hm aae h browser k left arrow pr click krke ,to app.js render nhi hoga pr haan Boxes mount honge and mount hone k karan render honge 
+ab mreko logic likhna hoga ki back button ya forward button p click p navbar ki  rendering ho(usne routing m part nhi liya h to sadev mount rhenge or jb tk app.js render na ho navbar to render nhi hoga ,agr phir se mount hota to render ho skta tha pr wo to sadev mount hi h isliye back/forward arrow p click krke navbar ki rendering ka logic likhna h) to mene ye kiya
+inside navbar component :-
+	useEffect(()=>{
+		setForcerender(!forcerender)
+	},[window.location.pathname])
+isse ye hoga window.location.pathname to change hoga hi back ya forward arrow krne pr  ,ab to useeffect ko chlna chahiye pr nhi chlega kyuki tujhe pata h dependecy wala ueeffect(componentdidupdate) ko bhi chalane k lie phele rendering honi jaroori h ,jb rendering hogi tabhi useEffect chlega and check krega agr window.location(dependency) m change h tabhi useEffect wala callback execute ho
+Ek jugadu tarika to ye h ki :-
+function App() {
+  const state = useSelector((state) => state.Header);
+  return (
+    <>
+   <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<><Navbar /><Boxes /></>}>
+        </Route>
+        <Route path="/collection" element={<><Navbar /><Products /></>}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    </>
+
+  );
+}
+ab mene navbar routing m daal diya ,ab jb path='/' ye hoga tb bhi <navbar /> mount hoga and path '/collection' tab bhi navbar ,ab jb arrow back p click krega to app.js render nhi hogi but router apne elements ko to mount krega hi to agr path ='/' p back aae to navbar mount hoga is baar kyuki path='/' m check kr mene element m boxes k upar likha h ,or mount hone ke karan render bhi,same logic for browser's forward button
+pr ye production layak code likhne m saksham nhi h kuki m navbar baar baar likh rha hu hr route m , shi tarika ye h ki navbar ko browser router s upar likh jb wo routing m part hi nhi lera to,uska solution below h:-
+<navbar /> ko browser router s upar likhna h and navbar component k andar mount m ek listener dalna h kyuki navbar ek hi baar mount hoga isliye listener ek hi baar register hoga
+inside navbar :-
+useEffect(()=>{
+		window.addEventListener('popstate', function () {
+    console.log('location changed!');
+		return ()=>{
+			this.window.removeEventListener('popstate')
+		}
+},[]);
+ye popstate listener tb trigger hota h jb browser ke back/forward arrow click hote  h tab nhi jb Linp to p pclick krke routing use kri ho ,only tb jb browser ke back/forward hit honge or iske callback k andar m navbar ko render krne ka logic likh lunga
+moral of the story :- jo log routing m part nhi lete (is case m navbar) to unki rendering browser wale arrow function s nhi hoti pr kisi 'Link to' p click ho to jaroor hoti h kyuki app.js render hota h usse jisse navbar(outside router) bhi render hojaega pr arrow clicks p render krane k lie mene navbar m event listener 'popstate' dala jo ki browser k arrow clicks p trigger hota h 

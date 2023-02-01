@@ -1,0 +1,1 @@
+react-native m display:flex m default direction column hoti h joki hmne jo web css padi thi usse ulta h
