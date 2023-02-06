@@ -82,3 +82,34 @@ useEffect(()=>{
 },[]);
 ye popstate listener tb trigger hota h jb browser ke back/forward arrow click hote  h tab nhi jb Linp to p pclick krke routing use kri ho ,only tb jb browser ke back/forward hit honge or iske callback k andar m navbar ko render krne ka logic likh lunga
 moral of the story :- jo log routing m part nhi lete (is case m navbar) to unki rendering browser wale arrow function s nhi hoti pr kisi 'Link to' p click ho to jaroor hoti h kyuki app.js render hota h usse jisse navbar(outside router) bhi render hojaega pr arrow clicks p render krane k lie mene navbar m event listener 'popstate' dala jo ki browser k arrow clicks p trigger hota h 
+
+Note:-Sorry for the inconvenience,link to pr click krne se app.js isliye render ho rha tha kyuki mere koi redux ka subsriber app.js ko render kr rha tha or link to kisi parent p dispatch laga tha uska child tha ,sorry yr upr wala sare logic shi h bs ye nhi ki router dware route chnge(link to ) hote hi app.js render hoga ,wo mene tujhe bata hi diya ki app.js nhi hoga 
+ab mera challeneg ye tha ki Link to p click krne se navbar render ho kyuki css alg h alg url ki (kaleere) to mene apna ek manual  event listener bna diya window ka joki m link to p click hone pr dispatch kr dunga and navbar k useEffect p listen krlunga 
+code:-<Link to  onClick={()=>{
+  window.dispatchEvent(new Event('urlChange'))
+ }}> //Box component(kaleere)
+
+
+const handlePopState = function () { //for listening to back and forward arrow buttom of browser
+    setRerender((rerender)=>!rerender)
+	}
+  const handleUrlChange = () => {
+		console.log('and',rerender)
+		setRerender((rerender)=>!rerender)
+	}
+ useEffect(()=>{
+		window.addEventListener('popstate', handlePopState);
+		window.addEventListener('urlChange',handleUrlChange)
+	return ()=>{
+			window.removeEventListener('popstate',handlePopState)
+			window.removeEventListener('urlChange',handleUrlChange)
+		}
+	},[])// inside Navbar component
+  ab isme sochne wali baat y h ki m handleUrl/popstate functions m setRerender(!rerender) bhi kr skta tha pr rerender ki value phele baar wali preserve rheti (closure) bhale hi render hone pr handleUrlChsnge/popstate ko nai memory milegi and uske andar ka render latest wala hi hoga prantu jis handleUrl/popstate wale callback ko windo ka eventlistener listen kr rha h us function (specific memory) ko hi wo hmesha call krega and us function m  render ki value initial vali hi thi jo ki false thi isliye hr baar setrerender m false jaega and rendering nhi hogi isliye callback use kiya set rerender m
+
+
+*redux m tujhe pata hi h reducer m hm defult m return state krte h reason y h ki same state jaegi to useSelector joki hmesaha reference compare krta h use old state and current state ka same reference milega to rendering nhi hogi kyuki reducer sale chlte h na ek particular action trigger hone pr pr agr jis reducer to trigger hona hoga wo to alag reference(redux m tate ko mutate nhi krte balki imuutable state return krte h) wali state dega hi or uska subscriber render hoga hi prantu sare reducer agr same reference denge state k kyuki sbka deafult chlega switch case ka to unke subscriber faltu m render nhi krenge
+agr switch case m default m {...state}or [...state] kre to jo subscriber ko render nhi bhi hona hoga wo bhi render honge kyuki state ka reference hr baar naya milega 
+ek solution jaha s useSelector import kiya h wha se shallocopy bhi import krle and useSelector m second arg dede ab useSelector change hone p old state and current state ki value dekhega naki reference isse wo tabhi rerender hoga jb sifr values alag alag ho reference nhi or haan shaloowcopy only first level deep jaegi
+
+* redux m reducer m dhyan rakhio agr jese bhar click krne pr manlo 2-3 divs band krane h to 2-3 dispatch bhi tune likhene honge unko close krane k lie or outside click m teen dispatch daal diya hoga ki ye 2-3 actions dispatch hojae outside click pr or divs close ho jae pr agr manlo 2 div phele se hi close h and only 3 wale ko krna h close pr bhar click krne pr teeno dispatch chlenge and teeno k nae reference return honge(immutability maintanance of redux) or teesra wala div close hoga and uska subscriber render hoga pr baki k 2 ke subscriber faltu m render honge to prevent this see gurman_proj(kaleere) reducer named Header.js (i have faced same situation there and added a logic in switch-navbar case)

@@ -1,3 +1,12 @@
+*display flex width auto krdeta h childs ki and height 100% with flex-shrink active in childs but when we give   align  items ,height becomes auto from 100% in case of flex-row 
+ In case of flex-column width becoms 100% and height becomes auto with flex shrink active in childs but when we give align items ,width becomes auto from 100% 
+
+
+*tujhe pta hi hoga display flex m childs p automatically flex shrink lag jata h pr child p flex shrink lagne ki condition y h ki child ki width auto ho ya percent m ho (agr child span a div h to bhi unki width auto ho jati h flex ka child banne k baad ,span ki phele hi auto hoti h and div ki auto ho jati h 100% s) , bs pixel(constant) m nhi honi chahiye warna flex shrink child m nhi lagega,means pixel wale childs shrink nhi hote
+agr flex wrap true ho to child m flex shrink nhi lagta kyuki wrap ko preference milta h and wrap hone lagte h pr haan tujhe yaad hoga ki wrap krane k lie childs pixel m hone chahiye yaad rakhio kyuki percent ya auto m hue  to shrink hone lagenge
+child pixel m ho to shrink to hoga nhi and wrap bhi false h parent m to overflow hone lagenge childs  depending on flex direction 
+
+
 *display flex width auto krdeta h and multiple child hone pr overflow na krne k bajae width auto shrink krdeta kyuki wo apne childs p flex shrink laga deta h over flow k waqt and over flow hone k bajae shrinking hoti h ,ye case tha direction row ka pr jb direction column hoti h or manlo parent ki height 100vh h and flex k chils div h to sab childs ki width 100% rhegi and column m align rhenge is case m vertically scroll auto rheta h bajae k height shrink ho jesa flex direction row m hua tha , pr han flex -column m align-items center krte waqt width 100% se reduce hokr auto ho jati h 
 
 * display flex s sare children flex ke ek hi line (horizintal wali) m align ho jate h bhale hi kisi child ki width 100% ho ya 1000% ,display flex jb bhi ho sare flex k children ek hi line m aa jate h or unki width auto shrink ho jati h kyuki unhe ek hi line m fit hona h pr flex-shrink(on child) 0 krne s rehnge to tab bhi ek hi line m prantu scroll hone lagenge  and width maintain rhegi shrink nhi hogi and flex wrap na hone k karan navi line mbhi nhi gya ,kyuki flex wrap jb hota h tb shrink nhi hote tb navi linem chale jate h */
@@ -12,6 +21,9 @@ flex:1 agr child p laga h jiska display ki fle direction column h to flex:1 heig
 
 * max height or height generally saath nhi dete agrmax height wala chakkr h to  to sirf max height do
 
+*ek div ki default width 100% hoti h and height auto ye baad bithale dimage m 
+kabhi flex wrap kiya ho or agr dekha ho ki wrap hone k bajae scroll hone laga h poora viewport hi horizontally to iska mtlb ye h ki flex wrap ka rule tune sikha nhi
+flex wrap ko use krne ka shi tarika y h ki parent ki width % or vw m ho pixel m nhi wrna viewport scroll hone lagega and child ki height pixel m hmesha honi chahiye tabhi flex wrap chlega agr child bhi percent m hua to wo shrink hone lgega bhale hi child ka flex shrink 0 ho tabhi bhi kyuki wo bhi percent m h na isliye wo always shrink hoga next line m nhi jaega pr agr child pixel m hua to pixel shrink nhi hota isliye wo nvi line m jaega mtlb tb flex wrap work krne lagega so parent percent m hoga tabhi to pchild tk pochega and child pixel m hone k karan next line m jaega flex wrap laga hoga to or agr parent pixel m hua to parent hi shrink nhi hoga to child kya hi next line m jaega( pr esa bhi nhi h ki pixel parent kabhi shrink nhi hoga kisi kisi time p shrink hojata h to flex wrap dekhne ko mil  skta h pr child to hmesha pixel m hi hona chahiye wrap hone k lie)
 
 *.topnav a:hover {
   background-color: #ddd;
@@ -72,3 +84,4 @@ eg3:- see gurman_proj repo where i have given min height and max height of child
 *agr kisi element ko bgColor na de to by default wo transparent rheta h
 
 *kitni baar esa hota h modal banana padta h or background ko opacity deni padti h pr manlo banckground ko opacity dene se modal ko bhi opacity lag jati h kyuki modal jisko opacity di h uska child niklata h to iska solution ye h ki gurman_proj (kaleere) me product description wala component jo ki ek modal h usko dekhamene kya kiya h (mene rgba(255,255,255,0.8 ka use kiya h ,vistar k lie jo code mene bola h wo dekh))
+
