@@ -1,0 +1,61 @@
+mongoose ke pre post wgera copy m bataya h or uske age continued .....
+
+normal js revision:-
+agr hm function based object  constructor ko static methid dete h to direct function constructor m dot laga k append kr dete h 
+eg:-
+function ghi(name){
+ this.name=name
+}
+ghi.xyz=bla bla //static methoid
+or whi agr class based object constructor ko dena ho to do ttarike h :-
+class xyz{
+ static meow(){}
+}
+or
+xyz.meow=bla bla 
+dono hi tareeko s static method define hota ha
+
+function constructor k static method m arrow method k case m this window object ko point krta h and normal function k case m this function constructor ko hi itself point krta h 
+eg using normal functoion case:-
+function g(){} //object constructor suppose
+g.meow=function(){ return this} //defining static method,ye normal function ka case h arrow function k case m this window object ko point krta
+g.a=10; //defining another static method
+g.meow().a //outputs 10 as g.meow() this return krega jo ki function object(static)  ko hi point krega naki function ke kisi instance ko to us object m to hmne a define kiya tha to .a krne pr 10 print hogya 
+
+class based constructor m jo classname.static method define krte h unka bhi this window object ko point krta h arrow object k case m and normal function k case m this class constructor ko hi point krta h  jisse hm this. lagake another static methods access kr skte h joki usi class m define honge kyuki this class ko hi point krega to obvious h ki this lagake usi class k another static methods ko access kr skte h
+eg:-
+class xyz{}
+xyz.ghi=function(){return this} //creating static methods
+xyz.a=10; //creating another static method
+xyz.ghi().a; //output 10 same explanation as function constructor
+
+classbased constructor m jo static method banate h inside class ke unke andar this class ko hi point krta h jisse hm this. lagake another static methods access kr skte h joki usi class m define honge kyuki this class ko hi point krega to obvious h ki this lagake usi class k another static methods ko access kr skte h
+same examples as used above
+
+
+
+tune use kiya hoga user.findOne or findByIdANDUPdate wgera wgera to ye sb static methods h eg:-
+const userSchema = new Schema({
+  name: String,
+  email: String,
+});
+const User = mongoose.model('User', userSchema);
+User.findOne().then.catch //findOne is a staic method because only static methods cn be accessed by '.' kyuki hmne User s phele new nhi lagaya h mtlb uska instance nhi banaya h hm direct User.findOne kr rhe h 
+
+to hm User model m hi another static methods define kr skte h jese
+
+User.findByName = function (name) {
+  return this.find({ name }); //inside 'this' points to User model itself
+};
+
+but iska official tarika ye h ki esa kro:-
+userSchema.statics.findByName = function (name) {
+  return this.find({ name });
+};
+kyuki usemodel userschema ko piroh k hi bana h to isse bhi userschema.statics wale method user model k andar statically defined ho jaenge , or ye tarika production m use hota h 
+
+(imp**)hme pata h ki usermodel bhi ek class banti h  and useSchema bhi ek class bnti h internally or usme findbyid wgera static methods h jo model. laga k access hote h 
+pr .save ek instance method h jb new UserModel krke instance banta h usme .save property hoti h wese hi mongooSchema.pre()/post bhi instance method hi hote h tabhi to unke andar ka this class ko nhi balki intance ko point krta h tabhi to this laga ke hm instance properties ko access krte  h 
+but hme pata h agr instancemethod s static method ko access krna h to classname.method lagana padega pr this k through nhi kr paenge instance method m pr mongoose hme pre and post m ek constructor method deta h jisse hm this.constructor.modelStaticMethods access kr skte h
+
+

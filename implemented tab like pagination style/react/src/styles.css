@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  
+}
+.active{
+  background-color: blue !important;
+  color:white
+}
+.disabled{
+  pointer-events: none !important;
+  cursor: progress !important
+}

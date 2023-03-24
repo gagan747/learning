@@ -1,6 +1,18 @@
 *display flex width auto krdeta h childs ki and height 100% with flex-shrink active in childs but when we give   align  items ,height becomes auto from 100% in case of flex-row 
  In case of flex-column width becoms 100% and height becomes auto with flex shrink active in childs but when we give align items ,width becomes auto from 100% 
 
+*flex wrap karane k lie child ya to pixel m ho kyuki auto and percent wale child shrink hone lagenge wrap hone k bajae pr agr chahta h ki width/height auto rhe and wrap bhi ho to flex shrink 0 krde child m(yr isme kux issue h kux kux jaga flex wrap width auto ya percent p bhi lag rha h wo shrink nhi wrap ho rhe h to ek baar verify kr lio)
+
+
+*flex wrap k sath alignContent use hota h align item nhi agr align item or flex wrap saath lage h to align itemsko alignContent s replace krdio
+
+
+yr flex shrink flex direction column p lag nhi rha h overflow y scroll ho rha h automatically but flex row m to lagta h 
+
+yr css m  agr container banata tha to chahta tha ki width km krne pr to container jese kaleere k case m (signup box) hilta nhi tha kyuki width pixel m hoti thi pr width k border tk width km krne se viewport x m scroll krta tha kyuki width pixel m thi pr m chahta tha ki wo container ab shrink hone lage to m media query k madad se width 100% krdeta tha usse jese h width k pixel tk screen pochegi to width 100% hone k karan shrink hone lagega ,agr width phele hi percent m dedeta to wo shuruat(jbse width km krna start krta) se hi shrink hojata,better solution rather than media query:-set max width jisse shuruat m width kam krne s shrink bhi nhi hoga max width k karan and width jese hi container ki width tk pochegi to max width reach hojaegi and tb max width wala concept khatam and shrink hone lageag ,so it is a alternative way than media quuery 
+
+flex shrink auto ya % wale child k sath hi hota h px k sath nhi
+flex:any number agr sare child p lagi h tb chahe flex shrink 0 ho ya 1 always shrink hi hota h pr sare childs p laga hona chahiye flex:any number
 
 *tujhe pta hi hoga display flex m childs p automatically flex shrink lag jata h pr child p flex shrink lagne ki condition y h ki child ki width auto ho ya percent m ho (agr child span a div h to bhi unki width auto ho jati h flex ka child banne k baad ,span ki phele hi auto hoti h and div ki auto ho jati h 100% s) , bs pixel(constant) m nhi honi chahiye warna flex shrink child m nhi lagega,means pixel wale childs shrink nhi hote
 agr flex wrap true ho to child m flex shrink nhi lagta kyuki wrap ko preference milta h and wrap hone lagte h pr haan tujhe yaad hoga ki wrap krane k lie childs pixel m hone chahiye yaad rakhio kyuki percent ya auto m hue  to shrink hone lagenge
@@ -23,7 +35,7 @@ flex:1 agr child p laga h jiska display ki fle direction column h to flex:1 heig
 
 *ek div ki default width 100% hoti h and height auto ye baad bithale dimage m 
 kabhi flex wrap kiya ho or agr dekha ho ki wrap hone k bajae scroll hone laga h poora viewport hi horizontally to iska mtlb ye h ki flex wrap ka rule tune sikha nhi
-flex wrap ko use krne ka shi tarika y h ki parent ki width % or vw m ho pixel m nhi wrna viewport scroll hone lagega and child ki height pixel m hmesha honi chahiye tabhi flex wrap chlega agr child bhi percent m hua to wo shrink hone lgega bhale hi child ka flex shrink 0 ho tabhi bhi kyuki wo bhi percent m h na isliye wo always shrink hoga next line m nhi jaega pr agr child pixel m hua to pixel shrink nhi hota isliye wo nvi line m jaega mtlb tb flex wrap work krne lagega so parent percent m hoga tabhi to pchild tk pochega and child pixel m hone k karan next line m jaega flex wrap laga hoga to or agr parent pixel m hua to parent hi shrink nhi hoga to child kya hi next line m jaega( pr esa bhi nhi h ki pixel parent kabhi shrink nhi hoga kisi kisi time p shrink hojata h to flex wrap dekhne ko mil  skta h pr child to hmesha pixel m hi hona chahiye wrap hone k lie)
+(is line p vichar kr kyuki % or auto wale childs bhi wrap ho jate h agr wrap tu h to instead of shrink ek baar check kr)flex wrap ko use krne ka shi tarika y h ki parent ki width % or vw m ho pixel m nhi wrna viewport scroll hone lagega and child ki height pixel m hmesha honi chahiye tabhi flex wrap chlega agr child bhi percent m hua to wo shrink hone lgega bhale hi child ka flex shrink 0 ho tabhi bhi kyuki wo bhi percent m h na isliye wo always shrink hoga next line m nhi jaega pr agr child pixel m hua to pixel shrink nhi hota isliye wo nvi line m jaega mtlb tb flex wrap work krne lagega so parent percent m hoga tabhi to pchild tk pochega and child pixel m hone k karan next line m jaega flex wrap laga hoga to or agr parent pixel m hua to parent hi shrink nhi hoga to child kya hi next line m jaega( pr esa bhi nhi h ki pixel parent kabhi shrink nhi hoga kisi kisi time p shrink hojata h to flex wrap dekhne ko mil  skta h pr child to hmesha pixel m hi hona chahiye wrap hone k lie) yr ek chij verify krni h ki child percent  m bhi kabhi kabhi wrap hora h  
 
 *.topnav a:hover {
   background-color: #ddd;
@@ -85,3 +97,4 @@ eg3:- see gurman_proj repo where i have given min height and max height of child
 
 *kitni baar esa hota h modal banana padta h or background ko opacity deni padti h pr manlo banckground ko opacity dene se modal ko bhi opacity lag jati h kyuki modal jisko opacity di h uska child niklata h to iska solution ye h ki gurman_proj (kaleere) me product description wala component jo ki ek modal h usko dekhamene kya kiya h (mene rgba(255,255,255,0.8 ka use kiya h ,vistar k lie jo code mene bola h wo dekh))
 
+*flex wrap k sath alignContent use hota h align item nhi agr align item or flex wrap saath lage h to align itemsko alignContent s replace krdio

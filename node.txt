@@ -1,0 +1,17 @@
+class ErrorHandler{
+          constructor(message,statusCode){
+                    this.statusCode=statusCode;
+                    this.message=message
+          }// generally (must) sare class ke primitives cinstructor k andar aate h  
+}
+isko or acha krne k lie:-
+class ErrorHandler extends Error{
+          constructor(message,statusCode){
+                    this.statusCode=statusCode;
+                    super(message)
+          }}
+          /iise ye pata lagta h ki jo inbuilt Error class h usme message naam  ka primitive h jo wo apne(Error class)ke constructor se accept kr rha h
+          or hmne super m diya h or hme pata h super parent k constructor ko call to krta h pr phele child k constructor s bind krdeta h 
+          to mtlb super(message) s Error class k constructor k andar ki line this.message =message (jo hmne super k through constructor k args m bheja h ) or this bind child wali s hoga to child wale k lie ye line chal jaegi this.message = message to hme explicitly nhi likhni padhhi bs yhi optimization hua error class ko extend krke
+          agr m super() ko bina args k call krta kyuki extens ka rule h super ko call krna hi padta h to bina args k call krta to errorhandler ke object ki message naam ki key to ban jati pr value undefined hoti kyuki super ko kux args nhi diye
+

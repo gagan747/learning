@@ -1,3 +1,17 @@
+*const state,setState = useState(1)
+onClick={()=>{
+  setState(state+1);
+  setState(state+1)
+}}
+
+//what will be the output ,if you are thinking state becomes 3 as tere two times setState , you are wrong state woulbe 1 ,explanation:-when first setState(state+1) executes it becomes :-setState(2)//(state+1=2) now it wont render,bcoz next setState will come and next line executes:-setState(2)//as bcoz state is still 1 bcoz previous 1 has not updated yet so overall statement becomes setState(2); setState(2); so the first setstate runs and it renders now next setstate wont run as state is not different then as  curent state becomes 2 from first setstate and second one won't render becuse value has to be different to produce rendering 
+ques :- i want state to become 3 but it is becoming 2 ,
+solution:- setState(state+1);
+           setState((state)=>state+1)
+           now the state becomes 3 as when we use callback inside setstate it always accept latest state value whether it has not set (as we see in example previous set state has gone to event loop and waiting for call stack to empty and it gets empty when synchronous work is done ) but still callback wala state hmesha latest value of state accpt krega callback wale state koo pata rhega ki wo change hone wala h and change hoke kesa lagta h 
+           so always use callback wala set state to avoid bugs as it is always good 
+
+
 *agr useState ko previous state(primitive) ke comparison m nai memory de tab bhi agr values same h to useState rendering nhi krega but agr array/object ke case m bhale hi dono array equal ho pr memory alag ho to bhi react rendering krega(primitives ke case m hale hi  memory same h pr values alag h tabhi rendering hogi pr array/obj k case m memory ka alag hona jaroori h ) 
 s
 
@@ -108,8 +122,144 @@ const handlePopState = function () { //for listening to back and forward arrow b
   ab isme sochne wali baat y h ki m handleUrl/popstate functions m setRerender(!rerender) bhi kr skta tha pr rerender ki value phele baar wali preserve rheti (closure) bhale hi render hone pr handleUrlChsnge/popstate ko nai memory milegi and uske andar ka render latest wala hi hoga prantu jis handleUrl/popstate wale callback ko windo ka eventlistener listen kr rha h us function (specific memory) ko hi wo hmesha call krega and us function m  render ki value initial vali hi thi jo ki false thi isliye hr baar setrerender m false jaega and rendering nhi hogi isliye callback use kiya set rerender m
 
 
-*redux m tujhe pata hi h reducer m hm defult m return state krte h reason y h ki same state jaegi to useSelector joki hmesaha reference compare krta h use old state and current state ka same reference milega to rendering nhi hogi kyuki reducer sale chlte h na ek particular action trigger hone pr pr agr jis reducer to trigger hona hoga wo to alag reference(redux m tate ko mutate nhi krte balki imuutable state return krte h) wali state dega hi or uska subscriber render hoga hi prantu sare reducer agr same reference denge state k kyuki sbka deafult chlega switch case ka to unke subscriber faltu m render nhi krenge
+*redux m tujhe pata hi h reducer m hm defult m return state krte h reason y h ki same state jaegi to useSelector joki hmesaha reference compare krta h use old state and current state ka same reference milega to rendering nhi hogi kyuki ,reducers sare chlte h na ek particular action trigger hone pr pr agr jis reducer to trigger hona hoga wo to alag reference(redux m state ko mutate nhi krte balki imuutable state return krte h) wali state dega hi or uska subscriber render hoga hi prantu sare reducer agr same reference denge state k kyuki sbka deafult chlega switch case ka to unke subscriber faltu m render nhi krenge
 agr switch case m default m {...state}or [...state] kre to jo subscriber ko render nhi bhi hona hoga wo bhi render honge kyuki state ka reference hr baar naya milega 
 ek solution jaha s useSelector import kiya h wha se shallocopy bhi import krle and useSelector m second arg dede ab useSelector change hone p old state and current state ki value dekhega naki reference isse wo tabhi rerender hoga jb sifr values alag alag ho reference nhi or haan shaloowcopy only first level deep jaegi
 
 * redux m reducer m dhyan rakhio agr jese bhar click krne pr manlo 2-3 divs band krane h to 2-3 dispatch bhi tune likhene honge unko close krane k lie or outside click m teen dispatch daal diya hoga ki ye 2-3 actions dispatch hojae outside click pr or divs close ho jae pr agr manlo 2 div phele se hi close h and only 3 wale ko krna h close pr bhar click krne pr teeno dispatch chlenge and teeno k nae reference return honge(immutability maintanance of redux) or teesra wala div close hoga and uska subscriber render hoga pr baki k 2 ke subscriber faltu m render honge to prevent this see gurman_proj(kaleere) reducer named Header.js (i have faced same situation there and added a logic in switch-navbar case)
+
+
+********(imp example)import Meow from "./Meow";
+import "./styles.css";
+import {useState} from 'react'
+export default function App() {
+
+  
+  const [a,setA] = useState([1,2,3,4,5])
+  return (
+    <div className="App" >
+    {
+      a.map((d,index)=><Meow key={index} data={d} />)
+    }
+    <button onClick={()=>setA(a.map(d=>d*2))}>click</button>
+    </div>
+  );
+}
+inside Meow Component:-
+import {useState} from 'react'
+
+export default function Meow({data}){
+  console.log(data)
+  const [state,setState] = useState(data)
+return(
+  <>
+  <div>{state}</div>
+  </>
+)
+}
+
+output :-12345
+after click output:-12345 kyuki bhale hi rendering to hui  and each component render hua and array ke elems ki value double bhi hogyi prantu mount nhi hua kyuki keys hr baar same mil rhi h check it i am giving index as a key to same component so if key is same the component will never remount and mount na hone ke karan state phir s set nhi hui purani wali hi rhi
+
+another example:-
+import Meow from "./Meow";
+import "./styles.css";
+import {useState} from 'react'
+export default function App() {
+
+  
+  const [a,setA] = useState([1,2,3,4,5])
+  return (
+    <div className="App" >
+    {
+      a.map((d,index)=><Meow key={d} data={d} />)
+    }
+    <button onClick={()=>setA(a.map(d=>d*2))}>click</button>
+    </div>
+  );
+}
+inside Meow Component:-
+import {useState} from 'react'
+
+export default function Meow({data}){
+  console.log(data)
+  const [state,setState] = useState(data)
+return(
+  <>
+  <div>{state}</div>
+  </>
+)
+}
+
+output :-12345
+after click button:-246810 //and after another click it goes to 48121620 and so on... 
+reason:- in this case see i have given array data as a key so when array data changes the key will change and component has to remount so state will be resetted
+
+important Note:- ye to bs example tha pr production m hm key ko kabhi bhi map ka index nhi rakhte kyuki bhale hi map ka index uique hota h pr manlo meri facebook ki 5 post h and mene 3rd wali delete ki to ek bug aaega eg:-
+const posts=[{id:1,data:'meow'},{id:2,data:'bhau'},{id:3,data:'cheetah'},{id:4,data:'guru'},{id:5,data:'meowbhau'}]
+posts.map((d,index)=><Post key={index} data={data} />) is case m ab jb 3rd wali post delete hui to post array m se id 3 wali delete hogyi pr jb firse rendering hui to 3rd wala post component phir se mount rha kyuki key 3 gyi na pr haan data 4th wale post ka gya hoga kyuki wo ab teesre number p aagya pr key 3 hone k karan react ko laga ki ye wala component khi nhi gya jiski pele key 3 thi or mapping 4 tk aake ruk gya and last post m 5th wali post ka data gya ,ab to soch rha hoga ki component mount/unmount hone s kya kyuki data prop to shi gya na latest wala pr mene data ki state set kr rakhi thi post m to updated wala data phir se reset nhi ho paya kyuki const state setstate wali line phir s nhi chali isliye 3 rd wala data phir se show hone laga delete hone k bavjood bhi or jb page refresh kiya tb shi dikha kyuki page refresh p sb phir se mount hota h 
+solution:- key hmesha esi rakho jo unique bhi ho or logical sense bhi banati ho for eg:-
+ posts.map((d,index)=><Post key={d.id} data={data} />) isse ye hoga ki <Post/> component ko key 3 kabhi milegi hi nhi kyuki 3rd wala post delete krne se array m se id 3 wala gayab hogya and mapping k samey id 2 ke baad id 4 milegi jisse use phechan rhegi ki 3rd wali post ko hi unmount krna h 
+
+**you know that if we send res.json  from express server and use fetch in frontend it works fine but when we send res.sendFile from exoress sever and send a image what do fetch from frontend bdehaves and how to handle that give me an example
+Yes, I'm aware of the difference between sending res.json and res.sendFile from an Express server and how to handle them in the frontend.
+
+When you send a JSON response from an Express server using res.json(), the response contains JSON data that can be easily parsed and consumed by the frontend using the fetch API. On the other hand, when you send a file using res.sendFile(), the response contains binary data that needs to be handled differently in the frontend.
+To handle a binary file response in the frontend using fetch, you can use the response.blob() method to convert the binary data to a Blob object, which can then be used to create a URL using the URL.createObjectURL() method. Here's an example code snippet that demonstrates how to handle a file response in the frontend:
+
+javascript
+Copy code
+fetch('/file')
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'filename.jpg';
+    link.click();
+  })
+  .catch(error => console.error(error));
+In this example, we're using fetch to make a request to /file endpoint in the Express server. We're then calling response.blob() to convert the response to a Blob object, and using URL.createObjectURL() to create a URL from the Blob. Finally, we're creating a link with the URL, setting the download attribute to specify the filename, and programmatically clicking the link to download the file.
+
+On the server-side, you can send a file using res.sendFile() method. Here's an example code snippet that demonstrates how to send a file from an Express server:
+
+
+*react m useCallback to tujhe pata hi h isliye use krte h kyuki manlo ek callback hmne define kiya h manlo handleSubmit or hr rerender p handleSubmit ka bhi naya function reference create hoga manlo tune "pure" component use kiya h jo ki rendering p part lera h (memo jiske export m lagate h wo bhi ek tareka ka pure component hota h see w3 schools for memo and useCallback combined eg),or wo pure component tabhi render krega jb uska props change hoga or manlo wo handlesubmit as a prop lera h to wo baar baar rerender hoga to hm chahte h ki baar baar na hoe to hm useCallback se uski memory fix krdenge yani ab wo pure component as a prop ek fixed closure ko lega handlsubmit k  or apni marzi k hisab s dependecy passkrenge useCallback m  ki depenency change hone pr hi handlesumit ka naya function reference create kr warna nhi  jb tk nhi krega wo as a prop us purane wale handlesubmit k closure ko hi point krta rhega 
+now ek baat yaad rakhio ki jab rendering hoti h to useEffect sbse last m chlta h pr useCallback series m chlta h , mtlb last m na chlke wo top to down approach  m jaha define h whi chlega kyuki manlo handleSubmit jo ki usecallback m tha uski dependecy change hui h to useCallback to handleSubmit ki nayi memory banai padegi na kyuki purecomponent tabhi rerender krega agr manlo usecallback bhi baad m chalta to handlesubmt ki nai memory bhi rendering k  baad m banti pr usse phele pure component(child that takes part in rerendering) chl gya hota pr render na hota(pure component not renders unless props changes) kyuki use kya pata handlesubmit apni memory reference change krne wala tha isliye usecallback top to bottom aprroach k anusar hi chlta h and handlesubmi ko haath ke haath update krdega jisse koi pure component use as a props use krra ho to wo render ho ske
+
+javascript
+Copy code
+const express = require('express');
+const app = express();
+const path = require('path');
+
+app.get('/file', (req, res) => {
+  const filePath = path.join(__dirname, 'path/to/file.jpg');
+  res.sendFile(filePath);
+});
+
+app.listen(3000, () => {
+  console.log('Server is listening on port 3000');
+});
+In this example, we're using the path module to construct the file path, and then using res.sendFile() to send the file as a response to the /file endpoint. When the client makes a request to this endpoint using fetch as shown above, the file will be downloaded in the browser.
+Gagan singh
+but what if we use response.json instaed of response.blob() what do we expect
+If you use response.json() to handle a binary file response from an Express server, it will result in an error because response.json() expects the response to be a JSON object, not binary data.
+
+Here's an example code snippet that demonstrates what will happen if you use response.json() to handle a binary file response:
+
+javascript
+Copy code
+fetch('/file')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+In this example, the response.json() method will throw an error because the response is not a valid JSON object. The error message might look something like this: SyntaxError: Unexpected token % in JSON at position 0.
+
+Therefore, if you want to handle a binary file response from an Express server using fetch, you should use the response.blob() method instead of response.json().
+
+ek confusion thi ki setState web api m jata h pr asliyat m setState to synchronous h baki usse hone wali ui rendering web api   m jati  h to agr manlo mene dispatch lagaya h and uske just neeche setstate likha h to phele dispatch synchronous chlega and jb reducer state set krdega tb subscriber ki jo re rendering honi thi wo web pi m jaegi and tb setstate chlega kyuki dispatch k niche setstate tha or uski rerendering bhi web api m jaegi or ab ki baar screenn do baar rendering hogi naki ek baar jese do sestate hote h to dono bundle hoke 1 hi rendering krte h pr dispatch or setstate ke saath 2 baar rendering hogi
+
+*dispatch synchronous hota h yani reducer tk jane ka and global state setting processing ka safar synchronous hota h but rendering async hoti h and call stack empty hone k baad hi hoti h
+ chahe beech m redux thunk middleware hi kyun na ho reducer tk to synchronous hi hota h  ,wo alag baat alag h ki agr thunk middleware m fetch api ya async task h to tb whi s event loop m jaega and task poora hone k baad jo dispatch hoga wo synchronous reducer tk jaega but state set krne k baad rendering to async hi hogi
+

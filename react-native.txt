@@ -1,1 +1,90 @@
 react-native m display:flex m default direction column hoti h joki hmne jo web css padi thi usse ulta h
+
+react m flexshrink nhi hota by default childs p to width/height ya percemt% m ho ya pixel m jaha h overflow hone ki naubat aaegi wrap ho jaega agr flexwrap property set h to or agr nhi h to hide hi hoga kyuki by default overflow hidden hota h react native m instead of scroll
+agr hm width/height ki jaga flex use kre sare childs m to impossible h ki overflow bhi ho kyuki flex property se kabhi overflow nhi hota
+agr manlo 80% jaga cover  h %/px se  or last k manlo do childs p width/height ki jaga flex 1/2/3/4... lagaya h to wo 20% total space m hi lagega yani phela preference px/%  ko milta h phir jitna bachta h usme flex wale childs cover hote h hn pr 80% m overflow nhi hua to baki k childs jismme flex laga h usme flex 100 bhi lagade kux iverflow nhi hoga kyuki flex property 20% m hi 100 ka ratio nikal legi pr agr width 100 krdeta last walo ki tb overflow hota
+
+flex column m width 100% hojati h and height auto
+flex row m height 100% ho jati h and width auto 
+flex wrap k sath alignContent use hota h align item nhi agr align item or flex wrap saath lage h to align itemsko alignContent s replace krdio
+
+
+
+jese tujhe pata hi h ki flex shrik active hone pr overflow nhi hoti width auto ya percent(flex row) m or pixel p flex shrink kaam nhi krta to same cheej react native m bhi h pixel m kaam nhi krti shrink but auto ya percent m krti h bs isme manually flex shrink on krna padega kyuki by default off hota h or ye scenerail same uske h jb hm flex property child k detet h to wo kabhi overflow nhi krta to ese hi width percent m  dene se and flex shrink 1 krne se same scenario create ho jaega  
+agr flex wrap true h to chahe flex shrink hi kyu na laga ho child p or width percent m bhale hi kyu na ho flex wrap ko preference milegi and wrapping hogi 
+
+Flexbox works the same way in React Native as it does in CSS on the web, 
+with a few exceptions. The defaults are different,
+1. with flexDirection defaulting to column instead of row,
+2. alignContent defaulting to flex-start instead of stretch, 
+3. flexShrink defaulting to 0 instead of 1,(which means agr height/width auto h abhi bhi shrink nhi hoga no shrinking ya to overflow krega ya agr wrap laga h to wrap pr hm explicitly flex shrink 1 kr skte h  hn pr flex:1 laga h ya flex:2 alag alag child p to shrink hi honge kyuki flex:(any number) wale expand nhi hote kyuki jese ek child ka flex :1 h or dusre ka 3 yani 1+3 yani phele wale ko 1/4 milegi and dusre ko 3/4 
+4. the flex parameter only supporting a single number.
+
+react m jese react fraggment hota na 
+eg :-
+return(<ReactFragment> //<></> or div wgera bhi use krte h
+</reactFragment>)
+to ye sb child ka parent hota h mtlb hm ek wrapper jo dete h na react m wese hi react native m generally View as a wrapper dete h
+eg:-
+return(<View></View>)
+pr react native m ye hota h ki internally View ka bhi ek parent hoga jispe ye css hogi:-
+View(wrapper) ka parent{
+display:flex;
+flexDirection:column;
+}
+ab tu dekh skta h parent k flex ki direction column h to wrapper View (flex child) uski width 100% ho jaegi ( jese flex row m child ki height 100% ho jati h and width auto wese hi  flex column child m width 100% height auto) and height auto so wrapper view ko flex :1 krne pr height full ho jaegi or manke chal ki y eklota child h or wrapper ko wese hi iklota hi rakhna padta h to iklote hone k karan flex:1 se height 100% ho jaegi or with to 100% h hi to yani poori screen cover kr dega chahe android ho ya ios
+flex shrink auto ya percent wale child k sath hi hota h px k sath nhi pr width/height auto ya percent krke bhi dekhle tabhi bhi shrink nhi honge react native m kyuki isme by default flex shrink 0 rheta h shrink krne k lie explicitly flex shrink 1 krne padenge
+
+View m inbuilt css hoti h joki h{
+          display:flex;
+          flexDirection:column;
+          width:100%;
+          height:auto;
+          overflow:hidden
+          //childs m flex shrink 0
+          //no implicit justify content/align items
+} //wese css wale flex m yet=hota h agr shrink nhi hua manlo child pixel m the ya flex shrink 0 tha  to overflow hota hi h pr isme overflow hidden h (android and ios m )
+
+*hm  text k lie jada tar text Component use krte h jese textComponent m kux ache props hote h (html m jinko attributes khete h wo react inbuilt components m props khelate h ) jese ek h :-numberOfLines jisse hm number of lines ko control kr skte h jese 1 krne pr height or increase nhi hogi balkki last m ... aa jaega
+
+
+*agr react fragment m View ki jaga safereaView use kreneg to usse ye faeda hogi ki text battery/tme icons s collapse nhi krega use padding top  extra inbuilt hoti h  view k comparison m but only works for ios to android m iska fix ye h ki:-
+<safeAreaView  style={{paddingTop:Platform.OS === 'android' ? Statusbar.currentHeight : 0}} />
+
+*<Image /> tag images klie use krte h jisme source naam ka prop hota h jisme require krte h static image ko or agr img url s aa rhi h to ese ,source={{uri:'urilink',width:'',height:''}}
+
+*Alert.alert is used for prompting alerts as window is not in react native
+e.g:-Alert.alert("title",'message',[
+          {text:'yes' onPress:()=>{}},{text:'no', onPress:()=>{}}
+]//buttons array
+)
+similarly for alert.prompt:-
+Alert.prompt('title','message',()=>{}//callback executed after prompt closed or ok) //only for ios
+
+stylesheet.create m styles create krne s koi style ka syntax error hoga to bta diya jaega but pr inline style s css ka syntax error nhi ata  h 
+inline style m multi=ple styles bhi add kr skte h eg:-style={{[styles.container,meow]}} const meow={backgroundColor:'green'}
+
+react native m px likhne ki jarurat nhi hoti bina unit ki values constants hi hoti h react native m ,% values alag chij ha
+
+api for getting device size :-Dimensions.get('screen') //not for orientation changes
+so to also detect orientation changes(landscape/portrait) we use inbuilt react native hooks useDimension/useDeviceorientation which renders component when device orientation changes
+useimension return Dimensions of the device,when device rotates it renders component with updated Dimensions
+similarly useDeviceorientation return {
+          landscspe:true,
+          portrati:false
+}
+eg:-
+const {landscape} = useDeviceorientation();
+const style={{
+          height:landscape?100%:30%
+}}
+pr in hooks ko work karane k lie app.json m orientation propert ko defaulr krna padega
+
+ab koi view agr container h or usme overflow:scroll lagana h to overflow:scroll react native m hota nhi h isliye hm scrollableView component ko replace kredenge us view s or agr koi style laga hua tha view p to wo style scrollble view ko dediyo kyuki scrollable view ek view hi h bs usme overflow scroll extra internal property hota h 
+
+ek confusion thi ki setState web api m jata h pr asliyat m setState to synchronous h baki usse hone wali ui rendering web api   m jati  h to agr manlo mene dispatch lagaya h and uske just neeche setstate likha h to phele dispatch synchronous chlega and jb reducer state set krdega tb subscriber ki jo re rendering honi thi wo web pi m jaegi and tb setstate chlega kyuki dispatch k niche setstate tha or uski rerendering bhi web api m jaegi or ab ki baar screenn do baar rendering hogi naki ek baar jese do sestate hote h to dono bundle hoke 1 hi rendering krte h pr dispatch or setstate ke saath 2 baar rendering hogi
+
+react native m bs overflow visible ya hidden hota h scroll wgera nhi
+
+*dispatch synchronous hota h yani reducer tk jane ka and global state setting processing ka safar synchronous hota h but rendering async hoti h and call stack empty hone k baad hi hoti h
+ chahe beech m redux thunk middleware hi kyun na ho reducer tk to synchronous hi hota h  ,wo alag baat alag h ki agr thunk middleware m fetch api ya async task h to tb whi s event loop m jaega and task poora hone k baad jo dispatch hoga wo synchronous reducer tk jaega but state set krne k baad rendering to async hi hogi

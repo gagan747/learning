@@ -91,7 +91,8 @@ type admin {
 let user :admin | user ={
     username:'xyz',
     id:'1234'
-} 
+} //isme atleat one property admin ya user se ho and koi extra field na ho jo in dono m na ho
+
 function xyz(id:Number | String){
     if(typeof id ==='string')
     id.toLowerCase()

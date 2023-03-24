@@ -25,3 +25,90 @@ Promise pending
 after 
 but khud soch promise pending bhi tabhi aaega na jb promise ka callback kux return krega pr wo to khud synchronus chlra h or baad m resolve hi ho jaega 4 sec baad isliye after bhi 4 sec baad print hua kyuki koi cheej event loop m gyi hi nhi pr promise k callback  m agr kux event loop m jane layak hota to promise pending return hojata jesebagr settimout hota to 
 ek aur cheej agr console.log(pro()) ki jaga pro().then() krta to promise {4} and after hote to dono hi 4   sec baad print pr after phele hota promise {4 } se kyuki .then event loop m jata h and then jb event loop m jaye usse phele pro() likha h uske baad likha h .then() yani jb pro poora synchronously chlega tb tk 4 sec hojange and tb .then chlega jo ki event loop m jaega and after tb instant chlega(pr after chala to pro() k baad hi yani after total 4 sec baad chala pr then k event loop m jane k instant baad chala) uske baad instant then wala part 
+
+agr hm function based object  constructor ko static methid dete h to direct function constructor m dot laga k append kr dete h 
+eg:-
+function ghi(name){
+ this.name=name
+}
+ghi.xyz=bla bla //static methoid
+or whi agr class based object constructor ko dena ho to do ttarike h :-
+class xyz{
+ static meow(){}
+}
+or
+xyz.meow=bla bla 
+dono hi tareeko s static method define hota ha
+
+function constructor k static method m arrow method k case m this window object ko point krta h and normal function k case m this function constructor ko hi itself point krta h 
+eg using normal functoion case:-
+function g(){} //object constructor suppose
+g.meow=function(){ return this} //defining static method,ye normal function ka case h arrow function k case m this window object ko point krta
+g.a=10; //defining another static method
+g.meow().a //outputs 10 as g.meow() this return krega jo ki function object(static)  ko hi point krega naki function ke kisi instance ko to us object m to hmne a define kiya tha to .a krne pr 10 print hogya 
+
+class based constructor m jo classname.static method define krte h unka bhi this window object ko point krta h arrow object k case m and normal function k case m this class constructor ko hi point krta h  jisse hm this. lagake another static methods access kr skte h joki usi class m define honge kyuki this class ko hi point krega to obvious h ki this lagake usi class k another static methods ko access kr skte h
+eg:-
+class xyz{}
+xyz.ghi=function(){return this} //creating static methods
+xyz.a=10; //creating another static method
+xyz.ghi().a; //output 10 same explanation as function constructor
+
+classbased constructor m jo static method banate h inside class ke unke andar this class ko hi point krta h jisse hm this. lagake another static methods access kr skte h joki usi class m define honge kyuki this class ko hi point krega to obvious h ki this lagake usi class k another static methods ko access kr skte h
+same examples as used above
+
+**you know that if we send res.json  from express server and use fetch in frontend it works fine but when we send res.sendFile from exoress sever and send a image what do fetch from frontend bdehaves and how to handle that give me an example
+Yes, I'm aware of the difference between sending res.json and res.sendFile from an Express server and how to handle them in the frontend.
+
+When you send a JSON response from an Express server using res.json(), the response contains JSON data that can be easily parsed and consumed by the frontend using the fetch API. On the other hand, when you send a file using res.sendFile(), the response contains binary data that needs to be handled differently in the frontend.
+
+To handle a binary file response in the frontend using fetch, you can use the response.blob() method to convert the binary data to a Blob object, which can then be used to create a URL using the URL.createObjectURL() method. Here's an example code snippet that demonstrates how to handle a file response in the frontend:
+
+javascript
+Copy code
+fetch('/file')
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'filename.jpg';
+    link.click();
+  })
+  .catch(error => console.error(error));
+In this example, we're using fetch to make a request to /file endpoint in the Express server. We're then calling response.blob() to convert the response to a Blob object, and using URL.createObjectURL() to create a URL from the Blob. Finally, we're creating a link with the URL, setting the download attribute to specify the filename, and programmatically clicking the link to download the file.
+
+On the server-side, you can send a file using res.sendFile() method. Here's an example code snippet that demonstrates how to send a file from an Express server:
+
+javascript
+Copy code
+const express = require('express');
+const app = express();
+const path = require('path');
+
+app.get('/file', (req, res) => {
+  const filePath = path.join(__dirname, 'path/to/file.jpg');
+  res.sendFile(filePath);
+});
+
+app.listen(3000, () => {
+  console.log('Server is listening on port 3000');
+});
+In this example, we're using the path module to construct the file path, and then using res.sendFile() to send the file as a response to the /file endpoint. When the client makes a request to this endpoint using fetch as shown above, the file will be downloaded in the browser.
+
+Gagan singh
+but what if we use response.json instaed of response.blob() what do we expect
+If you use response.json() to handle a binary file response from an Express server, it will result in an error because response.json() expects the response to be a JSON object, not binary data.
+
+Here's an example code snippet that demonstrates what will happen if you use response.json() to handle a binary file response:
+
+javascript
+Copy code
+fetch('/file')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+In this example, the response.json() method will throw an error because the response is not a valid JSON object. The error message might look something like this: SyntaxError: Unexpected token % in JSON at position 0.
+
+Therefore, if you want to handle a binary file response from an Express server using fetch, you should use the response.blob() method instead of response.json().
+

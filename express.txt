@@ -1,0 +1,146 @@
+res.sendFile krte waqt wese to jadatar express apne aap content type header set krleta h jese img m jpg ya audio m mp3 pr manlo res m mene buffer send krdia to kitni bar download hon lagta h kyuki content type octet set ho jata h but manlo agr image ko bhi download krana h to content type img hatane k lie content disposition header set krdo uska mtlb hota h download or ye dekh k content type express set hi nhi krega or usse bhi acha res.sendFile k bajae res.download hi use krlo jo content disposition header apne aap set krdega\
+
+app.use(express.static(pathToStaticFiles)) is used to serve static files mtlb localhost:port/ click krne pr express.static call hoga and static file serve krega mainly txt html css img,e.t.c or manlo ese likhta app.use('/static',express.static(path to static files)) tb localhost;port/static k age kux bhi lagau wo wo pathtostatic files m bhi search kreg but phele wale case m agr m localhost:port/xyz krta to pathtostatic m search na krta baki niche wale routes m dekha or cannot get aa jata but app.use('/static',express.static(pathtostatic)) wale case m agr  localhost:port/static(or any name)/xyz krta to cannot get na ata balki wo pathtostatic m check krta
+wait wait wait .... hm res.sendFile krke bhi to html files bhej skta h express.static midddleware ki jarurat hi nhi h ,han kr skte h krke bhi dekhli sb chlra h but kux html files hoti h jisme likha hota h you need to enable js to run this app(jese build k andar index.html) unko res.sendFile s bhej rha hu  to postman m to chlri h but browser m white screen a rhi h isliye un files jese index.html ko browser m show krane k lie express.static lagta hi han
+
+
+(**imp)express-session:-
+tu jwt flow se to jani hoga hi ki hr request m token decrypt hota h protected routes k lie and tab further pass hota h ,jwt ko stateless bhi kjete h kyuki server m uski state ka pata nhi hota,server m uski state maintain ni rehti only browser k cookies ya headers m rkhte h uski state,server uski state nhi maitain krta
+express-session ko staeful bhi kha jata h kyuki uski state store hoti h server mein ,express sesion ek store bana leta h state store krne k lie  joki memory m krta h joki galat h kyuki memory volatile h server restart hua to sb ud jaega isliye uslo hm mongo redis ,e.t.c as a store bhi provide kr skte h but by default wo memory m krta h 
+flow:-jwt flow to tujhe pata hi h ,express session ka flow is prakar h :-
+jb request jati h server p to express session k middleware  through guzarna padta h use joki kux is tarah dikhta h :-
+
+const session = require('express-session');
+
+app.use(session({
+ name:'xyz', //agr name na de to by default name client-sid hota h 
+  secret: 'my-secret-key',
+  resave: false,
+  saveUninitialized: true
+}));
+
+express session middleware check krta h ki agr req koi cookie leke aai h jiska naam express session middleware m name key m  h ,agr nhi lai to res.cookie m us name se ek cookie set kr deta h and store m bhi us cookie name ki jo value h jo ek token hota h us token se ek entry krdeta h , agr lekr aai h to check krta h store m agr store m us cookie name m jo token h us id se store m koi entry h ,agr h to wo entry ko store se fetch krke req.session m update kr deta h and agr store m us cookie ki value se koi entry nhi mili to ek nai cookie value store m and us cookie ke name m(req object m ) override kr deta h.
+mtlb jb hm pheli baar server ko hit krte h to tb cookie generate ho jati h response  mand browser m wo cookie set ho jati h and agr abhi expiry time to ignore kre to ek baar cookie browser m set hogyi to hr req m wo saath jaegi us specific browser se and server m hr baar us cookie ke corresponding datat store se fetch hoke req.session m update ho jaega.hm req.session m kux bhi store karwa skte h jese userId wgera wgera joki hr request m server req.session.userid se get krlega and whi agr dusre tab se whi route hit krenge or usme check laga hhua ki re.session.user h ki nhi pr nae browser m to nhi hoga kyuki cookie hi manlo login wale route p set krate h and tabhi userid bhi store m save krate h but us time na milne pr hm login p redirect kra skte h ki ya to session expire hoyga ( session expire tb ho skta h jb cookie browser m to set h and store m bhi pr store ka expiry time reach hogya and store se udne ke  karan usi res.cookie ke usi name m nai token value aa jaegi kyuki store m na milne ke karan usne nai value generate kri store m bhi and  joki store ke ek empty object ko point krega ab and wo value token res.cookie m usi name m override krdi  ) ya cookie aai hi nhi(pr cookie nhi aaegi to expression session khud ek cokie bana to dega pr wo empty object ko point kregi store  m to hme login route m jake us cookie ek empty obj m user property append krani padegi)  to login m jao wha apne session m user append karwao phele phir protected route m ana
+eg se sab clear ho jaega :-
+
+express session flow:---------
+
+const express = require('express');
+const session = require('express-session');
+const app = express();
+
+app.use(session({
+  secret: 'my-secret-key',
+  resave: false,
+  saveUninitialized: true
+}));
+
+Here, we're creating a new session middleware using the session function from the express-session module. The secret option is used to sign the session ID cookie, the resave option tells the middleware to only save the session if it has been modified, and the saveUninitialized option tells the middleware to create a new session if there is no session available.
+
+Next, we'll create a login API endpoint that checks the user's credentials and creates a new session:
+
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  // Check the user's credentials
+  if (username === 'myusername' && password === 'mypassword') {
+    // Create a new session
+    req.session.user = { username };
+    res.status(200).send('Login successful');
+  } else {
+    res.status(401).send('Invalid credentials');
+  }
+});
+
+Here, we're checking the user's credentials and, if they are correct, we're creating a new session by setting the user property on the req.session object to an object containing the user's username. We're also returning a response with a 200 status code to indicate that the login was successful.
+
+app.get('/protected', (req, res) => {
+  // Check if the user is authenticated
+  if (req.session.user) {
+    res.status(200).send(`Welcome, ${req.session.user.username}!`);
+  } else {
+    res.status(401).send('Unauthorized');
+  }
+});
+Here, we're checking if the user is authenticated by checking if the user property is set on the req.session object. If the user is authenticated, we're returning a response with a 200 status code and a welcome message. If the user is not authenticated, we're returning a response with a 401 status code to indicate that the request was unauthorized.
+
+ using jwt:-
+
+ Example of Login API using JWT Flow:
+
+First, we need to include the jsonwebtoken module in our Node.js and Express application:
+
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const app = express();
+
+app.use(express.json());
+Here, we're creating a new Express application and including the jsonwebtoken module. We're also adding middleware to parse JSON data in the request body.
+
+Next, we'll create a login API endpoint that checks the user's credentials and creates a new JWT:
+javascript
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  // Check the user's credentials
+  if (username === 'myusername' && password === 'mypassword') {
+    // Create a new JWT
+    const token = jwt.sign({ username }, 'my-secret-key');
+    res.status(200).send({ token });
+  } else {
+    res.status(401).send('Invalid credentials');
+  }
+});
+Here, we're checking the user's credentials and, if they are correct, we're
+creating a new JWT using the jwt.sign function from the jsonwebtoken module. The first argument to this function is a payload object containing the user's username, and the second argument is the secret key used to sign the JWT. We're also returning a response with a 200 status code and the JWT in the response body.
+
+Finally, we'll create a protected API endpoint that requires the user to be authenticated using the JWT:
+javascript
+
+app.get('/protected', (req, res) => {
+  // Get the token from the Authorization header
+  const token = req.headers.authorization?.split(' ')[1];
+  // Verify the JWT
+  try {
+    const { username } = jwt.verify(token, 'my-secret-key');
+    res.status(200).send(`Welcome, ${username}!`);
+  } catch {
+    res.status(401).send('Unauthorized');
+  }
+});
+Here, we're getting the JWT from the Authorization header in the request, and verifying it using the jwt.verify function from the jsonwebtoken module. If the JWT is valid, we're returning a response with a 200 status code and a welcome message. If the JWT is not valid, we're returning a response with a 401 status code to indicate that the request was unauthorized.
+
+Note: This example is for demonstration purposes only and is not meant to be used in a production environment. It is recommended to use a proper authentication mechanism such as Passport or OAuth for production applications.
+
+
+
+
+**here is another conversation bw chat gpt and me :-
+can you tell me the flow in detail that how existing session retreived or new session is created in express session
+Sure, here's a detailed explanation of how express-session retrieves an existing session or creates a new one:
+
+When a user makes a request to the server, express-session first checks if the request contains a session ID. This is typically done by looking for a cookie in the request headers with the name specified in the name option of the session() middleware.
+
+If a session ID is found in the request, express-session uses this ID to look up the corresponding session data in the session store. The session store is a backend storage mechanism that can be configured to use a variety of storage options, such as in-memory storage, file-based storage, or external databases like Redis or MongoDB.
+
+If the session data is found in the store, express-session loads it into the req.session object, which is then available for use in subsequent middleware and route handlers.
+
+If no session ID is found in the request, or if the corresponding session data cannot be found in the store, express-session creates a new session object and generates a new session ID. This new session ID is typically sent back to the client in the form of a cookie with the Set-Cookie header.
+
+The session data is then stored in the session store, associated with the new session ID.
+
+The req.session object is then populated with the new session data and is available for use in subsequent middleware and route handlers.
+
+This process is repeated for each subsequent request from the same client, with the express-session middleware using the session ID in the request to look up the corresponding session data in the store, or creating a new session if no ID is found. The session data can be modified in subsequent middleware or route handlers, and any changes made to the req.session object are automatically saved back to the session store when the response is sent.
+Gagan singh
+you said that If no session ID is found in the request, or if the corresponding session data cannot be found in the store, express-session creates a new session object and generates a new session ID. This new session ID is typically sent back to the client in the form of a cookie with the Set-Cookie header.   
+
+i want to ask that if the sessionn id sent by the request not found in the store then set-cookie creared cookie with new name or override new cookie with previous name
+If the session ID sent by the request is not found in the store, express-session will create a new session object and generate a new session ID. This new session ID is typically sent back to the client in the form of a cookie with the name specified in the name option of the session() middleware. If the name option is not specified, the default name is connect.sid.
+
+When express-session sends a cookie back to the client, it sets the Set-Cookie header in the response with the new or updated session ID. If the client already has a cookie with the same name and domain, the new cookie will typically overwrite the old one.
+
+However, there are several factors that can affect how cookies are handled by the client and the server, including the path, secure, and httpOnly options specified in the cookie configuration. It's important to carefully configure these options to ensure that the session cookie is secure and properly handled by the client and server.
+
+
+
