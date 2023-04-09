@@ -1,6 +1,6 @@
 react-native m display:flex m default direction column hoti h joki hmne jo web css padi thi usse ulta h
 
-react m flexshrink nhi hota by default childs p to width/height ya percemt% m ho ya pixel m jaha h overflow hone ki naubat aaegi wrap ho jaega agr flexwrap property set h to or agr nhi h to hide hi hoga kyuki by default overflow hidden hota h react native m instead of scroll
+react native m flexshrink nhi hota by default childs p to width/height ya percemt% m ho ya pixel m jaha h overflow hone ki naubat aaegi wrap ho jaega agr flexwrap property set h to or agr nhi h to hide hi hoga kyuki by default overflow hidden hota h react native m instead of scroll
 agr hm width/height ki jaga flex use kre sare childs m to impossible h ki overflow bhi ho kyuki flex property se kabhi overflow nhi hota
 agr manlo 80% jaga cover  h %/px se  or last k manlo do childs p width/height ki jaga flex 1/2/3/4... lagaya h to wo 20% total space m hi lagega yani phela preference px/%  ko milta h phir jitna bachta h usme flex wale childs cover hote h hn pr 80% m overflow nhi hua to baki k childs jismme flex laga h usme flex 100 bhi lagade kux iverflow nhi hoga kyuki flex property 20% m hi 100 ka ratio nikal legi pr agr width 100 krdeta last walo ki tb overflow hota
 
@@ -88,3 +88,31 @@ react native m bs overflow visible ya hidden hota h scroll wgera nhi
 
 *dispatch synchronous hota h yani reducer tk jane ka and global state setting processing ka safar synchronous hota h but rendering async hoti h and call stack empty hone k baad hi hoti h
  chahe beech m redux thunk middleware hi kyun na ho reducer tk to synchronous hi hota h  ,wo alag baat alag h ki agr thunk middleware m fetch api ya async task h to tb whi s event loop m jaega and task poora hone k baad jo dispatch hoga wo synchronous reducer tk jaega but state set krne k baad rendering to async hi hogi
+ 
+ 
+ 
+ 
+ **
+ setting Text component's inner HTML in react native example
+ import React, { useRef } from 'react';
+import { View, Text, Button } from 'react-native';
+
+const IncrementButton = () => {
+  const counterRef = useRef(0);
+  const counterDisplay = useRef();
+
+  const handleClick = () => {
+    counterRef.current += 1;
+    counterDisplay.current.setNativeProps({ text: counterRef.current.toString() });
+  };
+
+  return (
+    <View>
+      <Button title="Increment counter" onPress={handleClick} />
+      <Text>Counter value: <Text ref={counterDisplay}>{counterRef.current}</Text></Text>
+    </View>
+  );
+};
+
+export default IncrementButton;
+

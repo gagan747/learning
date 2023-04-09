@@ -112,3 +112,32 @@ In this example, the response.json() method will throw an error because the resp
 
 Therefore, if you want to handle a binary file response from an Express server using fetch, you should use the response.blob() method instead of response.json().
 
+
+
+**function deepClone(obj) {
+  let newObj = Array.isArray(obj)?[]:{} //for checking that whether new object to be returned is array or object
+  for (let key in obj) {
+    if (typeof obj[key] == 'object')
+      newObj[key] = deepClone(obj[key])
+    else
+      newObj[key] = obj[key]
+  }
+  return newObj
+}
+
+
+function meow (){
+    return new Promise((res,rej)=>{
+     setTimeout(()=>{
+        res('hello')
+    },1000)   
+    } )
+}
+
+
+async function ghi(){
+    const g = await meow().then(console.log).catch(()=>{})
+    console.log('after  await ',g)
+}
+ghi()
+
