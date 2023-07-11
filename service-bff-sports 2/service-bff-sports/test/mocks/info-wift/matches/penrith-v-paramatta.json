@@ -1,0 +1,679 @@
+{
+    "id": "PenrvParr",
+    "name": "Penrith v Parramatta",
+    "spectrumId": "PenrvParr",
+    "spectrumUniqueId": 1770866,
+    "competitionSpectrumId": "601",
+    "round": "Grand Final",
+    "broadcastChannel": "Fox League",
+    "broadcastChannels": [
+        "Fox League"
+    ],
+    "startTime": "2022-10-02T08:30:00.000Z",
+    "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Rugby%20League/competitions/NRL/matches/Penrith%20v%20Parramatta?jurisdiction=NSW",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Rugby%20League/competitions/NRL/matches/Penrith%20v%20Parramatta?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Rugby%20League/competitions/NRL/matches/Penrith%20v%20Parramatta/markets?jurisdiction=NSW"
+    },
+    "contestants": [
+        {
+            "name": "Penrith",
+            "position": "HOME",
+            "isHome": true,
+            "image": [
+                {
+                    "size": "svg",
+                    "url": "https://metadata.beta.tab.com.au/icons/NRL/Panthers.svg"
+                },
+                {
+                    "size": "xxhdpi",
+                    "url": "https://metadata.beta.tab.com.au/icons/NRL/Panthers_xxhdpi.png"
+                },
+                {
+                    "size": "2x",
+                    "url": "https://metadata.beta.tab.com.au/icons/NRL/Panthers%402x.png"
+                }
+            ]
+        },
+        {
+            "name": "Parramatta",
+            "position": "AWAY",
+            "isHome": false,
+            "image": [
+                {
+                    "size": "svg",
+                    "url": "https://metadata.beta.tab.com.au/icons/NRL/Eels.svg"
+                },
+                {
+                    "size": "xxhdpi",
+                    "url": "https://metadata.beta.tab.com.au/icons/NRL/Eels_xxhdpi.png"
+                },
+                {
+                    "size": "2x",
+                    "url": "https://metadata.beta.tab.com.au/icons/NRL/Eels%402x.png"
+                }
+            ]
+        }
+    ],
+    "competitors": [
+        "Penrith",
+        "Parramatta"
+    ],
+    "openMarketCount": 4,
+    "futureMarketCount": 0,
+    "nonFutureMarketCount": 4,
+    "markets": [
+        {
+            "id": "73239992",
+            "name": "NRL GF Penrith-Parramatta IncExT 02/10",
+            "shortName": "NRL GF Penr-Parr 1stTry",
+            "betOption": "1st Try Scorer",
+            "betOptionSpectrumId": "172",
+            "betOptionPriority": 2015,
+            "marketUniqueId": 73239992,
+            "closeTime": "2022-10-02T08:30:00.000Z",
+            "bettingStatus": "Closed",
+            "message": "Bet refunded if player not in final 17",
+            "informationMessage": "Bet refunded if player not in final 17",
+            "isFuture": false,
+            "onlineBetting": false,
+            "phoneBettingOnly": false,
+            "inPlay": false,
+            "goingInPlay": true,
+            "allowWin": true,
+            "allowPlace": false,
+            "allowEachWay": false,
+            "allowMulti": true,
+            "allowMultiWin": true,
+            "allowMultiPlace": false,
+            "allowMultiEachWay": false,
+            "numberOfPlaces": 0,
+            "cashOutEligibility": "Enabled",
+            "allowBundle": false,
+            "propositions": [
+                {
+                    "id": "64153",
+                    "name": "Taylan May (Pen)",
+                    "returnWin": "8.5",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64153,
+                    "isOpen": false,
+                    "sortOrder": 2
+                }
+            ],
+            "sameGame": true,
+            "sameGameMultipleSelections": false
+        },
+        {
+            "id": "73239989",
+            "name": "NRL GF Penrith-Parramatta 02/10",
+            "shortName": "NRL GF Penr-Parr ScrTry",
+            "betOption": "To Score a Try",
+            "betOptionSpectrumId": "385",
+            "betOptionPriority": 2025,
+            "marketUniqueId": 73239989,
+            "closeTime": "2022-10-02T08:30:00.000Z",
+            "bettingStatus": "Closed",
+            "message": null,
+            "informationMessage": null,
+            "isFuture": false,
+            "onlineBetting": false,
+            "phoneBettingOnly": false,
+            "inPlay": false,
+            "goingInPlay": false,
+            "allowWin": true,
+            "allowPlace": false,
+            "allowEachWay": false,
+            "allowMulti": true,
+            "allowMultiWin": true,
+            "allowMultiPlace": false,
+            "allowMultiEachWay": false,
+            "numberOfPlaces": 0,
+            "cashOutEligibility": "Enabled",
+            "allowBundle": false,
+            "propositions": [
+                {
+                    "id": "64213",
+                    "name": "Taylan May (Pen)",
+                    "returnWin": "1.95",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64213,
+                    "isOpen": false,
+                    "sortOrder": 2
+                }
+            ],
+            "sameGame": true,
+            "sameGameMultipleSelections": true
+        },
+        {
+            "id": "73239991",
+            "name": "NRL GF Penrith-Parramatta 02/10",
+            "shortName": "NRL GF Penr-Parr 1TryWn",
+            "betOption": "To Score A Try And Win",
+            "betOptionSpectrumId": "1605",
+            "betOptionPriority": 2030,
+            "marketUniqueId": 73239991,
+            "closeTime": "2022-10-02T08:30:00.000Z",
+            "bettingStatus": "Closed",
+            "message": null,
+            "informationMessage": "If draw after ET/GP all bets are losers",
+            "isFuture": false,
+            "onlineBetting": false,
+            "phoneBettingOnly": false,
+            "inPlay": false,
+            "goingInPlay": false,
+            "allowWin": true,
+            "allowPlace": false,
+            "allowEachWay": false,
+            "allowMulti": true,
+            "allowMultiWin": true,
+            "allowMultiPlace": false,
+            "allowMultiEachWay": false,
+            "numberOfPlaces": 0,
+            "cashOutEligibility": "Enabled",
+            "allowBundle": false,
+            "propositions": [
+                {
+                    "id": "64498",
+                    "name": "Taylan May 1+ Try/Pen win",
+                    "returnWin": "2.25",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64498,
+                    "isOpen": false,
+                    "sortOrder": 2
+                }
+            ]
+        },
+        {
+            "id": "73239990",
+            "name": "NRL GF Penrith-Parramatta 80min 02/10",
+            "shortName": "NRL GF Penr-Parr 1TryMg",
+            "betOption": "1st Tryscorer/Margin",
+            "betOptionSpectrumId": "211",
+            "betOptionPriority": 2660,
+            "marketUniqueId": 73239990,
+            "closeTime": "2022-10-02T08:30:00.000Z",
+            "bettingStatus": "Closed",
+            "message": "80min. Bet refunded if player not in 17",
+            "informationMessage": "80min. Bet refunded if player not in 17",
+            "isFuture": false,
+            "onlineBetting": false,
+            "phoneBettingOnly": false,
+            "inPlay": false,
+            "goingInPlay": false,
+            "allowWin": true,
+            "allowPlace": false,
+            "allowEachWay": false,
+            "allowMulti": true,
+            "allowMultiWin": true,
+            "allowMultiPlace": false,
+            "allowMultiEachWay": false,
+            "numberOfPlaces": 0,
+            "cashOutEligibility": "Enabled",
+            "allowBundle": false,
+            "propositions": [
+                {
+                    "id": "64396",
+                    "name": "Taylan May/Pen 13+",
+                    "returnWin": "15",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64396,
+                    "isOpen": false,
+                    "sortOrder": 5
+                },
+                {
+                    "id": "64397",
+                    "name": "Taylan May/Pen 1-12",
+                    "returnWin": "26",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64397,
+                    "isOpen": false,
+                    "sortOrder": 6
+                },
+                {
+                    "id": "64398",
+                    "name": "Taylan May/Par 1-12",
+                    "returnWin": "41",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64398,
+                    "isOpen": false,
+                    "sortOrder": 7
+                },
+                {
+                    "id": "64399",
+                    "name": "Taylan May/Par 13+",
+                    "returnWin": "101",
+                    "returnPlace": 0,
+                    "differential": null,
+                    "bettingStatus": "Refund",
+                    "allowPlace": false,
+                    "number": 64399,
+                    "isOpen": false,
+                    "sortOrder": 8
+                }
+            ]
+        }
+    ],
+    "inPlay": false,
+    "goingInPlay": true,
+    "betOptionPriority": [
+        "1st Try Scorer",
+        "To Score a Try",
+        "To Score A Try And Win",
+        "1st Tryscorer/Margin"
+    ],
+    "betOptionGroups": [
+        {
+            "name": "Popular",
+            "types": [
+                "ALL"
+            ],
+            "betOptions": [
+                "72",
+                "43",
+                "235",
+                "456",
+                "543",
+                "32",
+                "2657",
+                "212",
+                "2609",
+                "75",
+                "172",
+                "385",
+                "1605",
+                "716",
+                "714",
+                "1944",
+                "2484",
+                "2485",
+                "37",
+                "155",
+                "2357",
+                "807",
+                "2693",
+                "1358",
+                "3105",
+                "246",
+                "3195",
+                "3901",
+                "431",
+                "823",
+                "1312",
+                "52",
+                "432",
+                "168",
+                "48",
+                "252",
+                "169",
+                "64",
+                "497",
+                "44",
+                "687",
+                "401",
+                "1852",
+                "817",
+                "55",
+                "135",
+                "200",
+                "180",
+                "557",
+                "36",
+                "1786",
+                "134",
+                "867",
+                "123",
+                "905",
+                "834",
+                "449",
+                "617",
+                "641",
+                "183",
+                "1951",
+                "739",
+                "1591",
+                "1231"
+            ]
+        },
+        {
+            "name": "Popular",
+            "types": [
+                "SGM"
+            ],
+            "betOptions": [
+                "72",
+                "43",
+                "456",
+                "385",
+                "2484",
+                "2485",
+                "32",
+                "172",
+                "1944"
+            ]
+        },
+        {
+            "name": "Try Scorers",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "172",
+                "385",
+                "651",
+                "716",
+                "1605",
+                "127",
+                "1944",
+                "1279",
+                "864",
+                "2729",
+                "2730",
+                "587",
+                "211",
+                "260",
+                "861",
+                "2782",
+                "2781",
+                "3106",
+                "1278",
+                "820",
+                "222",
+                "390",
+                "3200",
+                "145",
+                "550"
+            ]
+        },
+        {
+            "name": "Doubles",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "212",
+                "285",
+                "2657",
+                "2658",
+                "70",
+                "238",
+                "1282",
+                "136",
+                "3901",
+                "738",
+                "431",
+                "823",
+                "915",
+                "379",
+                "879"
+            ]
+        },
+        {
+            "name": "Margins",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "32",
+                "126",
+                "262",
+                "149",
+                "866",
+                "1282",
+                "3342",
+                "3344",
+                "3343",
+                "3340",
+                "3341",
+                "247",
+                "49"
+            ]
+        },
+        {
+            "name": "Totals",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "456",
+                "157",
+                "711",
+                "2101",
+                "2485",
+                "3349",
+                "1282",
+                "95",
+                "2560",
+                "226",
+                "1756",
+                "2060",
+                "2602",
+                "150",
+                "3347",
+                "3345",
+                "2010",
+                "2603",
+                "208",
+                "3346",
+                "862"
+            ]
+        },
+        {
+            "name": "Tries",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "2183",
+                "2987",
+                "281",
+                "148",
+                "3348",
+                "1757",
+                "2988",
+                "2763",
+                "2751",
+                "2989",
+                "2764",
+                "3348",
+                "1748",
+                "3542",
+                "1745",
+                "1753"
+            ]
+        },
+        {
+            "name": "1st Half",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "279",
+                "963",
+                "1607",
+                "574",
+                "280",
+                "768",
+                "2486",
+                "2487",
+                "379",
+                "879",
+                "291",
+                "576",
+                "2708",
+                "1843",
+                "1844",
+                "1744",
+                "1002",
+                "2122",
+                "1316",
+                "147",
+                "2473",
+                "1280",
+                "2841",
+                "2842",
+                "1748",
+                "3542",
+                "1745",
+                "2706",
+                "2704",
+                "2705",
+                "290"
+            ]
+        },
+        {
+            "name": "2nd Half",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "316",
+                "352",
+                "2820",
+                "270",
+                "340",
+                "2724",
+                "271",
+                "2727",
+                "1726",
+                "1722",
+                "1753",
+                "389"
+            ]
+        },
+        {
+            "name": "Player",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "246",
+                "3739",
+                "3740",
+                "3741",
+                "3742",
+                "3743",
+                "3744",
+                "3745",
+                "1347",
+                "1346",
+                "145",
+                "495",
+                "550",
+                "3661",
+                "3495",
+                "129",
+                "130"
+            ]
+        },
+        {
+            "name": "Match",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "424",
+                "2180",
+                "3540",
+                "1340",
+                "264",
+                "2322",
+                "544",
+                "405",
+                "862",
+                "536",
+                "544",
+                "659",
+                "662",
+                "2784",
+                "3541",
+                "425",
+                "506",
+                "1341",
+                "2862",
+                "2861",
+                "1148",
+                "1340",
+                "3733",
+                "3734",
+                "3735",
+                "3736",
+                "3737",
+                "3738",
+                "1341",
+                "96",
+                "1721",
+                "2990",
+                "2991",
+                "2992",
+                "2986",
+                "2993",
+                "2994",
+                "3264",
+                "2601",
+                "3006",
+                "2767"
+            ]
+        },
+        {
+            "name": "Regular Season",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "48",
+                "169",
+                "64",
+                "772",
+                "401",
+                "168",
+                "3194",
+                "3195",
+                "62"
+            ]
+        },
+        {
+            "name": "Round Leader",
+            "types": [
+                "ALL",
+                "SGM"
+            ],
+            "betOptions": [
+                "988",
+                "2935",
+                "2610",
+                "2936",
+                "3189"
+            ]
+        }
+    ],
+    "sameGame": true
+}

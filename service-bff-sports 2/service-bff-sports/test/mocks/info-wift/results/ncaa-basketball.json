@@ -1,0 +1,115 @@
+{
+  "matches": [
+    {
+      "id": "UAPBvTxSo",
+      "name": "ArknsasPineBluff v Texas Southern",
+      "spectrumId": "UAPBvTxSo",
+      "spectrumUniqueId": 1541951,
+      "competitionSpectrumId": "1011",
+      "round": null,
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-02-22T01:30:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/ArknsasPineBluff%20v%20Texas%20Southern?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/ArknsasPineBluff%20v%20Texas%20Southern?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/ArknsasPineBluff%20v%20Texas%20Southern/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "ArknsasPineBluff",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Texas Southern",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": [
+        "ArknsasPineBluff",
+        "Texas Southern"
+      ],
+      "openMarketCount": 16,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 16,
+      "inPlay": false,
+      "goingInPlay": true
+    },
+    {
+      "id": "BCoovAlSt",
+      "name": "Bethune-Cookman v Alabama State",
+      "spectrumId": "BCoovAlSt",
+      "spectrumUniqueId": 1541847,
+      "competitionSpectrumId": "1011",
+      "round": null,
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-02-22T02:00:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/Bethune-Cookman%20v%20Alabama%20State?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/Bethune-Cookman%20v%20Alabama%20State?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/Bethune-Cookman%20v%20Alabama%20State/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "Bethune-Cookman",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Alabama State",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": [
+        "Bethune-Cookman",
+        "Alabama State"
+      ],
+      "openMarketCount": 11,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 11,
+      "inPlay": false,
+      "goingInPlay": true
+    },
+    {
+      "id": "BosCvFSU",
+      "name": "Boston College v Florida State",
+      "spectrumId": "BosCvFSU",
+      "spectrumUniqueId": 1541234,
+      "competitionSpectrumId": "1011",
+      "round": null,
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-02-22T00:00:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/Boston%20College%20v%20Florida%20State?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/Boston%20College%20v%20Florida%20State?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/results/Basketball/competitions/NCAA%20Basketball/matches/Boston%20College%20v%20Florida%20State/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "Boston College",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Florida State",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": [
+        "Boston College",
+        "Florida State"
+      ],
+      "openMarketCount": 37,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 37,
+      "inPlay": false,
+      "goingInPlay": true
+    }
+  ]
+}

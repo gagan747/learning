@@ -1,0 +1,839 @@
+{
+  "type": "app.statsCenter.matchup",
+  "title": "Stats Center - Matchup",
+  "discoveryName": "stats-service:get:stats:matchup",
+  "refreshInterval": 300,
+  "refreshUrl": "<some url>",
+  "filters": {
+    "data": [
+      {
+        "label": "Lineups",
+        "type": "app.statsCenter.lineups",
+        "isSelected": false
+      },
+      {
+        "label": "Matchup",
+        "type": "app.statsCenter.matchup",
+        "isSelected": true
+      },
+      {
+        "label": "Standings",
+        "type": "app.statsCenter.standings",
+        "isSelected": false
+      },
+      {
+        "label": "News",
+        "type": "app.statsCenter.news",
+        "isSelected": false
+      }
+    ]
+  },
+  "data": [
+    {
+      "type": "app.statsCenter.matchup.tabs",
+      "data": [
+        {
+          "label": "Teams",
+          "type": "app.statsCenter.matchup.teams",
+          "isSelected": true
+        },
+        {
+          "label": "Players",
+          "type": "app.statsCenter.matchup.players",
+          "isSelected": false
+        }
+      ]
+    },
+    {
+      "type": "app.statsCenter.matchup.teams",
+      "data": [
+        {
+          "type": "app.statsCenter.matchup.teams.h2h.overall",
+          "title": "Head-to-Head",
+          "data": {
+            "homeTeamWins": 3,
+            "awayTeamWins": 2,
+            "homeTeamAbbreviation": "UTA",
+            "awayTeamAbbreviation": "DET",
+            "totalGames": 5,
+            "since": 2020,
+            "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+            "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg"
+          }
+        },
+        {
+          "type": "app.statsCenter.matchup.teams.h2h.matches",
+          "data": [
+            {
+              "eventType": "Regular Season",
+              "week": 7,
+              "matchDate": "2022-11-24T02:00:00",
+              "venue": "Vivint Arena",
+              "homeTeamAbbreviation": "UTA",
+              "awayTeamAbbreviation": "DET",
+              "homeTeamScore": 116,
+              "awayTeamScore": 125,
+              "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+              "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg"
+            },
+            {
+              "eventType": "Regular Season",
+              "week": 15,
+              "matchDate": "2022-01-22T02:00:00",
+              "venue": "Vivint Arena",
+              "homeTeamAbbreviation": "UTA",
+              "awayTeamAbbreviation": "DET",
+              "homeTeamScore": 111,
+              "awayTeamScore": 101,
+              "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+              "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg"
+            },
+            {
+              "eventType": "Regular Season",
+              "week": 14,
+              "matchDate": "2022-01-11T00:00:00",
+              "venue": "Little Caesars Arena",
+              "homeTeamAbbreviation": "DET",
+              "awayTeamAbbreviation": "UTA",
+              "homeTeamScore": 126,
+              "awayTeamScore": 116,
+              "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+              "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg"
+            },
+            {
+              "eventType": "Regular Season",
+              "week": 17,
+              "matchDate": "2021-02-03T03:00:00",
+              "venue": "Vivint Smart Home Arena",
+              "homeTeamAbbreviation": "Uta",
+              "awayTeamAbbreviation": "Det",
+              "homeTeamScore": 117,
+              "awayTeamScore": 105,
+              "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+              "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg"
+            },
+            {
+              "eventType": "Regular Season",
+              "week": 14,
+              "matchDate": "2021-01-10T20:00:00",
+              "venue": "Little Caesars Arena",
+              "homeTeamAbbreviation": "Det",
+              "awayTeamAbbreviation": "Uta",
+              "homeTeamScore": 86,
+              "awayTeamScore": 96,
+              "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+              "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg"
+            }
+          ]
+        },
+        {
+          "type": "app.statsCenter.matchup.teams.recentMatches",
+          "title": "Recent Games",
+          "data": {
+            "homeTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+            "awayTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+            "homeTeam": [
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Clippers.svg",
+                "otherTeamAbbreviation": "LAC",
+                "score": "125-112"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Chicago%20Bulls.svg",
+                "otherTeamAbbreviation": "CHI",
+                "score": "107-114"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Phoenix%20Suns.svg",
+                "otherTeamAbbreviation": "@PHX",
+                "score": "112-113"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Golden State%20Warriors.svg",
+                "otherTeamAbbreviation": "GSW",
+                "score": "118-129"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Clippers.svg",
+                "otherTeamAbbreviation": "@LAC",
+                "score": "114-121"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Portland%20Trail Blazers.svg",
+                "otherTeamAbbreviation": "@POR",
+                "score": "118-113"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Phoenix%20Suns.svg",
+                "otherTeamAbbreviation": "PHX",
+                "score": "134-133"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/New York%20Knicks.svg",
+                "otherTeamAbbreviation": "NYK",
+                "score": "111-118"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Philadelphia%2076ers.svg",
+                "otherTeamAbbreviation": "@PHI",
+                "score": "98-105"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Washington%20Wizards.svg",
+                "otherTeamAbbreviation": "@WAS",
+                "score": "112-121"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Atlanta%20Hawks.svg",
+                "otherTeamAbbreviation": "@ATL",
+                "score": "125-119"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Lakers.svg",
+                "otherTeamAbbreviation": "LAL",
+                "score": "139-116"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Clippers.svg",
+                "otherTeamAbbreviation": "@LAC",
+                "score": "110-102"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Lakers.svg",
+                "otherTeamAbbreviation": "@LAL",
+                "score": "130-116"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Dallas%20Mavericks.svg",
+                "otherTeamAbbreviation": "@DAL",
+                "score": "100-103"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Memphis%20Grizzlies.svg",
+                "otherTeamAbbreviation": "MEM",
+                "score": "121-105"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Memphis%20Grizzlies.svg",
+                "otherTeamAbbreviation": "MEM",
+                "score": "124-123"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Denver%20Nuggets.svg",
+                "otherTeamAbbreviation": "@DEN",
+                "score": "101-117"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Houston%20Rockets.svg",
+                "otherTeamAbbreviation": "HOU",
+                "score": "109-101"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Houston%20Rockets.svg",
+                "otherTeamAbbreviation": "@HOU",
+                "score": "108-114"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/New Orleans%20Pelicans.svg",
+                "otherTeamAbbreviation": "@NOP",
+                "score": "122-121"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Minnesota%20Timberwolves.svg",
+                "otherTeamAbbreviation": "MIN",
+                "score": "132-126"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Denver%20Nuggets.svg",
+                "otherTeamAbbreviation": "DEN",
+                "score": "123-102"
+              }
+            ],
+            "awayTeam": [
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/New York%20Knicks.svg",
+                "otherTeamAbbreviation": "NYK",
+                "score": "110-140"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Cleveland%20Cavaliers.svg",
+                "otherTeamAbbreviation": "CLE",
+                "score": "94-102"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Phoenix%20Suns.svg",
+                "otherTeamAbbreviation": "@PHX",
+                "score": "102-108"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Denver%20Nuggets.svg",
+                "otherTeamAbbreviation": "@DEN",
+                "score": "110-108"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Sacramento%20Kings.svg",
+                "otherTeamAbbreviation": "@SAC",
+                "score": "129-137"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Lakers.svg",
+                "otherTeamAbbreviation": "@LAL",
+                "score": "121-128"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Los Angeles%20Clippers.svg",
+                "otherTeamAbbreviation": "@LAC",
+                "score": "91-96"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Toronto%20Raptors.svg",
+                "otherTeamAbbreviation": "TOR",
+                "score": "111-115"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Boston%20Celtics.svg",
+                "otherTeamAbbreviation": "BOS",
+                "score": "108-117"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/New York%20Knicks.svg",
+                "otherTeamAbbreviation": "@NYK",
+                "score": "112-121"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Boston%20Celtics.svg",
+                "otherTeamAbbreviation": "@BOS",
+                "score": "112-128"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Oklahoma City%20Thunder.svg",
+                "otherTeamAbbreviation": "OKC",
+                "score": "112-103"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Cleveland%20Cavaliers.svg",
+                "otherTeamAbbreviation": "CLE",
+                "score": "88-112"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Milwaukee%20Bucks.svg",
+                "otherTeamAbbreviation": "@MIL",
+                "score": "91-116"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Milwaukee%20Bucks.svg",
+                "otherTeamAbbreviation": "@MIL",
+                "score": "108-110"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Golden State%20Warriors.svg",
+                "otherTeamAbbreviation": "GSW",
+                "score": "128-114"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Atlanta%20Hawks.svg",
+                "otherTeamAbbreviation": "ATL",
+                "score": "112-136"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Atlanta%20Hawks.svg",
+                "otherTeamAbbreviation": "ATL",
+                "score": "113-118"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Washington%20Wizards.svg",
+                "otherTeamAbbreviation": "@WAS",
+                "score": "99-120"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Indiana%20Pacers.svg",
+                "otherTeamAbbreviation": "IND",
+                "score": "115-124"
+              },
+              {
+                "result": "L",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/New York%20Knicks.svg",
+                "otherTeamAbbreviation": "@NYK",
+                "score": "106-130"
+              },
+              {
+                "result": "W",
+                "otherTeamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Orlando%20Magic.svg",
+                "otherTeamAbbreviation": "ORL",
+                "score": "113-109"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "app.statsCenter.matchup.players",
+      "data": [
+        {
+          "type": "app.statsCenter.matchup.players.leaders",
+          "title": "Offensive Leaders",
+          "data": [
+            {
+              "title": "POINTS PER GAME",
+              "data": [
+                {
+                  "playerId": 949131,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Lauri",
+                  "lastName": "Markkanen",
+                  "positionInitials": "PF",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 949131
+                  },
+                  "stats": {
+                    "pointsPerGame": "22.2",
+                    "assistsPerGame": "2.2",
+                    "threePointersMade": 60,
+                    "reboundsPerGame": "8.5",
+                    "blocksPerGame": "0.7",
+                    "stealsPerGame": "0.5"
+                  },
+                  "value": "22.2"
+                },
+                {
+                  "playerId": 599812,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Bojan",
+                  "lastName": "Bogdanovic",
+                  "positionInitials": "SF",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 599812
+                  },
+                  "stats": {
+                    "pointsPerGame": "20.3",
+                    "assistsPerGame": "2.5",
+                    "threePointersMade": 50,
+                    "reboundsPerGame": "3.8",
+                    "blocksPerGame": "0.0",
+                    "stealsPerGame": "0.4"
+                  },
+                  "value": "20.3"
+                },
+                {
+                  "playerId": 1232182,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Cade",
+                  "lastName": "Cunningham",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1232182
+                  },
+                  "stats": {
+                    "pointsPerGame": "19.9",
+                    "assistsPerGame": "6.0",
+                    "threePointersMade": 17,
+                    "reboundsPerGame": "6.2",
+                    "blocksPerGame": "0.6",
+                    "stealsPerGame": "0.8"
+                  },
+                  "value": "19.9"
+                }
+              ]
+            },
+            {
+              "title": "ASSISTS PER GAME",
+              "data": [
+                {
+                  "playerId": 329468,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Mike",
+                  "lastName": "Conley",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 329468
+                  },
+                  "stats": {
+                    "pointsPerGame": "10.2",
+                    "assistsPerGame": "7.9",
+                    "threePointersMade": 32,
+                    "reboundsPerGame": "2.4",
+                    "blocksPerGame": "0.3",
+                    "stealsPerGame": "1.2"
+                  },
+                  "value": "7.9"
+                },
+                {
+                  "playerId": 1232182,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Cade",
+                  "lastName": "Cunningham",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1232182
+                  },
+                  "stats": {
+                    "pointsPerGame": "19.9",
+                    "assistsPerGame": "6.0",
+                    "threePointersMade": 17,
+                    "reboundsPerGame": "6.2",
+                    "blocksPerGame": "0.6",
+                    "stealsPerGame": "0.8"
+                  },
+                  "value": "6.0"
+                },
+                {
+                  "playerId": 551975,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Jordan",
+                  "lastName": "Clarkson",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 551975
+                  },
+                  "stats": {
+                    "pointsPerGame": "19.5",
+                    "assistsPerGame": "4.9",
+                    "threePointersMade": 68,
+                    "reboundsPerGame": "4.0",
+                    "blocksPerGame": "0.4",
+                    "stealsPerGame": "0.3"
+                  },
+                  "value": "4.9"
+                }
+              ]
+            },
+            {
+              "title": "3 POINTERS MADE",
+              "data": [
+                {
+                  "playerId": 879503,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Malik",
+                  "lastName": "Beasley",
+                  "positionInitials": "SG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 879503
+                  },
+                  "stats": {
+                    "pointsPerGame": "13.6",
+                    "assistsPerGame": "1.6",
+                    "threePointersMade": 76,
+                    "reboundsPerGame": "3.9",
+                    "blocksPerGame": "0.2",
+                    "stealsPerGame": "1.0"
+                  },
+                  "value": "76"
+                },
+                {
+                  "playerId": 551975,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Jordan",
+                  "lastName": "Clarkson",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 551975
+                  },
+                  "stats": {
+                    "pointsPerGame": "19.5",
+                    "assistsPerGame": "4.9",
+                    "threePointersMade": 68,
+                    "reboundsPerGame": "4.0",
+                    "blocksPerGame": "0.4",
+                    "stealsPerGame": "0.3"
+                  },
+                  "value": "68"
+                },
+                {
+                  "playerId": 949131,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Lauri",
+                  "lastName": "Markkanen",
+                  "positionInitials": "PF",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 949131
+                  },
+                  "stats": {
+                    "pointsPerGame": "22.2",
+                    "assistsPerGame": "2.2",
+                    "threePointersMade": 60,
+                    "reboundsPerGame": "8.5",
+                    "blocksPerGame": "0.7",
+                    "stealsPerGame": "0.5"
+                  },
+                  "value": "60"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "app.statsCenter.matchup.players.leaders",
+          "title": "Defensive Leaders",
+          "data": [
+            {
+              "title": "REBOUNDS PER GAME",
+              "data": [
+                {
+                  "playerId": 1177050,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Isaiah",
+                  "lastName": "Stewart",
+                  "positionInitials": "C",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1177050
+                  },
+                  "stats": {
+                    "pointsPerGame": "12.4",
+                    "assistsPerGame": "1.3",
+                    "threePointersMade": 23,
+                    "reboundsPerGame": "9.1",
+                    "blocksPerGame": "0.8",
+                    "stealsPerGame": "0.5"
+                  },
+                  "value": "9.1"
+                },
+                {
+                  "playerId": 949131,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Lauri",
+                  "lastName": "Markkanen",
+                  "positionInitials": "PF",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 949131
+                  },
+                  "stats": {
+                    "pointsPerGame": "22.2",
+                    "assistsPerGame": "2.2",
+                    "threePointersMade": 60,
+                    "reboundsPerGame": "8.5",
+                    "blocksPerGame": "0.7",
+                    "stealsPerGame": "0.5"
+                  },
+                  "value": "8.5"
+                },
+                {
+                  "playerId": 1067852,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Jarred",
+                  "lastName": "Vanderbilt",
+                  "positionInitials": "PF",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1067852
+                  },
+                  "stats": {
+                    "pointsPerGame": "8.3",
+                    "assistsPerGame": "2.7",
+                    "threePointersMade": 8,
+                    "reboundsPerGame": "8.4",
+                    "blocksPerGame": "0.3",
+                    "stealsPerGame": "1.1"
+                  },
+                  "value": "8.4"
+                }
+              ]
+            },
+            {
+              "title": "BLOCKS PER GAME",
+              "data": [
+                {
+                  "playerId": 1243728,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Walker",
+                  "lastName": "Kessler",
+                  "positionInitials": "C",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1243728
+                  },
+                  "stats": {
+                    "pointsPerGame": "5.0",
+                    "assistsPerGame": "0.6",
+                    "threePointersMade": 0,
+                    "reboundsPerGame": "4.9",
+                    "blocksPerGame": "1.6",
+                    "stealsPerGame": "0.2"
+                  },
+                  "value": "1.6"
+                },
+                {
+                  "playerId": 1344765,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Jalen",
+                  "lastName": "Duren",
+                  "positionInitials": "C",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1344765
+                  },
+                  "stats": {
+                    "pointsPerGame": "6.6",
+                    "assistsPerGame": "0.6",
+                    "threePointersMade": 0,
+                    "reboundsPerGame": "7.1",
+                    "blocksPerGame": "0.9",
+                    "stealsPerGame": "0.5"
+                  },
+                  "value": "0.9"
+                },
+                {
+                  "playerId": 1177050,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Isaiah",
+                  "lastName": "Stewart",
+                  "positionInitials": "C",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1177050
+                  },
+                  "stats": {
+                    "pointsPerGame": "12.4",
+                    "assistsPerGame": "1.3",
+                    "threePointersMade": 23,
+                    "reboundsPerGame": "9.1",
+                    "blocksPerGame": "0.8",
+                    "stealsPerGame": "0.5"
+                  },
+                  "value": "0.8"
+                }
+              ]
+            },
+            {
+              "title": "STEALS PER GAME",
+              "data": [
+                {
+                  "playerId": 514882,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Kelly",
+                  "lastName": "Olynyk",
+                  "positionInitials": "C",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 514882
+                  },
+                  "stats": {
+                    "pointsPerGame": "13.1",
+                    "assistsPerGame": "3.2",
+                    "threePointersMade": 39,
+                    "reboundsPerGame": "4.9",
+                    "blocksPerGame": "0.8",
+                    "stealsPerGame": "1.3"
+                  },
+                  "value": "1.3"
+                },
+                {
+                  "playerId": 329468,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Utah%20Jazz.svg",
+                  "firstName": "Mike",
+                  "lastName": "Conley",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 329468
+                  },
+                  "stats": {
+                    "pointsPerGame": "10.2",
+                    "assistsPerGame": "7.9",
+                    "threePointersMade": 32,
+                    "reboundsPerGame": "2.4",
+                    "blocksPerGame": "0.3",
+                    "stealsPerGame": "1.2"
+                  },
+                  "value": "1.2"
+                },
+                {
+                  "playerId": 1257421,
+                  "teamLogo": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "firstName": "Killian",
+                  "lastName": "Hayes",
+                  "positionInitials": "PG",
+                  "navigation": {
+                    "sportName": "basketball",
+                    "competitionName": "nba",
+                    "playerId": 1257421
+                  },
+                  "stats": {
+                    "pointsPerGame": "7.3",
+                    "assistsPerGame": "4.5",
+                    "threePointersMade": 19,
+                    "reboundsPerGame": "2.6",
+                    "blocksPerGame": "0.4",
+                    "stealsPerGame": "1.1"
+                  },
+                  "value": "1.1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

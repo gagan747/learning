@@ -1,0 +1,741 @@
+{
+  "id": "873",
+  "name": "UEFA Europa League",
+  "spectrumId": "873",
+  "_links": {
+    "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League?jurisdiction=QLD",
+    "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+    "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/tournaments?jurisdiction=QLD",
+    "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches?jurisdiction=QLD",
+    "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/markets?jurisdiction=QLD",
+    "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/markets/all-channels?jurisdiction=QLD"
+  },
+  "tournaments": [],
+  "hasMarkets": true,
+  "matches": [
+    {
+      "id": "RlpzvAlat",
+      "name": "RB Leipzig v Atalanta",
+      "spectrumId": "RlpzvAlat",
+      "spectrumUniqueId": 1570442,
+      "competitionSpectrumId": "873",
+      "round": "Quarter Final",
+      "broadcastChannel": "Stan Sport",
+      "broadcastChannels": ["Stan Sport"],
+      "startTime": "2022-04-07T16:45:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/RB%20Leipzig%20v%20Atalanta?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/RB%20Leipzig%20v%20Atalanta?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/RB%20Leipzig%20v%20Atalanta/markets?jurisdiction=QLD"
+      },
+      "vision": {
+        "performVisualisation": {
+          "startTime": "2022-04-07T16:45:00Z",
+          "requiresAuthentication": false,
+          "eventId": "9f4m0kdm8m793qvwvqcletvdg",
+          "_links": {
+            "self": "https://api.beta.tab.com.au/v1/vision-service/tab-act/matches/RlpzvAlat/performVisualisation"
+          }
+        }
+      },
+      "skySports": {
+        "channel": "sky",
+        "previewVideo": "https://api.beta.tab.com.au/v1/vision-service/tab-act/matches/EssvGCs/championData",
+        "authenticationRequired": true
+      },
+      "contestants": [
+        {
+          "name": "RB Leipzig",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Atalanta",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": ["RB Leipzig", "Atalanta"],
+      "openMarketCount": 150,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 150,
+      "markets": [
+        {
+          "id": "65638488",
+          "name": "EuL Leipzig-Atalanta Result",
+          "shortName": "EuL Rlpz-Alat Result",
+          "betOption": "Result",
+          "betOptionSpectrumId": "91",
+          "betOptionPriority": 70,
+          "marketUniqueId": 65638488,
+          "closeTime": "2022-04-07T16:45:00.000Z",
+          "bettingStatus": "Open",
+          "message": "Normal Time",
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": true,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "447963",
+              "name": "RB Leipzig",
+              "returnWin": 1.7,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447963,
+              "isOpen": true,
+              "sortOrder": 1,
+              "position": "HOME",
+              "sameGame": true
+            },
+            {
+              "id": "447967",
+              "name": "Draw",
+              "returnWin": 3.9,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447967,
+              "isOpen": true,
+              "sortOrder": 2,
+              "position": "DRAW",
+              "sameGame": true
+            },
+            {
+              "id": "447971",
+              "name": "Atalanta",
+              "returnWin": 4.25,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447971,
+              "isOpen": true,
+              "sortOrder": 3,
+              "position": "AWAY",
+              "sameGame": true
+            }
+          ],
+          "sameGame": true,
+          "sameGameMultipleSelections": false
+        },
+        {
+          "id": "65652033",
+          "name": "EuL QF RB Leipzig-Atalanta 08/04",
+          "shortName": "EuL QF Leipzg-Atalnt ToQual",
+          "betOption": "To Qualify",
+          "betOptionSpectrumId": "193",
+          "betOptionPriority": 115,
+          "marketUniqueId": 65652033,
+          "closeTime": "2022-04-07T16:45:00.000Z",
+          "bettingStatus": "Open",
+          "message": null,
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": false,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "402538",
+              "name": "RB Leipzig",
+              "returnWin": 1.75,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402538,
+              "isOpen": true,
+              "sortOrder": 1
+            },
+            {
+              "id": "402539",
+              "name": "Atalanta",
+              "returnWin": 2,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402539,
+              "isOpen": true,
+              "sortOrder": 2
+            }
+          ]
+        }
+      ],
+      "inPlay": false,
+      "goingInPlay": true,
+      "sameGame": true
+    },
+    {
+      "id": "BrgavRngr",
+      "name": "Braga v Rangers",
+      "spectrumId": "BrgavRngr",
+      "spectrumUniqueId": 1570440,
+      "competitionSpectrumId": "873",
+      "round": "Quarter Final",
+      "broadcastChannel": "Stan Sport",
+      "broadcastChannels": [
+        "Stan Sport"
+      ],
+      "startTime": "2022-04-07T19:00:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/Braga%20v%20Rangers?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/Braga%20v%20Rangers?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/Braga%20v%20Rangers/markets?jurisdiction=QLD"
+      },
+      "skySports": {
+        "channel": "sky",
+        "previewVideo": "https://api.beta.tab.com.au/v1/vision-service/tab-act/matches/EssvGCs/championData",
+        "authenticationRequired": true
+      },
+      "vision": {
+        "performVisualisation": {
+          "startTime": "2022-04-07T19:00:00Z",
+          "requiresAuthentication": false,
+          "eventId": "2zh6vfg6l22u3288yqikql1qs",
+          "_links": {
+            "self": "https://api.beta.tab.com.au/v1/vision-service/tab-act/matches/BrgavRngr/performVisualisation"
+          }
+        }
+      },
+      "contestants": [
+        {
+          "name": "Braga",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Rangers",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": [
+        "Braga",
+        "Rangers"
+      ],
+      "openMarketCount": 149,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 149,
+      "markets": [
+        {
+          "id": "65638416",
+          "name": "EuL Braga-Rangers Result",
+          "shortName": "EuL Brga-Rngr Result",
+          "betOption": "Result",
+          "betOptionSpectrumId": "91",
+          "betOptionPriority": 70,
+          "marketUniqueId": 65638416,
+          "closeTime": "2022-04-07T19:00:00.000Z",
+          "bettingStatus": "Open",
+          "message": "Normal Time",
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": true,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "447961",
+              "name": "Braga",
+              "returnWin": 2.25,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447961,
+              "isOpen": true,
+              "sortOrder": 1,
+              "position": "HOME",
+              "sameGame": true
+            },
+            {
+              "id": "447965",
+              "name": "Draw",
+              "returnWin": 3.25,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447965,
+              "isOpen": true,
+              "sortOrder": 2,
+              "position": "DRAW",
+              "sameGame": true
+            },
+            {
+              "id": "447968",
+              "name": "Rangers",
+              "returnWin": 3.1,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447968,
+              "isOpen": true,
+              "sortOrder": 3,
+              "position": "AWAY",
+              "sameGame": true
+            }
+          ],
+          "sameGame": true,
+          "sameGameMultipleSelections": false
+        },
+        {
+          "id": "65652029",
+          "name": "EuL QF Braga-Rangers 08/04",
+          "shortName": "EuL QF Braga-Rngers ToQual",
+          "betOption": "To Qualify",
+          "betOptionSpectrumId": "193",
+          "betOptionPriority": 115,
+          "marketUniqueId": 65652029,
+          "closeTime": "2022-04-07T19:00:00.000Z",
+          "bettingStatus": "Open",
+          "message": null,
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": false,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "402536",
+              "name": "Braga",
+              "returnWin": 2.25,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402536,
+              "isOpen": true,
+              "sortOrder": 1
+            },
+            {
+              "id": "402537",
+              "name": "Rangers",
+              "returnWin": 1.62,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402537,
+              "isOpen": true,
+              "sortOrder": 2
+            }
+          ]
+        }
+      ],
+      "inPlay": false,
+      "goingInPlay": true,
+      "sameGame": true
+    },
+    {
+      "id": "EFftvBrca",
+      "name": "Eint Frankfurt v Barcelona",
+      "spectrumId": "EFftvBrca",
+      "spectrumUniqueId": 1570441,
+      "competitionSpectrumId": "873",
+      "round": "Quarter Final",
+      "broadcastChannel": "Stan Sport",
+      "broadcastChannels": [
+        "Stan Sport"
+      ],
+      "startTime": "2022-04-07T19:00:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/Eint%20Frankfurt%20v%20Barcelona?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/Eint%20Frankfurt%20v%20Barcelona?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/Eint%20Frankfurt%20v%20Barcelona/markets?jurisdiction=QLD"
+      },
+      "vision": {
+        "performVisualisation": {
+          "startTime": "2022-04-07T19:00:00Z",
+          "requiresAuthentication": false,
+          "eventId": "de6umnz4zq18mpxr34sr9jrbo",
+          "_links": {
+            "self": "https://api.beta.tab.com.au/v1/vision-service/tab-act/matches/EFftvBrca/performVisualisation"
+          }
+        }
+      },
+      "skySports": {
+        "channel": "sky",
+        "previewVideo": "https://api.beta.tab.com.au/v1/vision-service/tab-act/matches/EssvGCs/championData",
+        "authenticationRequired": true
+      },
+      "contestants": [
+        {
+          "name": "Eint Frankfurt",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Barcelona",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": [
+        "Eint Frankfurt",
+        "Barcelona"
+      ],
+      "openMarketCount": 150,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 150,
+      "markets": [
+        {
+          "id": "65638452",
+          "name": "EuL EFrnkfrt-Barcelna Result",
+          "shortName": "EuL EFft-Brca Result",
+          "betOption": "Result",
+          "betOptionSpectrumId": "91",
+          "betOptionPriority": 70,
+          "marketUniqueId": 65638452,
+          "closeTime": "2022-04-07T19:00:00.000Z",
+          "bettingStatus": "Open",
+          "message": "Normal Time",
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": true,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "447960",
+              "name": "Eint Frankfurt",
+              "returnWin": 4.5,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447960,
+              "isOpen": true,
+              "sortOrder": 1,
+              "position": "HOME",
+              "sameGame": true
+            },
+            {
+              "id": "447964",
+              "name": "Draw",
+              "returnWin": 3.8,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447964,
+              "isOpen": true,
+              "sortOrder": 2,
+              "position": "DRAW",
+              "sameGame": true
+            },
+            {
+              "id": "447969",
+              "name": "Barcelona",
+              "returnWin": 1.7,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447969,
+              "isOpen": true,
+              "sortOrder": 3,
+              "position": "AWAY",
+              "sameGame": true
+            }
+          ],
+          "sameGame": true,
+          "sameGameMultipleSelections": false
+        },
+        {
+          "id": "65652031",
+          "name": "EuL QF EFrankfurt-Barcelona 08/04",
+          "shortName": "EuL QF EFrkft-Brclna ToQual",
+          "betOption": "To Qualify",
+          "betOptionSpectrumId": "193",
+          "betOptionPriority": 115,
+          "marketUniqueId": 65652031,
+          "closeTime": "2022-04-07T19:00:00.000Z",
+          "bettingStatus": "Open",
+          "message": null,
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": false,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "402534",
+              "name": "Eintracht Frankfurt",
+              "returnWin": 5.5,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402534,
+              "isOpen": true,
+              "sortOrder": 1
+            },
+            {
+              "id": "402535",
+              "name": "Barcelona",
+              "returnWin": 1.13,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402535,
+              "isOpen": true,
+              "sortOrder": 2
+            }
+          ]
+        }
+      ],
+      "inPlay": false,
+      "goingInPlay": true,
+      "sameGame": true
+    },
+    {
+      "id": "WHamvLyon",
+      "name": "West Ham v Lyon",
+      "spectrumId": "WHamvLyon",
+      "spectrumUniqueId": 1570443,
+      "competitionSpectrumId": "873",
+      "round": "Quarter Final",
+      "broadcastChannel": "Stan Sport",
+      "broadcastChannels": [
+        "Stan Sport"
+      ],
+      "startTime": "2022-04-07T19:00:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/West%20Ham%20v%20Lyon?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/West%20Ham%20v%20Lyon?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Soccer/competitions/UEFA%20Europa%20League/matches/West%20Ham%20v%20Lyon/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "West Ham",
+          "position": "HOME",
+          "isHome": true
+        },
+        {
+          "name": "Lyon",
+          "position": "AWAY",
+          "isHome": false
+        }
+      ],
+      "competitors": [
+        "West Ham",
+        "Lyon"
+      ],
+      "openMarketCount": 150,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 150,
+      "markets": [
+        {
+          "id": "65638524",
+          "name": "EuL West Ham-Lyon Result",
+          "shortName": "EuL WHam-Lyon Result",
+          "betOption": "Result",
+          "betOptionSpectrumId": "91",
+          "betOptionPriority": 70,
+          "marketUniqueId": 65638524,
+          "closeTime": "2022-04-07T19:00:00.000Z",
+          "bettingStatus": "Open",
+          "message": "Normal Time",
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": true,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "447962",
+              "name": "West Ham",
+              "returnWin": 2,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447962,
+              "isOpen": true,
+              "sortOrder": 1,
+              "position": "HOME",
+              "sameGame": true
+            },
+            {
+              "id": "447966",
+              "name": "Draw",
+              "returnWin": 3.4,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447966,
+              "isOpen": true,
+              "sortOrder": 2,
+              "position": "DRAW",
+              "sameGame": true
+            },
+            {
+              "id": "447970",
+              "name": "Lyon",
+              "returnWin": 3.6,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 447970,
+              "isOpen": true,
+              "sortOrder": 3,
+              "position": "AWAY",
+              "sameGame": true
+            }
+          ],
+          "sameGame": true,
+          "sameGameMultipleSelections": false
+        },
+        {
+          "id": "65652034",
+          "name": "EuL QF West Ham-Lyon 08/04",
+          "shortName": "EuL QF WstHam-Lyon ToQual",
+          "betOption": "To Qualify",
+          "betOptionSpectrumId": "193",
+          "betOptionPriority": 115,
+          "marketUniqueId": 65652034,
+          "closeTime": "2022-04-07T19:00:00.000Z",
+          "bettingStatus": "Open",
+          "message": null,
+          "informationMessage": null,
+          "isFuture": false,
+          "onlineBetting": true,
+          "phoneBettingOnly": false,
+          "inPlay": false,
+          "goingInPlay": false,
+          "allowWin": true,
+          "allowPlace": false,
+          "allowEachWay": false,
+          "allowMulti": true,
+          "allowMultiWin": true,
+          "allowMultiPlace": false,
+          "allowMultiEachWay": false,
+          "numberOfPlaces": 0,
+          "cashOutEligibility": "Enabled",
+          "allowBundle": false,
+          "propositions": [
+            {
+              "id": "402532",
+              "name": "West Ham",
+              "returnWin": 1.8,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402532,
+              "isOpen": true,
+              "sortOrder": 1
+            },
+            {
+              "id": "402533",
+              "name": "Lyon",
+              "returnWin": 1.95,
+              "returnPlace": 0,
+              "differential": null,
+              "bettingStatus": "Open",
+              "allowPlace": false,
+              "number": 402533,
+              "isOpen": true,
+              "sortOrder": 2
+            }
+          ]
+        }
+      ],
+      "inPlay": false,
+      "goingInPlay": true,
+      "sameGame": true
+    }
+  ],
+  "betOptionPriority": [
+    "Result",
+    "To Qualify"
+  ]
+}

@@ -1,0 +1,558 @@
+{
+    "id": "6120",
+    "name": "Sports Offers",
+    "spectrumId": "6120",
+    "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers?jurisdiction=NSW",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/tournaments?jurisdiction=NSW",
+        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches?jurisdiction=NSW",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/markets?jurisdiction=NSW",
+        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/markets/all-channels?jurisdiction=NSW"
+    },
+    "tournaments": [],
+    "hasMarkets": true,
+    "matches": [
+        {
+            "id": "2SUM1707",
+            "name": "EPL 22/23 Season Offer",
+            "spectrumId": "2SUM1707",
+            "spectrumUniqueId": 1689605,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-13T13:00:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/EPL%2022%2F23%20Season%20Offer?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/EPL%2022%2F23%20Season%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/EPL%2022%2F23%20Season%20Offer/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "70255147",
+                    "name": "EPL 22/23 Season Offer",
+                    "shortName": "EPL 22/23 Season Offer",
+                    "betOption": "Sport Offer",
+                    "betOptionSpectrumId": "2693",
+                    "betOptionPriority": 9525,
+                    "marketUniqueId": 70255147,
+                    "closeTime": "2022-08-13T13:00:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "22/23 EPL Season Final Top 4 Standings",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147341",
+                            "name": "ManCity/Liv/Chels ALL Top 4",
+                            "returnWin": 3.5,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147341,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        },
+                        {
+                            "id": "147342",
+                            "name": "ManCity/Liverpool/Chelsea",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 147342,
+                            "isOpen": false,
+                            "sortOrder": 2
+                        },
+                        {
+                            "id": "147343",
+                            "name": "All finish in EPL Top 4",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 147343,
+                            "isOpen": false,
+                            "sortOrder": 3
+                        },
+                        {
+                            "id": "147344",
+                            "name": "Max bet $50. 1 per customer",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 147344,
+                            "isOpen": false,
+                            "sortOrder": 4
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "EPL_Unique",
+            "name": "EPL Sunday Offer",
+            "spectrumId": "EPL_Unique",
+            "spectrumUniqueId": 1723592,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-13T14:00:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/EPL%20Sunday%20Offer?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/EPL%20Sunday%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/EPL%20Sunday%20Offer/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71411447",
+                    "name": "EPL Sunday Offrs 14/08",
+                    "shortName": "EPL Sunday Offrs 14/08",
+                    "betOption": "Sport Offer",
+                    "betOptionSpectrumId": "2693",
+                    "betOptionPriority": 9525,
+                    "marketUniqueId": 71411447,
+                    "closeTime": "2022-08-13T14:00:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "EPL: Man City v Bournemouth 14/08",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147001",
+                            "name": "Haaland Goal 1stHalf & MCWin",
+                            "returnWin": 2.5,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147001,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        },
+                        {
+                            "id": "147002",
+                            "name": "Max bet $50. 1 per customer",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 147002,
+                            "isOpen": false,
+                            "sortOrder": 2
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "6SPO1008",
+            "name": "NRL Thursday Offer",
+            "spectrumId": "6SPO1008",
+            "spectrumUniqueId": 1719468,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-11T09:50:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/NRL%20Thursday%20Offer?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/NRL%20Thursday%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/NRL%20Thursday%20Offer/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71284012",
+                    "name": "NRL Thursday Offer",
+                    "shortName": "NRL Thursday Offer",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17230,
+                    "marketUniqueId": 71284012,
+                    "closeTime": "2022-08-11T09:55:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "NRL: Penrith v Melbourne 11/8",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147071",
+                            "name": "Kikau/Olam 1st/2nd try",
+                            "returnWin": 5,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147071,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "5SPO1108",
+            "name": "Tennis Thursday Offer",
+            "spectrumId": "5SPO1108",
+            "spectrumUniqueId": 1719477,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-11T14:00:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Tennis%20Thursday%20Offer?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Tennis%20Thursday%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Tennis%20Thursday%20Offer/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71283946",
+                    "name": "Tennis Thursday Offer",
+                    "shortName": "Tennis Thursday Offer",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17230,
+                    "marketUniqueId": 71283946,
+                    "closeTime": "2022-08-11T14:00:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "ATP Mrl. Kyrgios v DeMinaur",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147136",
+                            "name": "Kyrgios 2-0/No Tiebreak",
+                            "returnWin": 3.75,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147136,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "4SPO1108",
+            "name": "Tennis Thursday Offer 1",
+            "spectrumId": "4SPO1108",
+            "spectrumUniqueId": 1719476,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-11T02:00:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Tennis%20Thursday%20Offer%201?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Tennis%20Thursday%20Offer%201?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Tennis%20Thursday%20Offer%201/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71283945",
+                    "name": "Tennis Thursday Offer 1",
+                    "shortName": "Tennis Thursday Offer 1",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17230,
+                    "marketUniqueId": 71283945,
+                    "closeTime": "2022-08-11T14:00:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "ATP Mon: Kyrgios vs De Minaur",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147131",
+                            "name": "Kyrgios 2-0/Serve 10+ Aces",
+                            "returnWin": 3.25,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147131,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "1SPO1208",
+            "name": "Soccer Friday Offer 1",
+            "spectrumId": "1SPO1208",
+            "spectrumUniqueId": 1719483,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-12T00:30:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Soccer%20Friday%20Offer%201?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Soccer%20Friday%20Offer%201?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/Soccer%20Friday%20Offer%201/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71283952",
+                    "name": "Soccer Friday Offer 1",
+                    "shortName": "Soccer Friday Offer 1",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17230,
+                    "marketUniqueId": 71283952,
+                    "closeTime": "2022-08-12T00:30:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "CLB: Esudiantes vs Atletico PR",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147315",
+                            "name": "Estudiantes 2+Gls/Atl 1+Gls",
+                            "returnWin": 3.75,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147315,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "3SPO1108",
+            "name": "AFL Friday Offer",
+            "spectrumId": "3SPO1108",
+            "spectrumUniqueId": 1719475,
+            "competitionSpectrumId": "6120",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-11T02:00:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/AFL%20Friday%20Offer?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/AFL%20Friday%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/matches/AFL%20Friday%20Offer/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71283944",
+                    "name": "AFL Friday Offer 1",
+                    "shortName": "AFL Friday Offer 1",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17230,
+                    "marketUniqueId": 71283944,
+                    "closeTime": "2022-08-12T09:50:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "AFL: St Kilda v Brisbane 12/8",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "147126",
+                            "name": "Neale/Steele 65+ Disposals",
+                            "returnWin": 3.75,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 147126,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        }
+    ],
+    "betOptionPriority": [
+        "Sport Offer",
+        "Sport Offers"
+    ],
+    "betOptions": [
+        {
+            "name": "Sport Offer",
+            "hasFutureMarket": true,
+            "openMarketCount": 2,
+            "_links": {
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/markets?jurisdiction=NSW&betOptionName=Sport%20Offer"
+            }
+        },
+        {
+            "name": "Sport Offers",
+            "hasFutureMarket": true,
+            "openMarketCount": 5,
+            "_links": {
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Todays%20Offers/competitions/Sports%20Offers/markets?jurisdiction=NSW&betOptionName=Sport%20Offers"
+            }
+        }
+    ],
+    "betOptionGroups": null,
+    "hasFuturePredictions": true
+}

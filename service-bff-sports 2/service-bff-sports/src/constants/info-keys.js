@@ -1,0 +1,18 @@
+module.exports = {
+  infoSports: 'info:sports',
+  infoSportsNextToGo: 'info:sports:nextToGo',
+  infoSportsNextToGoMatchesMarkets: 'info:sports:nextToGo:markets',
+  infoSportsResults: 'info:sports:results',
+  infoSportsSport: 'info:sports:sport',
+  infoSportResults: 'info:sport:results',
+  infoSportCompetition: 'info:sport:competiton',
+  infoCompetitionTournament: 'info:competiton:tournament',
+  infoCompetitionMatches: 'info:competiton:matches',
+  infoCompetitionMatchesResults: 'info:competition:matches:results',
+  infoCompetitionMatch: 'info:competiton:match',
+  infoMatchMarketsResults: 'info:match:markets:results',
+  infoTournamentMatches: 'info:tournament:matches',
+  infoTournamentMatchesResults: 'info:tournament:matches:results',
+  infoTournamentMatch: 'info:tournament:match',
+  infoTournamentMatchMarketsResults: 'info:tournament:match:markets:results',
+};

@@ -1,0 +1,417 @@
+{
+    "id": "7",
+    "name": "Golf",
+    "displayName": "Golf",
+    "spectrumId": "7",
+    "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf?jurisdiction=NSW",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "competitions": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions?jurisdiction=NSW"
+    },
+    "competitions": [
+        {
+            "id": "401",
+            "name": "US PGA Tour",
+            "spectrumId": "401",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "401094",
+                    "name": "Mexico Open",
+                    "spectrumId": "401094",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/tournaments/Mexico%20Open?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/tournaments/Mexico%20Open?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/tournaments/Mexico%20Open/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/tournaments/Mexico%20Open/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20PGA%20Tour/tournaments/Mexico%20Open/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "403",
+            "name": "DP World Tour",
+            "spectrumId": "403",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "403117",
+                    "name": "Catalunya Championship",
+                    "spectrumId": "403117",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/tournaments/Catalunya%20Championship?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/tournaments/Catalunya%20Championship?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/tournaments/Catalunya%20Championship/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/tournaments/Catalunya%20Championship/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/DP%20World%20Tour/tournaments/Catalunya%20Championship/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "418",
+            "name": "Ryder Cup",
+            "spectrumId": "418",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "418001",
+                    "name": "Ryder Cup",
+                    "spectrumId": "418001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/tournaments/Ryder%20Cup?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/tournaments/Ryder%20Cup?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/tournaments/Ryder%20Cup/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/tournaments/Ryder%20Cup/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Ryder%20Cup/tournaments/Ryder%20Cup/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "407",
+            "name": "US LPGA Tour",
+            "spectrumId": "407",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "407092",
+                    "name": "Palos Verdes Championship",
+                    "spectrumId": "407092",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/tournaments/Palos%20Verdes%20Championship?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/tournaments/Palos%20Verdes%20Championship?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/tournaments/Palos%20Verdes%20Championship/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/tournaments/Palos%20Verdes%20Championship/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20LPGA%20Tour/tournaments/Palos%20Verdes%20Championship/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "410",
+            "name": "Senior PGA Tour",
+            "spectrumId": "410",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "410021",
+                    "name": "Insperity Invitational",
+                    "spectrumId": "410021",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/tournaments/Insperity%20Invitational?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/tournaments/Insperity%20Invitational?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/tournaments/Insperity%20Invitational/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/tournaments/Insperity%20Invitational/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Senior%20PGA%20Tour/tournaments/Insperity%20Invitational/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "416",
+            "name": "PGA Championship",
+            "spectrumId": "416",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "416001",
+                    "name": "PGA Championship",
+                    "spectrumId": "416001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/tournaments/PGA%20Championship?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/tournaments/PGA%20Championship?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/tournaments/PGA%20Championship/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/tournaments/PGA%20Championship/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/PGA%20Championship/tournaments/PGA%20Championship/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "413",
+            "name": "British Open",
+            "spectrumId": "413",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "413001",
+                    "name": "British Open",
+                    "spectrumId": "413001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/tournaments/British%20Open?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/tournaments/British%20Open?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/tournaments/British%20Open/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/tournaments/British%20Open/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/British%20Open/tournaments/British%20Open/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "415",
+            "name": "US Open",
+            "spectrumId": "415",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "415001",
+                    "name": "US Open",
+                    "spectrumId": "415001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/tournaments/US%20Open?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/tournaments/US%20Open?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/tournaments/US%20Open/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/tournaments/US%20Open/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Open/tournaments/US%20Open/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "414",
+            "name": "US Masters",
+            "spectrumId": "414",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "414001",
+                    "name": "US Masters",
+                    "spectrumId": "414001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/tournaments/US%20Masters?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/tournaments/US%20Masters?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/tournaments/US%20Masters/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/tournaments/US%20Masters/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/US%20Masters/tournaments/US%20Masters/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "417",
+            "name": "Presidents Cup",
+            "spectrumId": "417",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "417001",
+                    "name": "Presidents Cup",
+                    "spectrumId": "417001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/tournaments/Presidents%20Cup?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/tournaments/Presidents%20Cup?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/tournaments/Presidents%20Cup/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/tournaments/Presidents%20Cup/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Presidents%20Cup/tournaments/Presidents%20Cup/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "445",
+            "name": "Golf Futures",
+            "spectrumId": "445",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "445002",
+                    "name": "European Golf Futures",
+                    "spectrumId": "445002",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/European%20Golf%20Futures?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/European%20Golf%20Futures?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/European%20Golf%20Futures/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/European%20Golf%20Futures/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/European%20Golf%20Futures/markets/all-channels?jurisdiction=NSW"
+                    }
+                },
+                {
+                    "id": "445001",
+                    "name": "US Golf Futures",
+                    "spectrumId": "445001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/US%20Golf%20Futures?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/US%20Golf%20Futures?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/US%20Golf%20Futures/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/US%20Golf%20Futures/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Golf%20Futures/tournaments/US%20Golf%20Futures/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "441",
+            "name": "To Win a Major",
+            "spectrumId": "441",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "441001",
+                    "name": "To Win a Major",
+                    "spectrumId": "441001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/tournaments/To%20Win%20a%20Major?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/tournaments/To%20Win%20a%20Major?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/tournaments/To%20Win%20a%20Major/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/tournaments/To%20Win%20a%20Major/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/To%20Win%20a%20Major/tournaments/To%20Win%20a%20Major/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "451",
+            "name": "2022 Player Offers",
+            "spectrumId": "451",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "451010",
+                    "name": "Cameron Smith Majors Offer",
+                    "spectrumId": "451010",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/tournaments/Cameron%20Smith%20Majors%20Offer?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/tournaments/Cameron%20Smith%20Majors%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/tournaments/Cameron%20Smith%20Majors%20Offer/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/tournaments/Cameron%20Smith%20Majors%20Offer/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/2022%20Player%20Offers/tournaments/Cameron%20Smith%20Majors%20Offer/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        },
+        {
+            "id": "430",
+            "name": "Number of Major Wins",
+            "spectrumId": "430",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/tournaments?jurisdiction=NSW",
+                "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/matches?jurisdiction=NSW",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/markets?jurisdiction=NSW",
+                "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/markets/all-channels?jurisdiction=NSW"
+            },
+            "tournaments": [
+                {
+                    "id": "430001",
+                    "name": "Number of Major Wins",
+                    "spectrumId": "430001",
+                    "_links": {
+                        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/tournaments/Number%20of%20Major%20Wins?jurisdiction=NSW",
+                        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/tournaments/Number%20of%20Major%20Wins?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/tournaments/Number%20of%20Major%20Wins/matches?jurisdiction=NSW",
+                        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/tournaments/Number%20of%20Major%20Wins/markets?jurisdiction=NSW",
+                        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Golf/competitions/Number%20of%20Major%20Wins/tournaments/Number%20of%20Major%20Wins/markets/all-channels?jurisdiction=NSW"
+                    }
+                }
+            ],
+            "hasMarkets": false
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "4",
+  "name": "Basketball",
+  "displayName": "Basketball",
+  "spectrumId": "4",
+  "_links": {
+    "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball?jurisdiction=QLD",
+    "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+    "competitions": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions?jurisdiction=QLD"
+  },
+  "competitions": [
+    {
+      "id": "1001",
+      "name": "NBA",
+      "spectrumId": "1001",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBA?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBA?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBA/tournaments?jurisdiction=QLD",
+        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBA/matches?jurisdiction=QLD",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBA/markets?jurisdiction=QLD",
+        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBA/markets/all-channels?jurisdiction=QLD"
+      },
+      "tournaments": [],
+      "hasMarkets": true,
+      "sameGame": true
+    },
+    {
+      "id": "1003",
+      "name": "NBL",
+      "spectrumId": "1003",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBL?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBL?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBL/tournaments?jurisdiction=QLD",
+        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBL/matches?jurisdiction=QLD",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBL/markets?jurisdiction=QLD",
+        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NBL/markets/all-channels?jurisdiction=QLD"
+      },
+      "tournaments": [],
+      "hasMarkets": true,
+      "sameGame": true
+    },
+    {
+      "id": "1011",
+      "name": "NCAA Basketball",
+      "spectrumId": "1011",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NCAA%20Basketball?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NCAA%20Basketball?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NCAA%20Basketball/tournaments?jurisdiction=QLD",
+        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NCAA%20Basketball/matches?jurisdiction=QLD",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NCAA%20Basketball/markets?jurisdiction=QLD",
+        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/NCAA%20Basketball/markets/all-channels?jurisdiction=QLD"
+      },
+      "tournaments": [],
+      "hasMarkets": true
+    }
+  ],
+  "sameGame": true
+}

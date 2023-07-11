@@ -1,0 +1,210 @@
+{
+  "type": "sports.match.stats",
+  "data": [
+    {
+      "type": "app.sports.stats.filters",
+      "data": [
+        {
+          "name": "Lineups",
+          "type": "app.statsCentre.lineups",
+          "isSelected": false
+        },
+        {
+          "name": "Matchup",
+          "type": "app.statsCentre.matchup",
+          "isSelected": true
+        },
+        {
+          "name": "Ladder",
+          "type": "app.statsCentre.table",
+          "isSelected": false
+        }
+      ]
+    },
+    {
+      "type": "sports.stats.matchup",
+      "data": [
+        {
+          "type": "sports.stats.matchup.teams",
+          "data": [
+            {
+              "type": "sports.stats.matchup.teams.h2h",
+              "data": [
+                {
+                  "title": "Head-to-Head",
+                  "showHideText": "Show more",
+                  "totals": [
+                    {
+                      "title": "MEL Wins",
+                      "value": "18",
+                      "image": "mel.png"
+                    },
+                    {
+                      "title": "Games",
+                      "value": "28"
+                    },
+                    {
+                      "title": "GEE Wins",
+                      "value": "10",
+                      "image": "gee.png"
+                    }
+                  ],
+                  "matches": [
+                    {
+                      "title": "Week 21",
+                      "matchDate": "2022-01-22T02:00:00",
+                      "subtitle": "At the soccer place",
+                      "homeTeamName": "Arsenal",
+                      "homeImage": "https://metadata.beta.tab.com.au/icons/EPL%20logos/Arsenal.svg",
+                      "homeValue": "1",
+                      "awayTeamName": "Brentford",
+                      "awayImage": "https://metadata.beta.tab.com.au/icons/EPL%20logos/Brentford.svg",
+                      "awayValue": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "sports.stats.matchup.teams.recent",
+              "data": [
+                {
+                  "title": "Recent Matches",
+                  "showHideText": "Show more",
+                  "homeImage": "mel.png",
+                  "awayImage": "gee.png",
+                  "results": [
+                    {
+                      "home": {
+                        "title": "Rd 20 - Home",
+                        "win": true,
+                        "loss": false,
+                        "draw": false,
+                        "opponentName": "ESS",
+                        "opponentImage": "ess.png",
+                        "value": "122-97"
+                      },
+                      "away": {
+                        "title": "Rd 20 - Away",
+                        "win": true,
+                        "loss": false,
+                        "draw": false,
+                        "opponentName": "CAR",
+                        "opponentImage": "car.png",
+                        "value": "70-89"
+                      }
+                    },
+                    {
+                      "home": {
+                        "title": "Rd 19 - Away",
+                        "win": true,
+                        "loss": false,
+                        "draw": false,
+                        "opponentName": "WB",
+                        "opponentImage": "wb.png",
+                        "value": "81-111"
+                      },
+                      "away": {
+                        "title": "Rd 19 - Away",
+                        "win": true,
+                        "loss": false,
+                        "draw": false,
+                        "opponentName": "GCS",
+                        "opponentImage": "gcs.png",
+                        "value": "39-142"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sports.stats.matchup.players",
+          "data": [
+            {
+              "title": "Scoring Leaders",
+              "data": [
+                {
+                  "title": "Goals",
+                  "data": [
+                    {
+                      "image": "gee.png",
+                      "name": "Jeremy Cameron",
+                      "info": "F",
+                      "value": "29.7"
+                    },
+                    {
+                      "image": "gee.png",
+                      "name": "Tom Hawkins",
+                      "info": "F",
+                      "value": "27.3"
+                    },
+                    {
+                      "image": "mel.png",
+                      "name": "Bailey Fritsch",
+                      "info": "F",
+                      "value": "27.0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Accuracy",
+                  "data": [
+                    {
+                      "image": "gee.png",
+                      "name": "Tom Hawkins",
+                      "info": "F",
+                      "value": "29.7"
+                    },
+                    {
+                      "image": "mel.png",
+                      "name": "Bailey Fritsch",
+                      "info": "HF",
+                      "value": "27.3"
+                    },
+                    {
+                      "image": "gee.png",
+                      "name": "Gryan Miers",
+                      "info": "F",
+                      "value": "27.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Possession Leaders",
+              "data": [
+                {
+                  "title": "Contested Possessions",
+                  "data": [
+                    {
+                      "image": "mel.png",
+                      "name": "Christian Petracca",
+                      "info": "M",
+                      "value": "29.7"
+                    },
+                    {
+                      "image": "mel.png",
+                      "name": "Clayton Oliver",
+                      "info": "M",
+                      "value": "27.3"
+                    },
+                    {
+                      "image": "gee.png",
+                      "name": "Patrick Dangerfield",
+                      "info": "M",
+                      "value": "27.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

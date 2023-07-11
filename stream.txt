@@ -1,0 +1,57 @@
+first read notes in my copy of streaming chapter 
+
+input stream ka event 'end' implicit emit hota h jb input stream m data kux bacha ni hota and ye output wali piping rok deta h if any
+output stream  m hm manually  outputstream.end() kr skte h stream ko band yani input se unpipe krne k lie, usi kaam ka ek alternate ye bhi h ki hm output stream se finish emit karwade jo ki implicit output stream ka end call krdeta h 
+jese output stream m finish event hota h pr input stream m finish event nhi hota or uska manually end bhi fire krne se kux nhi hoga jb tk unpipe ka kre output stream se jse inputstream.unpipe(outputstream) outputstream m data jata rhega jb tk buffer end ni ho jata isliye .end input ka fire kro or uske 'on' m explicityly unpipe kro input stream k case  m pr output stream k finish event s piping apne app ruk  jati h 
+
+eg:-
+  const command = ffmpeg()
+  command.input((getIndianDate().getHours() >= 18 && getIndianDate().getHours() <=5 )?imgNigPath:imgMorPath)
+    .inputOptions(['-ignore_loop', '0'])// if want a img instead of gif replace this inputOPtions with loop()
+    .input(liveGurbaniStream) //it goes to event loop and when the on('data') event fires it converts to video and writes to output path and the process continues until the inputStream 
+    .audioCodec('aac')
+    .audioBitrate('128k') //higher bitrate for higher quality
+    .videoCodec('libx264')
+    .outputOptions('-crf', '28', '-preset', 'fast', '-movflags', '+faststart')
+    .output(outputPath)
+    .on('end', function () {
+      command.kill('SIGTERM');//used command.kill bcoz when end event is fired it is not ending writing to output path ,it still writes to output path after end ,so have to kil the process
+      setTimeout(() => {
+        try {
+          console.log('upload to youtube started for', outputPath)
+         // uploadToYoutube(outputPath)
+        } catch (err) {
+          console.log(err)
+        }
+      }, 59000);
+    })
+    .on('error', (err) => console.log('An error occurred: ' + err.message))
+    .run();
+
+iske case m command event loop m jaega and jese hi input(liveGurbaniStream) jo ki ek read stream h wo chlegi tb wo utna chunk output path m pipe krdega yani jese hi chunk of data aaega and liveGurbaniStream ka on('data') chunk chlega and wo internally wo chunk output path m pipe kr dega but jb on data chlega utne sme k lie to usko execute hone k lie single thread m ana hi padega 
+
+
+question:-why if we pipe readable stream using fs.createreadstream to res ,but we see that file(img/audio/video) loads in one go at cient instead of streaming,as we know fs.createreadstream emits chunks of data ,then why do we see file loaded in one go,why do we also have to set content lenght header along with readable stream to actually stream data in packets at client
+Ans
+You're right that the createReadStream method in Node.js creates a readable stream that emits chunks of data. However, the important thing to note is that how these chunks are sent to the client depends on how you handle the response in your code.
+
+In the case where you do not set the Content-Length header, the server will not send the response until the entire stream is consumed. This means that the entire audio file will be read from disk into memory and then sent in one go when the stream is fully consumed.
+
+On the other hand, if you set the Content-Length header, the client knows how much data to expect and will start processing the response as soon as it starts receiving data from the server. This means that the server can start sending chunks of data as they become available, rather than waiting for the entire stream to be consumed before sending the response.
+
+So, to answer your question, while the readable stream emits chunks of data, the way in which these chunks are sent to the client depends on how you handle the response in your code. If you don't set the Content-Length header, the server will send the entire response in one go when the stream is fully consumed, effectively sending the response in one go.
+
+However, you are also correct that in some cases, the file may appear to be loaded in one go on the client side. This can happen if the client receives the entire response in a single packet, which can occur if the response is small enough to fit into a single TCP packet. When this happens, the client will receive the entire response and it will appear as if the file has been loaded in one go.
+
+To ensure that the file is streamed in smaller packets to the client, it is necessary to set the Content-Length header along with the response. By setting the Content-Length header to the size of the file, the server informs the client of the total size of the response, and the client can then use this information to display a progress bar or estimate the time remaining for the download.
+
+In addition, setting the Content-Length header can also help the client to properly handle the response, especially in cases where the client needs to allocate memory or resources to process the response. By knowing the total size of the response, the client can allocate the necessary resources upfront and avoid memory or resource issues.
+
+So, while the file data is streamed in smaller chunks from the server, setting the Content-Length header is still necessary to ensure that the client is informed of the total size of the response and that the response is properly handled.
+
+
+When you pipe a readable stream created by fs.createReadStream to a response object (res in this case), the stream is automatically paused until the client starts consuming the data. Once the client starts consuming the data, the stream resumes and starts emitting chunks of data. However, if the Content-Length header is not set, the client does not know the size of the data being sent and therefore assumes that the data is being sent in one go. As a result, the client buffers the entire response in memory before processing it, effectively loading the file in one go.
+
+On the other hand, if you set the Content-Length header, the client knows the size of the data being sent and can start processing the response as soon as it starts receiving data from the server. This allows the server to start sending chunks of data as they become available, rather than waiting for the entire stream to be consumed before sending the response.
+
+So, to actually stream data in packets at the client, you need to set the Content-Length header along with the readable stream. This allows the client to process the response in smaller chunks and therefore stream the data in packets. If you don't set the Content-Length header, the client will assume that the entire response is being sent in one go and will buffer the entire response in memory before processing it.

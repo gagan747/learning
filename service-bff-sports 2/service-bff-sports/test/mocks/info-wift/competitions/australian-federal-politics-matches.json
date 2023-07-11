@@ -1,0 +1,27 @@
+{
+  "matches": [
+    {
+      "id": "2022_Feder",
+      "name": "Next Federal Election",
+      "spectrumId": "2022_Feder",
+      "spectrumUniqueId": 718963,
+      "competitionSpectrumId": "5102",
+      "round": null,
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-05-21T07:00:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Politics/competitions/Australian%20Federal%20Politics/matches/Next%20Federal%20Election?jurisdiction=NSW",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Politics/competitions/Australian%20Federal%20Politics/matches/Next%20Federal%20Election?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Politics/competitions/Australian%20Federal%20Politics/matches/Next%20Federal%20Election/markets?jurisdiction=NSW"
+      },
+      "contestants": [],
+      "competitors": [],
+      "openMarketCount": 172,
+      "futureMarketCount": 172,
+      "nonFutureMarketCount": 0,
+      "inPlay": false,
+      "goingInPlay": false
+    }
+  ]
+}

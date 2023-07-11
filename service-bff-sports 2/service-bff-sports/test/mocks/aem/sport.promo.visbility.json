@@ -1,0 +1,120 @@
+{
+  "html": "",
+  "items": [
+    {
+      "item": {
+        "authenticationStatus": "logged-in,logged-out",
+        "jurisdiction": "vic,nsw",
+        "bannerImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/backgrounds/3655_PromoVis_Owned_1440x168_NFL.jpeg",
+        "learnMoreImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/8358_AFL%2B2021_ATL%2BOffers_SGM_All%2BGames__Owned_PromoTile_462x218.jpeg",
+        "inVenueOnly": "False",
+        "startDate": "2022-02-20",
+        "endDate": "2022-11-30",
+        "sportType": "Basketball",
+        "competition": "NCAA Basketball",
+        "marketType": "Head to Head",
+        "matchIds": "GSWvBos",
+        "promoTitle": "NCAA Basketball",
+        "betNowText": "Bet Now",
+        "promoDetails": "4+ Legs, 1 Fails",
+        "learnMoreTitle": "NFL Head to Head Offer",
+        "learnMoreDetails": "Bigchange (Manish)Learn More - This is the Thoroughbred,&nbsp; season 1,2,3,8,9sdfasdfsa~!@#$%^&amp;*()_+_}|:?&lt;&gt;,../;']]\\=-`1adsfasdfaasTips:Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.",
+        "termsAndCondition": "Tips:Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.&nbsp;<b>Does Termly's legal terms generator cover all contract and consumer protection laws?</b><br>&nbsp;Termly’s legal terms generator is designed to help you comply with contract laws. While our legal terms generator may help you comply with other similarly drafted laws, it is not specifically written to comply with the laws of any other country. We recommend consulting with a local attorney for any country not yet specifically included in our current offerings.<br><br>1. *Excludes WA &amp; SA residents.2. Available online to TAB Account holders only. Promo T&amp;Cs apply.3. Min $1.10 odds per leg. Combined Multi of $1.50.4. Available once per person on first qualifying Multi placed online on each of Rounds 1 to 4.5. Bonus Bet is equal to stake up to $50. No Futures, bonus, cash out, partial cash out or live bets qualify.Help is close at hand. Call Gambler’s Help, GambleAware or the ACT Gambling Counselling &amp; Support Service on 1800 858 858 www.gambleaware.nsw.gov.au or www.gamblinghelponline.org.au. Don’t let the game play you. Stay in control. Gamble Responsibly."
+      },
+      "name": "sportspromovisibility",
+      "type": "tabcorpaem/components/content/contentfragment/v1/contentfragment",
+      "path": "/content/experience-fragments/tab-digital/components/sports-promo-visibility/master"
+    },
+    {
+      "item": {
+        "authenticationStatus": "logged-in,logged-out",
+        "jurisdiction": "nsw,qld",
+        "bannerImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/backgrounds/3655_PromoVis_Owned_1440x168_Basketball.jpeg",
+        "learnMoreImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/8358_AFL%2B2021_ATL%2BOffers_SGM_All%2BGames__Owned_PromoTile_462x218.jpeg",
+        "startDate": "2022-02-20",
+        "endDate": "2022-11-30",
+        "sportType": "Basketball",
+        "competition": "NCAA Basketball",
+        "marketType": "Head to Head",
+        "promoTitle": "NBA Promo",
+        "betNowText": "Bet Now",
+        "promoDetails": "NBA - September 4+ Legs, 1 Fails",
+        "learnMoreTitle": "NBA - 29 July MLB H2H Multi Offer",
+        "learnMoreDetails": "Bigchange (Manish)Learn More - This is the Thoroughbred,&nbsp; season 1,2,3,8,9sdfasdfsa~!@#$%^&amp;*()_+_}|:?&lt;&gt;,../;']]\\=-`1adsfasdfaasTips:<h3>What are legal terms?</h3>Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.",
+        "termsAndCondition": "<br>Tips:<h3>What are legal terms?</h3>Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.<b> Does Termly's legal terms generator cover all contract and consumer protection laws?</b><br>Termly’s legal terms generator is designed to help you comply with contract laws. While our legal terms generator may help you comply with other similarly drafted laws, it is not specifically written to comply with the laws of any other country. We recommend consulting with a local attorney for any country not yet specifically included in our current offerings.<br><br><br>1. *Excludes WA &amp; SA residents.2. Available online to TAB Account holders only. Promo T&amp;Cs apply.3. Min $1.10 odds per leg. Combined Multi of $1.50.4. Available once per person on first qualifying Multi placed online on each of Rounds 1 to 4.5. Bonus Bet is equal to stake up to $50. No Futures, bonus, cash out, partial cash out or live bets qualify.&nbsp;Help is close at hand. Call Gambler’s Help, GambleAware or the ACT Gambling Counselling &amp; Support Service on 1800 858 858 www.gambleaware.nsw.gov.au or www.gamblinghelponline.org.au. Don’t let the game play you. Stay in control. Gamble Responsibly."
+      },
+      "name": "sportspromovisibility",
+      "type": "tabcorpaem/components/content/contentfragment/v1/contentfragment"
+    },
+    {
+      "item": {
+        "authenticationStatus": "logged-in",
+        "jurisdiction": "nt,sa",
+        "bannerImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/backgrounds/3655_PromoVis_Owned_1440x168_Basketball.jpeg",
+        "learnMoreImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/8358_AFL%2B2021_ATL%2BOffers_SGM_All%2BGames__Owned_PromoTile_462x218.jpeg",
+        "startDate": "2022-02-20",
+        "endDate": "2022-10-30",
+        "sportType": "Basketball",
+        "competition": "NCAA Basketball",
+        "marketType": "Head to Head",
+        "promoTitle": "NBA Promo",
+        "betNowText": "Bet Now",
+        "promoDetails": "Logged In only",
+        "learnMoreTitle": "NBA - 29 July MLB H2H Multi Offer",
+        "learnMoreDetails": "Bigchange (Manish)Learn More - This is the Thoroughbred,&nbsp; season 1,2,3,8,9sdfasdfsa~!@#$%^&amp;*()_+_}|:?&lt;&gt;,../;']]\\=-`1adsfasdfaasTips:<h3>What are legal terms?</h3>Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.",
+        "termsAndCondition": "<br>Tips:<h3>What are legal terms?</h3>Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.<b> Does Termly's legal terms generator cover all contract and consumer protection laws?</b><br>Termly’s legal terms generator is designed to help you comply with contract laws. While our legal terms generator may help you comply with other similarly drafted laws, it is not specifically written to comply with the laws of any other country. We recommend consulting with a local attorney for any country not yet specifically included in our current offerings.<br><br><br>1. *Excludes WA &amp; SA residents.2. Available online to TAB Account holders only. Promo T&amp;Cs apply.3. Min $1.10 odds per leg. Combined Multi of $1.50.4. Available once per person on first qualifying Multi placed online on each of Rounds 1 to 4.5. Bonus Bet is equal to stake up to $50. No Futures, bonus, cash out, partial cash out or live bets qualify.&nbsp;Help is close at hand. Call Gambler’s Help, GambleAware or the ACT Gambling Counselling &amp; Support Service on 1800 858 858 www.gambleaware.nsw.gov.au or www.gamblinghelponline.org.au. Don’t let the game play you. Stay in control. Gamble Responsibly."
+      },
+      "name": "sportspromovisibility",
+      "type": "tabcorpaem/components/content/contentfragment/v1/contentfragment"
+    },
+    {
+      "item": {
+        "authenticationStatus": "logged-in,logged-out",
+        "jurisdiction": "sa",
+        "bannerImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/backgrounds/3655_PromoVis_Owned_1440x168_NFL.jpeg",
+        "learnMoreImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/8358_AFL%2B2021_ATL%2BOffers_SGM_All%2BGames__Owned_PromoTile_462x218.jpeg",
+        "inVenueOnly": "False",
+        "startDate": "2022-02-20",
+        "endDate": "2022-11-30",
+        "sportType": "Basketball",
+        "competition": "NCAA Basketball",
+        "marketType": "Head to Head",
+        "matchIds": "GSWvBos",
+        "promoTitle": "NCAA Basketball",
+        "betNowText": "Bet Now",
+        "promoDetails": "4+ Legs, 1 Fails",
+        "learnMoreTitle": "NFL Head to Head Offer",
+        "learnMoreDetails": "Bigchange (Manish)Learn More - This is the Thoroughbred,&nbsp; season 1,2,3,8,9sdfasdfsa~!@#$%^&amp;*()_+_}|:?&lt;&gt;,../;']]\\=-`1adsfasdfaasTips:Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.",
+        "termsAndCondition": "Tips:Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.&nbsp;<b>Does Termly's legal terms generator cover all contract and consumer protection laws?</b><br>&nbsp;Termly’s legal terms generator is designed to help you comply with contract laws. While our legal terms generator may help you comply with other similarly drafted laws, it is not specifically written to comply with the laws of any other country. We recommend consulting with a local attorney for any country not yet specifically included in our current offerings.<br><br>1. *Excludes WA &amp; SA residents.2. Available online to TAB Account holders only. Promo T&amp;Cs apply.3. Min $1.10 odds per leg. Combined Multi of $1.50.4. Available once per person on first qualifying Multi placed online on each of Rounds 1 to 4.5. Bonus Bet is equal to stake up to $50. No Futures, bonus, cash out, partial cash out or live bets qualify.Help is close at hand. Call Gambler’s Help, GambleAware or the ACT Gambling Counselling &amp; Support Service on 1800 858 858 www.gambleaware.nsw.gov.au or www.gamblinghelponline.org.au. Don’t let the game play you. Stay in control. Gamble Responsibly."
+      },
+      "name": "sportspromovisibility",
+      "type": "tabcorpaem/components/content/contentfragment/v1/contentfragment",
+      "path": "/content/experience-fragments/tab-digital/components/sports-promo-visibility/master"
+    },
+    {
+      "item": {
+        "authenticationStatus": "logged-in,logged-out",
+        "jurisdiction": "sa",
+        "bannerImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/backgrounds/3655_PromoVis_Owned_1440x168_NFL.jpeg",
+        "learnMoreImage": "https://congo.cmsapi.tab.com.au/content/dam/tab-digital/job-number---campaign-name/owned/promo-visibility/8358_AFL%2B2021_ATL%2BOffers_SGM_All%2BGames__Owned_PromoTile_462x218.jpeg",
+        "inVenueOnly": "False",
+        "startDate": "2022-02-20",
+        "endDate": "2022-11-30",
+        "sportType": "Basketball",
+        "competition": "NCAA Basketball",
+        "marketType": "Head to Head",
+        "matchIds": "GSWvBos",
+        "promoTitle": "NCAA Basketball",
+        "betNowText": "Bet Now",
+        "promoDetails": "Special 4+ Legs, 1 Fails",
+        "learnMoreTitle": "Special NFL Head to Head Offer",
+        "learnMoreDetails": "Bigchange (Manish)Learn More - This is the Thoroughbred,&nbsp; season 1,2,3,8,9sdfasdfsa~!@#$%^&amp;*()_+_}|:?&lt;&gt;,../;']]\\=-`1adsfasdfaasTips:Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.",
+        "termsAndCondition": "Tips:Legal terms are an agreement between you and your users. Legal terms establish the rights and responsibilities of both parties. Those rights and responsibilities include any rules that users must agree to when using your website or mobile app.&nbsp;<b>Does Termly's legal terms generator cover all contract and consumer protection laws?</b><br>&nbsp;Termly’s legal terms generator is designed to help you comply with contract laws. While our legal terms generator may help you comply with other similarly drafted laws, it is not specifically written to comply with the laws of any other country. We recommend consulting with a local attorney for any country not yet specifically included in our current offerings.<br><br>1. *Excludes WA &amp; SA residents.2. Available online to TAB Account holders only. Promo T&amp;Cs apply.3. Min $1.10 odds per leg. Combined Multi of $1.50.4. Available once per person on first qualifying Multi placed online on each of Rounds 1 to 4.5. Bonus Bet is equal to stake up to $50. No Futures, bonus, cash out, partial cash out or live bets qualify.Help is close at hand. Call Gambler’s Help, GambleAware or the ACT Gambling Counselling &amp; Support Service on 1800 858 858 www.gambleaware.nsw.gov.au or www.gamblinghelponline.org.au. Don’t let the game play you. Stay in control. Gamble Responsibly."
+      },
+      "name": "sportspromovisibility",
+      "type": "tabcorpaem/components/content/contentfragment/v1/contentfragment",
+      "path": "/content/experience-fragments/tab-digital/components/sports-promo-visibility/master"
+    }
+  ],
+  "size": 3
+}

@@ -125,6 +125,7 @@ Therefore, if you want to handle a binary file response from an Express server u
   return newObj
 }
 
+*imp------>
 
 function meow (){
     return new Promise((res,rej)=>{
@@ -136,8 +137,17 @@ function meow (){
 
 
 async function ghi(){
+    const g = await meow()
+    console.log('after  await ',g)
+}
+ghi()
+
+//output hello //after 1 sec joki pata hi tha
+what if -->
+async function ghi(){
     const g = await meow().then(console.log).catch(()=>{})
     console.log('after  await ',g)
 }
 ghi()
 
+tb await jo laga h wo then or catch (joki ek promise instance return krte  h) uspe lagega yani jb meow() resolve ho jaega tb then chlega and wo jo return krega wo await ko as a resolved promise milega, or agr then or catch ne kux return nhi kiya to undefined as a resolved promise await ke left side ko milega or agr await lagae hi na to left hand side ko console kraega to promise pending dikhaega yani then or catch jb lge hote h to promise pending return krte h and jb then then or catch chl jate h and jo return krte h agr uske age then ki nai chaining nhi h (yani then ek promisee instance return krta h tabhi to dustra then usko pakad skta h ) to await usko as a resolved promise return krega left hand side ho or haan agr catch se kux return hora h to bhi await ko as a resolved promise milega ,hme explicitly reject krna padhega catch se agr await k left hand side ko nhi dena h to ya to throw error krdo catch se or agr explicitly throw ya reject karwaenge to jo await kisi try catch m wrap hoga to us catch m jaega

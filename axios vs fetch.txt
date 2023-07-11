@@ -1,0 +1,59 @@
+if the status code is 404 do axios rejects the promise??
+Yes, if the status code of the response is a 4xx or 5xx error, axios will reject the promise returned by the request. This means that the catch block of the try...catch statement will be executed with the error object as its parameter.
+
+Here's an example:
+
+vbnet
+Copy code
+try {
+  const response = await axios({
+    url,
+    method: 'GET',
+    responseType: 'arraybuffer'
+  });
+
+  // Handle successful response here
+} catch (error) {
+  // Handle error here
+  console.error(error);
+
+  if (error.response && error.response.status === 404) {
+    console.error('Not found');
+  }
+}
+In this example, the catch block will be executed if there is any error, including a 404 error. The error object will contain information about the error, including the response object in the response property.
+
+By checking the status code of the response (error.response.status), you can determine the specific error that occurred. In this case, if the status code is 404, the code will log "Not found" to the console as an additional error-handling step.
+
+
+
+
+Gagan singh
+but fetch does not rejects promise with status code 404 
+You are correct that fetch does not reject the Promise when the status code is a 4xx or 5xx error, unlike Axios.
+
+In fetch, the Promise returned by the request will only reject if there is a network error or a CORS policy violation. This means that you will need to check the ok property of the response object to determine if the request was successful or not.
+
+Here's an example of how to handle errors with fetch:
+
+javascript
+Copy code
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.arrayBuffer();
+  })
+  .then(arrayBuffer => {
+    // Handle successful response here
+  })
+  .catch(error => {
+    // Handle error here
+    console.error(error);
+  });
+In this example, the fetch function is used to make the request. The response is then checked to see if it is ok. If it is not ok, an error is thrown using the throw keyword, which will cause the Promise to be rejected. If the response is ok, the arrayBuffer() method is called on the response to convert it to an array buffer.
+
+In the catch block, you can handle the error in any way you like. For example, you could log the error message to the console, display an error message to the user, or perform some other error-handling logic.
+
+By checking the ok property of the response object, you can determine if the request was successful or not and handle errors appropriately.

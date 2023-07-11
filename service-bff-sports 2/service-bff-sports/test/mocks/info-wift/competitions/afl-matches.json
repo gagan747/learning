@@ -1,0 +1,201 @@
+{
+  "matches": [
+    {
+      "id": "WBdvEss",
+      "name": "Wst Bulldogs v Essendon",
+      "spectrumId": "WBdvEss",
+      "spectrumUniqueId": 1603705,
+      "competitionSpectrumId": "102",
+      "round": "7",
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-05-01T05:20:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Wst%20Bulldogs%20v%20Essendon?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Wst%20Bulldogs%20v%20Essendon?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Wst%20Bulldogs%20v%20Essendon/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "Wst Bulldogs",
+          "position": "HOME",
+          "isHome": true,
+          "image": [
+            {
+              "size": "svg",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Western%20Bulldogs.svg"
+            },
+            {
+              "size": "xxhdpi",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Western%20Bulldogs_xxhdpi.png"
+            },
+            {
+              "size": "2x",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Western%20Bulldogs%402x.png"
+            }
+          ]
+        },
+        {
+          "name": "Essendon",
+          "position": "AWAY",
+          "isHome": false,
+          "image": [
+            {
+              "size": "svg",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Essendon.svg"
+            },
+            {
+              "size": "xxhdpi",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Essendon_xxhdpi.png"
+            },
+            {
+              "size": "2x",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Essendon%402x.png"
+            }
+          ]
+        }
+      ],
+      "competitors": [
+        "Wst Bulldogs",
+        "Essendon"
+      ],
+      "openMarketCount": 169,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 169,
+      "inPlay": false,
+      "goingInPlay": true,
+      "sameGame": true
+    },
+    {
+      "id": "SydvBrs",
+      "name": "Sydney v Brisbane",
+      "spectrumId": "SydvBrs",
+      "spectrumUniqueId": 1603706,
+      "competitionSpectrumId": "102",
+      "round": "7",
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-05-01T06:40:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Sydney%20v%20Brisbane?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Sydney%20v%20Brisbane?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Sydney%20v%20Brisbane/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "Sydney",
+          "position": "HOME",
+          "isHome": true,
+          "image": [
+            {
+              "size": "svg",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Sydney%20Swans.svg"
+            },
+            {
+              "size": "xxhdpi",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Sydney%20Swans_xxhdpi.png"
+            },
+            {
+              "size": "2x",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Sydney%20Swans%402x.png"
+            }
+          ]
+        },
+        {
+          "name": "Brisbane",
+          "position": "AWAY",
+          "isHome": false,
+          "image": [
+            {
+              "size": "svg",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Brisbane%20Lions.svg"
+            },
+            {
+              "size": "xxhdpi",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Brisbane%20Lions_xxhdpi.png"
+            },
+            {
+              "size": "2x",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Brisbane%20Lions%402x.png"
+            }
+          ]
+        }
+      ],
+      "competitors": [
+        "Sydney",
+        "Brisbane"
+      ],
+      "openMarketCount": 113,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 113,
+      "inPlay": false,
+      "goingInPlay": true,
+      "sameGame": true
+    },
+    {
+      "id": "RchvCol",
+      "name": "Richmond v Collingwood",
+      "spectrumId": "RchvCol",
+      "spectrumUniqueId": 1611046,
+      "competitionSpectrumId": "102",
+      "round": "8",
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2022-05-07T03:45:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Richmond%20v%20Collingwood?jurisdiction=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Richmond%20v%20Collingwood?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/AFL%20Football/competitions/AFL/matches/Richmond%20v%20Collingwood/markets?jurisdiction=QLD"
+      },
+      "contestants": [
+        {
+          "name": "Richmond",
+          "position": "HOME",
+          "isHome": true,
+          "image": [
+            {
+              "size": "svg",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Richmond.svg"
+            },
+            {
+              "size": "xxhdpi",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Richmond_xxhdpi.png"
+            },
+            {
+              "size": "2x",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Richmond%402x.png"
+            }
+          ]
+        },
+        {
+          "name": "Collingwood",
+          "position": "AWAY",
+          "isHome": false,
+          "image": [
+            {
+              "size": "svg",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Collingwood.svg"
+            },
+            {
+              "size": "xxhdpi",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Collingwood_xxhdpi.png"
+            },
+            {
+              "size": "2x",
+              "url": "https://metadata.beta.tab.com.au/icons/AFL/Collingwood%402x.png"
+            }
+          ]
+        }
+      ],
+      "competitors": [
+        "Richmond",
+        "Collingwood"
+      ],
+      "openMarketCount": 2,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 2,
+      "inPlay": false,
+      "goingInPlay": false
+    }
+  ]
+}

@@ -263,3 +263,46 @@ ek confusion thi ki setState web api m jata h pr asliyat m setState to synchrono
 *dispatch synchronous hota h yani reducer tk jane ka and global state setting processing ka safar synchronous hota h but rendering async hoti h and call stack empty hone k baad hi hoti h
  chahe beech m redux thunk middleware hi kyun na ho reducer tk to synchronous hi hota h  ,wo alag baat alag h ki agr thunk middleware m fetch api ya async task h to tb whi s event loop m jaega and task poora hone k baad jo dispatch hoga wo synchronous reducer tk jaega but state set krne k baad rendering to async hi hogi
 
+
+
+
+
+
+
+
+
+*****mene socha thun ki kya jarurat h apna hi thunk ki tara ek cheej bana leta hu or wo chl bhi gya :---
+ React.useEffect(() => {
+    dispatch(getAllProducts())
+  }, [])
+  
+  export const getAllProducts = () => {
+  return dispatch => {
+    dispatch(getProducts());
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(products => {
+        dispatch(getProductsSuccess(products));
+      })
+      .catch(error => {
+        dispatch(getProductsFailure(error));
+      });
+  };
+};
+
+//yha tk to jo code likha h wo basic thunk ka tha
+ab niche mene bina thunk k action m hi api call ki h ,ch gya pr thunk redux deta h to chlo thunk hi use krlo
+
+
+ React.useEffect(async () => {
+    dispatch(await getAllProducts(dispatch))
+  }, [])
+
+
+export const getAllProducts = async dispatch => {
+  dispatch(getProducts());
+  const res = await fetch(API_URL);
+  const products = await res.json();
+
+  return getProductsSuccess(products)
+};

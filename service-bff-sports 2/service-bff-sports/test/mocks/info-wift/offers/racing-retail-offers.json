@@ -1,0 +1,348 @@
+{
+    "id": "6021",
+    "name": "Racing Retail Offer",
+    "spectrumId": "6021",
+    "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer?jurisdiction=NSW",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/tournaments?jurisdiction=NSW",
+        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches?jurisdiction=NSW",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/markets?jurisdiction=NSW",
+        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/markets/all-channels?jurisdiction=NSW"
+    },
+    "tournaments": [],
+    "hasMarkets": true,
+    "matches": [
+        {
+            "id": "1RVMOIPSW0",
+            "name": "Ipswich R1xR2 VMO",
+            "spectrumId": "1RVMOIPSW0",
+            "spectrumUniqueId": 1724446,
+            "competitionSpectrumId": "6021",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-17T02:28:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Ipswich%20R1xR2%20VMO?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Ipswich%20R1xR2%20VMO?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Ipswich%20R1xR2%20VMO/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71442484",
+                    "name": "Ipswich R1xR2 VMO 17/08",
+                    "shortName": "Ipswich R1xR2 VMO",
+                    "betOption": "Racing Offers",
+                    "betOptionSpectrumId": "2794",
+                    "betOptionPriority": 15,
+                    "marketUniqueId": 71442484,
+                    "closeTime": "2022-08-17T02:28:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "BR1 #7 / BR2 #1 both to Win",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "191221",
+                            "name": "Spillify/Aban",
+                            "returnWin": 3,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 191221,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        },
+                        {
+                            "id": "191222",
+                            "name": "both horses must start",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 191222,
+                            "isOpen": false,
+                            "sortOrder": 2
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "1RVMOCRAN",
+            "name": "Cranbourne R3xR5 VMO",
+            "spectrumId": "1RVMOCRAN",
+            "spectrumUniqueId": 1724444,
+            "competitionSpectrumId": "6021",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-17T03:30:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Cranbourne%20R3xR5%20VMO?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Cranbourne%20R3xR5%20VMO?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Cranbourne%20R3xR5%20VMO/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71442482",
+                    "name": "Cranbourne R3xR5 VMO 17/08",
+                    "shortName": "Cranbourne R3xR5 VMO",
+                    "betOption": "Racing Offers",
+                    "betOptionSpectrumId": "2794",
+                    "betOptionPriority": 15,
+                    "marketUniqueId": 71442482,
+                    "closeTime": "2022-08-17T03:30:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "MR3 #1 / MR5 #3 both to finish Top 3",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "191209",
+                            "name": "SaturnIsle/Reactivate Top 3",
+                            "returnWin": 3.4,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 191209,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        },
+                        {
+                            "id": "191210",
+                            "name": "both horses must start",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 191210,
+                            "isOpen": false,
+                            "sortOrder": 2
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "1RVMOMORP0",
+            "name": "Morphettville R6xR7 VMO",
+            "spectrumId": "1RVMOMORP0",
+            "spectrumUniqueId": 1724448,
+            "competitionSpectrumId": "6021",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-17T06:05:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Morphettville%20R6xR7%20VMO?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Morphettville%20R6xR7%20VMO?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Morphettville%20R6xR7%20VMO/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71442486",
+                    "name": "Morphettville R6xR7 VMO 17/08",
+                    "shortName": "Morphettville R6xR7 VMO",
+                    "betOption": "Racing Offers",
+                    "betOptionSpectrumId": "2794",
+                    "betOptionPriority": 15,
+                    "marketUniqueId": 71442486,
+                    "closeTime": "2022-08-17T06:05:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "AR6#1 / AR7#10 Both run Top3 17/08",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "191581",
+                            "name": "Trumpsta/Lamoree Top3",
+                            "returnWin": 3,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 191581,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        },
+                        {
+                            "id": "191582",
+                            "name": "Both horses must start",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 191582,
+                            "isOpen": false,
+                            "sortOrder": 2
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "1RVMOCANT",
+            "name": "Canterbury R6xR7 VMO",
+            "spectrumId": "1RVMOCANT",
+            "spectrumUniqueId": 1724442,
+            "competitionSpectrumId": "6021",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-17T06:15:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Canterbury%20R6xR7%20VMO?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Canterbury%20R6xR7%20VMO?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/matches/Canterbury%20R6xR7%20VMO/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71442480",
+                    "name": "Canterbury R6xR7 VMO 17/08",
+                    "shortName": "Canterbury R6xR7 VMO",
+                    "betOption": "Racing Offers",
+                    "betOptionSpectrumId": "2794",
+                    "betOptionPriority": 15,
+                    "marketUniqueId": 71442480,
+                    "closeTime": "2022-08-17T06:15:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "SR6 #9 / SR7 #2 both to finish Top 3",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "191201",
+                            "name": "TwilightAff/FlowerMoon Top 3",
+                            "returnWin": 2.4,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 191201,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        },
+                        {
+                            "id": "191202",
+                            "name": "both horses must start",
+                            "returnWin": 1.01,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Suspended",
+                            "allowPlace": false,
+                            "number": 191202,
+                            "isOpen": false,
+                            "sortOrder": 2
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        }
+    ],
+    "betOptionPriority": [
+        "Racing Offers"
+    ],
+    "betOptions": [
+        {
+            "name": "Racing Offers",
+            "hasFutureMarket": true,
+            "openMarketCount": 4,
+            "_links": {
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Racing%20Retail%20Offer/markets?jurisdiction=NSW&betOptionName=Racing%20Offers"
+            }
+        }
+    ],
+    "betOptionGroups": null,
+    "hasFuturePredictions": true
+}

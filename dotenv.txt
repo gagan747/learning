@@ -1,0 +1,5 @@
+ya to hm jese npm start krte h usse phele hi kux bhi likhde to wo process.env m aa jata h for eg MEOW=7 node app.js and app.js m process.env.meow aa jaega 
+ab app.js koi or files to require krra ho to usme bhi process.env.meow chl jaega 
+pr agr ap npm /node/any script chalane se phele nhi balki .env file se process.env m load krna chahte ho to dotenv use krte h hm joki .env se process.env m load krdega
+ab manlo app.js(using require i have require dotenv in the top of the file ) so that all the files which are also being requied from app.js are placed below the require dotenv mtlb upr likhne se dotenv phele chl jaega and koi bhi jo require ho rhi hongi unme process.env me environment(.env se ) load ho jaenge, hmen hr model m separate dotenv likhne ki jarurat nhi
+but in the case of ECMA6 or ES6 (import/export) if we import dotenv from 'dotenv' , it is not similiar as 'require' bcoz in type module(ES6/ECMA6) we have to separately  import dotenv in each file to access environment varialbe using process.env

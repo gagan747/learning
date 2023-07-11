@@ -1,0 +1,166 @@
+{
+    "id": "6024",
+    "name": "Sports Retail Offer",
+    "spectrumId": "6024",
+    "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer?jurisdiction=NSW",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+        "tournaments": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/tournaments?jurisdiction=NSW",
+        "matches": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches?jurisdiction=NSW",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/markets?jurisdiction=NSW",
+        "markets:all-channels": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/markets/all-channels?jurisdiction=NSW"
+    },
+    "tournaments": [],
+    "hasMarkets": true,
+    "matches": [
+        {
+            "id": "1SVM1708",
+            "name": "Soccer VMO Wednesday",
+            "spectrumId": "1SVM1708",
+            "spectrumUniqueId": 1727451,
+            "competitionSpectrumId": "6024",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-17T02:00:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches/Soccer%20VMO%20Wednesday?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches/Soccer%20VMO%20Wednesday?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches/Soccer%20VMO%20Wednesday/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71579094",
+                    "name": "Soccer VMO Wednesday",
+                    "shortName": "Soccer VMO Wednesday",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17240,
+                    "marketUniqueId": 71579094,
+                    "closeTime": "2022-08-17T02:38:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "MLS: Los Angeles FC v DC United 17/08",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "191001",
+                            "name": "LAFC 1-0 or 2-0 at Halftime",
+                            "returnWin": 2.5,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 191001,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        },
+        {
+            "id": "1SVM1808",
+            "name": "NRL VMO Thursday",
+            "spectrumId": "1SVM1808",
+            "spectrumUniqueId": 1727459,
+            "competitionSpectrumId": "6024",
+            "round": null,
+            "broadcastChannel": null,
+            "broadcastChannels": [],
+            "startTime": "2022-08-18T09:55:00.000Z",
+            "_links": {
+                "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches/NRL%20VMO%20Thursday?jurisdiction=NSW",
+                "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches/NRL%20VMO%20Thursday?jurisdiction={jurisdiction}{&channelType,cashSales,homeState}",
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/matches/NRL%20VMO%20Thursday/markets?jurisdiction=NSW"
+            },
+            "contestants": [],
+            "competitors": [],
+            "openMarketCount": 1,
+            "futureMarketCount": 1,
+            "nonFutureMarketCount": 0,
+            "markets": [
+                {
+                    "id": "71579102",
+                    "name": "NRL VMO Thursday",
+                    "shortName": "NRL VMO Thursday",
+                    "betOption": "Sport Offers",
+                    "betOptionSpectrumId": "807",
+                    "betOptionPriority": 17240,
+                    "marketUniqueId": 71579102,
+                    "closeTime": "2022-08-18T09:55:00.000Z",
+                    "bettingStatus": "Open",
+                    "message": "NRL: Souths v Penrith",
+                    "informationMessage": null,
+                    "isFuture": true,
+                    "onlineBetting": true,
+                    "phoneBettingOnly": false,
+                    "inPlay": false,
+                    "goingInPlay": false,
+                    "allowWin": true,
+                    "allowPlace": false,
+                    "allowEachWay": false,
+                    "allowMulti": false,
+                    "allowMultiWin": false,
+                    "allowMultiPlace": false,
+                    "allowMultiEachWay": false,
+                    "numberOfPlaces": 0,
+                    "cashOutEligibility": "Disabled",
+                    "allowBundle": false,
+                    "propositions": [
+                        {
+                            "id": "191037",
+                            "name": "Turuva 1st, 2nd or Last Try",
+                            "returnWin": 4,
+                            "returnPlace": 0,
+                            "differential": null,
+                            "bettingStatus": "Open",
+                            "allowPlace": false,
+                            "number": 191037,
+                            "isOpen": true,
+                            "sortOrder": 1
+                        }
+                    ]
+                }
+            ],
+            "inPlay": false,
+            "goingInPlay": false
+        }
+    ],
+    "betOptionPriority": [
+        "Sport Offers"
+    ],
+    "betOptions": [
+        {
+            "name": "Sport Offers",
+            "hasFutureMarket": true,
+            "openMarketCount": 2,
+            "_links": {
+                "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Sports%20Exotics/competitions/Sports%20Retail%20Offer/markets?jurisdiction=NSW&betOptionName=Sport%20Offers"
+            }
+        }
+    ],
+    "betOptionGroups": null,
+    "hasFuturePredictions": true
+}

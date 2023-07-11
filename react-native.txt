@@ -116,3 +116,43 @@ const IncrementButton = () => {
 
 export default IncrementButton;
 
+
+*****mene socha thun ki kya jarurat h apna hi thunk ki tara ek cheej bana leta hu or wo chl bhi gya :---
+ React.useEffect(() => {
+    dispatch(getAllProducts())
+  }, [])
+  
+  export const getAllProducts = () => {
+  return dispatch => {
+    dispatch(getProducts());
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(products => {
+        dispatch(getProductsSuccess(products));
+      })
+      .catch(error => {
+        dispatch(getProductsFailure(error));
+      });
+  };
+};
+
+//yha tk to jo code likha h wo basic thunk ka tha
+ab niche mene bina thunk k action m hi api call ki h ,ch gya pr thunk redux deta h to chlo thunk hi use krlo
+
+
+ React.useEffect(async () => {
+    dispatch(await getAllProducts(dispatch))
+  }, [])
+
+
+export const getAllProducts = async dispatch => {
+  dispatch(getProducts());
+  const res = await fetch(API_URL);
+  const products = await res.json();
+
+  return getProductsSuccess(products)
+};
+
+
+
+

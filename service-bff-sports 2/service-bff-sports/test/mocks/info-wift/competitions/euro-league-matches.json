@@ -1,0 +1,30 @@
+{
+  "matches": [
+    {
+      "id": "PartvLyon",
+      "name": "Partizan v ASVEL Lyon",
+      "spectrumId": "PartvLyon",
+      "spectrumUniqueId": 1911151,
+      "competitionSpectrumId": "1010",
+      "round": null,
+      "broadcastChannel": null,
+      "broadcastChannels": [],
+      "startTime": "2023-01-31T19:30:00.000Z",
+      "_links": {
+        "self": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/EuroLeague/matches/Partizan%20v%20ASVEL%20Lyon?jurisdiction=QLD&homeState=QLD",
+        "selfTemplate": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/EuroLeague/matches/Partizan%20v%20ASVEL%20Lyon?jurisdiction={jurisdiction}{&returnPromo,returnOffers,returnMultiOnly,channelType,cashSales,homeState}",
+        "markets": "https://api.beta.tab.com.au/v1/tab-info-service/sports/Basketball/competitions/EuroLeague/matches/Partizan%20v%20ASVEL%20Lyon/markets?jurisdiction=QLD&homeState=QLD"
+      },
+      "contestants": [
+        { "name": "Partizan", "position": "HOME", "isHome": true },
+        { "name": "ASVEL Lyon", "position": "AWAY", "isHome": false }
+      ],
+      "competitors": ["Partizan", "ASVEL Lyon"],
+      "openMarketCount": 2,
+      "futureMarketCount": 0,
+      "nonFutureMarketCount": 2,
+      "inPlay": true,
+      "goingInPlay": false
+    }
+  ]
+}

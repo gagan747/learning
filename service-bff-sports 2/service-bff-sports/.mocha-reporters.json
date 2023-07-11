@@ -1,0 +1,14 @@
+{
+  "reporterEnabled": "@tabdigital/monar, mochawesome",
+  "tabdigitalMonarReporterOptions": {
+    "outputDir": "output/coverage"
+  },
+  "mochawesomeReporterOptions": {
+    "reportFilename": "index",
+    "reportDir": "output/coverage/report",
+    "reportTitle": "service-bff-sports",
+    "reportPageTitle": "service-bff-sports",
+    "inline": true,
+    "quiet": true
+  }
+}

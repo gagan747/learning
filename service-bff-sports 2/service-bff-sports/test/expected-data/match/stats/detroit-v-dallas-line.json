@@ -1,0 +1,63 @@
+{
+  "message": null,
+  "cashOutEligibility": "PreMatch",
+  "promoAvailable": false,
+  "allowWin": true,
+  "allowPlace": false,
+  "allowEachWay": false,
+  "allowMulti": true,
+  "sameGameMultipleSelections": false,
+  "propositions": [
+    {
+      "id": "887573",
+      "numberId": 887573,
+      "number": 887573,
+      "name": "Detroit +7.0",
+      "sortOrder": 1,
+      "returnWin": 1.9,
+      "returnPlace": 0,
+      "bettingStatus": "Open",
+      "isOpen": true,
+      "allowPlace": false,
+      "sameGame": true
+    },
+    {
+      "id": "887574",
+      "numberId": 887574,
+      "number": 887574,
+      "name": "Dallas -7.0",
+      "sortOrder": 2,
+      "returnWin": 1.9,
+      "returnPlace": 0,
+      "bettingStatus": "Open",
+      "isOpen": true,
+      "allowPlace": false,
+      "sameGame": true
+    }
+  ],
+  "stats": {
+    "type": "sports.stats.matchup.result",
+    "data": {
+      "navigation": {
+        "template": "app.statsCenter.matchup",
+        "discoveryKey": "stats-service:bff:matchup",
+        "params": {
+          "sportName": "Basketball",
+          "competitionName": "NBA",
+          "spectrumUniqueId": 1283905
+        }
+      },
+      "result": {
+        "title": "Last Time: Week 21",
+        "matchDate": "2022-01-22T02:00:00",
+        "subtitle": "At the soccer place",
+        "homeTeamName": "Arsenal",
+        "homeImage": "https://metadata.beta.tab.com.au/icons/EPL%20logos/Arsenal.svg",
+        "homeValue": "1",
+        "awayTeamName": "Brentford",
+        "awayImage": "https://metadata.beta.tab.com.au/icons/EPL%20logos/Brentford.svg",
+        "awayValue": "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "message": null,
+  "cashOutEligibility": "Enabled",
+  "promoAvailable": false,
+  "allowWin": true,
+  "allowPlace": false,
+  "allowEachWay": false,
+  "allowMulti": true,
+  "sameGameMultipleSelections": false,
+  "propositions": [
+    {
+      "id": "887571",
+      "numberId": 887571,
+      "number": 887571,
+      "name": "Detroit",
+      "position": "HOME",
+      "sortOrder": 1,
+      "returnWin": 3.2,
+      "returnPlace": 0,
+      "bettingStatus": "Open",
+      "isOpen": true,
+      "allowPlace": false,
+      "icon": {
+        "imageURL": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg"
+      },
+      "sameGame": true
+    },
+    {
+      "id": "887572",
+      "numberId": 887572,
+      "number": 887572,
+      "name": "Dallas",
+      "position": "AWAY",
+      "sortOrder": 2,
+      "returnWin": 1.37,
+      "returnPlace": 0,
+      "bettingStatus": "Open",
+      "isOpen": true,
+      "allowPlace": false,
+      "icon": {
+        "imageURL": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Dallas%20Mavericks.svg"
+      },
+      "sameGame": true
+    }
+  ],
+  "stats": {
+    "type": "sports.stats.default.table",
+    "data": {
+      "showHideText": "mini standings",
+      "navigation": {
+        "discoveryKey": "stats-service:get:stats:standings",
+        "params": {
+          "competitionName": "NBA",
+          "sportName": "Basketball",
+          "spectrumUniqueId": 1283905
+        }
+      },
+      "data": [
+        {
+          "headers": [
+            {
+              "key": "East",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            },
+            {
+              "key": "clubLogo",
+              "show": false
+            },
+            {
+              "key": "p",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            },
+            {
+              "key": "w",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            },
+            {
+              "key": "l",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            },
+            {
+              "key": "h",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            },
+            {
+              "key": "a",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            },
+            {
+              "key": "stk",
+              "show": true,
+              "styling": {
+                "fontWeight": "semiBold"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "accessibilityString": "East Dallas Rank 5 Played 45 Won 24 Lost 21 Away 8-15 Streak 2 Loss",
+              "data": [
+                {
+                  "v": "5",
+                  "vType": "string",
+                  "styling": {
+                    "fontWeight": "semiBold"
+                  }
+                },
+                {
+                  "v": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Dallas%20Mavericks.svg",
+                  "vType": "imageUrl"
+                },
+                {
+                  "v": "45",
+                  "vType": "string"
+                },
+                {
+                  "v": "24",
+                  "vType": "string"
+                },
+                {
+                  "v": "21",
+                  "vType": "string"
+                },
+                {
+                  "v": "16-6",
+                  "vType": "string",
+                  "styling": {
+                    "fontColor": "lightGray"
+                  }
+                },
+                {
+                  "v": "8-15",
+                  "vType": "string"
+                },
+                {
+                  "v": "L2",
+                  "vType": "string",
+                  "styling": {
+                    "fontWeight": "semiBold",
+                    "fontColor": "red"
+                  }
+                }
+              ]
+            },
+            {
+              "accessibilityString": "East Detroit Rank 14 Played 47 Won 12 Lost 35 Home 6-16 Streak 2 Loss",
+              "data": [
+                {
+                  "v": "14",
+                  "vType": "string",
+                  "styling": {
+                    "fontWeight": "semiBold"
+                  }
+                },
+                {
+                  "v": "https://metadata.beta.tab.com.au/icons/NBA%20logos/Detroit%20Pistons.svg",
+                  "vType": "imageUrl"
+                },
+                {
+                  "v": "47",
+                  "vType": "string"
+                },
+                {
+                  "v": "12",
+                  "vType": "string"
+                },
+                {
+                  "v": "35",
+                  "vType": "string"
+                },
+                {
+                  "v": "6-16",
+                  "vType": "string"
+                },
+                {
+                  "v": "6-19",
+                  "vType": "string",
+                  "styling": {
+                    "fontColor": "lightGray"
+                  }
+                },
+                {
+                  "v": "L2",
+                  "vType": "string",
+                  "styling": {
+                    "fontWeight": "semiBold",
+                    "fontColor": "red"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
