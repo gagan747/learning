@@ -23,8 +23,6 @@ s
 
 *redux m ek baat yaad rakhio generally hm reducer m default case  m state hi return krate h, mene galti se initial state wali value return kra di wo bhi ese {...initialstate}(kyuki redux m mutate nhi krte h) default case m ,usse  koi bhi agr reducer call hota tha to mera ye wala reducer bhi call hota tha jesa ki tujhe pata hi h but isme dikkt ye hui ki ye bhi koi action.type match na hone ke karan default state to return kr hi rha tha jisse na chahte hue jin component ne iski state ko subscribe kiya tha unhe bhi render hona padha kyuki nai memory mili h state ki to redux to render krega hi tabhi hm  default case m state retun krte h naki {...state} kyuki agr state return krenge to whi value return hogi and redux rendering nhi karega isse ye hoga ki whi  comp render honge jinki actual m nai state return hui h and immutate state dene k karan rendering bhi hogi ,ab tujhe pata laga hoga ki default case  state kyu dete h and {...state} kyu nhi kyuki reducer to sare hi call honge to sare reducer agr nai state return krne lag jae to na chahte hue sare compo ko render hona padega and jo mene galti kri thi ki m {...initialstate} de rha tha usse ye bhi  ho rha tha ki kisi or action dispatch k karan meri wo state phir s initial state s initialize hogi resulting in loss of state for that subscriber
 
-
-
 * agr react m jsx m andar html dunga to wo tags k sath es a string executi hogi eg:-
 myHtml='<i>hello</i>'
 render(){
@@ -306,3 +304,8 @@ export const getAllProducts = async dispatch => {
 
   return getProductsSuccess(products)
 };
+
+
+
+
+Most important:-hme pata h setTimeout k andar latest state set to kr skte h with using callback style for setting state as without using callback style we are gwtting the old value of state bcoz of closure so we are using callback method for this but what if we have to only get the latest state value inside callback instead of setting(as for setting we have callack method), there is no way acc to me so we would use useRef for this as useRef always print updated value, closure is not effecting use ref because we are maintaing the same memory reference throught each render, agr state m object bhi leta h to uska memory reference change hota h render p to inside setTimeout callback to purani wali stte(eference in case of object) ko hi point krega na due to closure, but in refs the same meory reference is mantained through out each render
