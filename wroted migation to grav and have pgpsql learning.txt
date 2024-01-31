@@ -1,0 +1,63 @@
+CREATE OR REPLACE FUNCTION generate_default_aliases(name TEXT, abbreviated_name TEXT)
+RETURNS TABLE (alias TEXT) AS $$
+DECLARE
+  words TEXT[];
+  first_name TEXT;
+  last_name TEXT;
+  initials TEXT[];
+BEGIN
+  words := string_to_array(name, ' ');
+  first_name := words[1]; 
+  last_name := words[array_length(words, 1)]; 
+
+  FOR i IN 1..array_length(words, 1) LOOP
+    initials[i] := CASE WHEN i = 1 OR i = array_length(words, 1) THEN substr(words[i], 1, 1) ELSE '' END;
+  END LOOP;
+
+  IF abbreviated_name <> '' THEN
+    RETURN QUERY SELECT
+      initials[1] || ' ' || last_name
+    UNION ALL
+    SELECT last_name || ' ' || first_name
+    UNION ALL
+    SELECT first_name || ' ' || last_name || '(' || abbreviated_name || ')'
+    UNION ALL
+    SELECT last_name || ' ' || first_name || '(' || abbreviated_name || ')';
+  ELSE
+    RETURN QUERY SELECT
+      initials[1] || ' ' || last_name
+    UNION ALL
+    SELECT last_name || ' ' || first_name;
+  END IF;
+END;
+$$ LANGUAGE plpgsql;
+
+INSERT INTO player_alias (player_id, alias)
+SELECT
+    player_id,
+    alias
+FROM (
+    SELECT
+        p.id AS player_id,
+        unnest(ARRAY(
+            SELECT generate_default_aliases(LOWER(p.name), LOWER(t.abbreviated_name))
+        )) AS alias
+    FROM
+        player p
+    LEFT JOIN player_team_mapping ptm ON ptm.tab_player_id = p.id
+    LEFT JOIN team_competition_mapping tcm ON tcm.id = ptm.team_competition_mapping_id
+    LEFT JOIN team t ON t.id = tcm.tab_team_id 
+    LEFT JOIN player_alias pal ON p.id = pal.player_id 
+    GROUP BY 
+        p.id,
+        p.name,
+        t.abbreviated_name
+    HAVING NOT EXISTS (
+        SELECT 1
+        FROM unnest(ARRAY(
+            SELECT generate_default_aliases(LOWER(p.name), LOWER(t.abbreviated_name))
+        )) AS elem1
+        JOIN unnest(ARRAY(SELECT array_agg(DISTINCT pal.alias))) AS elem2
+        ON elem1 = elem2
+    )
+) AS aliases;
