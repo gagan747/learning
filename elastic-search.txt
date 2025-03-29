@@ -1,0 +1,128 @@
+the example you told me by creating docker compose fie worked 
+version: '3.8'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.7.1
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    networks:
+      - elastic
+
+networks:
+  elastic:
+
+
+
+i have question that if i manually install elasticsearch and kibana without docker then i have to create a token from elasticsearch and paste it in kibana, why this process is not invloved when we create using doccker?
+Answer
+When you install Elasticsearch and Kibana manually without Docker, you need to create a security token in Elasticsearch and provide it to Kibana to establish a secure connection between the two services. This is because, by default, Elasticsearch has security features enabled, and it requires authentication to access the cluster.
+However, when you use Docker to deploy Elasticsearch and Kibana, the process is different. In the provided docker-compose.yml example, the xpack.security.enabled environment variable is set to false for the Elasticsearch container:
+text
+environment:
+  - discovery.type=single-node
+  - xpack.security.enabled=false
+
+This setting disables the X-Pack security features in Elasticsearch, which means that authentication and authorization are not required for accessing the cluster. As a result, Kibana can connect to Elasticsearch without the need for a security token.
+text
+environment:
+  - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+
+Kibana uses the ELASTICSEARCH_HOSTS environment variable to specify the URL of the Elasticsearch cluster. Since security is disabled in Elasticsearch, Kibana can connect directly without any additional configuration.
+It's important to note that disabling security is suitable for development or testing environments, but it is not recommended for production setups. In a production environment, you should enable security features and properly configure authentication and authorization to ensure the safety of your data.
+If you want to enable security in your Docker-based setup, you need to:
+Enable security in the Elasticsearch configuration by removing or setting xpack.security.enabled to true.
+Create a security token or user credentials in Elasticsearch.
+Pass the necessary security settings to Kibana using environment variables or configuration files.
+By following these steps, you can secure the communication between Elasticsearch and Kibana when using Docker, similar to the manual installation process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if i manually up the container with running docer compose using docker hub ,kibana asks for authentication,why the environent variabe is not retrieved when i up the container from docke rhub
+Sources
+stackoverflow.com favicon
+forums.docker.com favicon
+github.com favicon
+alexmarquardt.com favicon
+View 5 more
+Answer
+When you run Kibana and Elasticsearch using Docker Compose, the environment variables defined in your docker-compose.yml file are used to configure the containers at startup. If you manually pull and run the containers from Docker Hub without using Docker Compose, the environment variables specified in your docker-compose.yml file will not be automatically applied. Here’s why this happens and what you can do about it:
+Why Environment Variables Are Not Retrieved
+Manual Container Creation:
+When you manually create containers using docker run, you need to specify all the necessary environment variables directly in the command line. For example:
+bash
+docker run -d --name elasticsearch -e discovery.type=single-node -e xpack.security.enabled=false -p 9200:9200 docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+docker run -d --name kibana -e ELASTICSEARCH_HOSTS=http://elasticsearch:9200 -p 5601:5601 docker.elastic.co/kibana/kibana:8.7.1
+
+This means that if you don't include the environment variables, Elasticsearch will default to its standard configuration, which may require authentication.
+Docker Compose vs. Docker Run:
+Docker Compose simplifies the management of multi-container applications by allowing you to define all configurations in a single docker-compose.yml file. When you run docker-compose up, it reads this file and applies all specified settings, including environment variables.
+In contrast, when using docker run, each container must be configured individually, and any settings not specified will revert to their defaults.
+What To Do If Authentication Is Required
+If you're encountering authentication prompts when running Kibana after pulling the images manually, here’s how to handle it:
+Set Environment Variables Manually:
+Ensure that you set the necessary environment variables when starting your containers manually. For example:
+bash
+docker run -d --name elasticsearch \
+  -e discovery.type=single-node \
+  -e xpack.security.enabled=false \
+  -p 9200:9200 \
+  docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+
+docker run -d --name kibana \
+  -e ELASTICSEARCH_HOSTS=http://elasticsearch:9200 \
+  -p 5601:5601 \
+  docker.elastic.co/kibana/kibana:8.7.1
+
+Use Docker Compose:
+If you prefer not to set environment variables manually every time, consider using Docker Compose for easier management of your containers with predefined settings.
+Enable Security:
+If you want to enable security (i.e., set xpack.security.enabled=true), you'll need to create user credentials in Elasticsearch and configure Kibana accordingly with those credentials.
+Check Logs for Issues:
+If Kibana still prompts for authentication unexpectedly, check the logs of both Elasticsearch and Kibana for any errors or warnings that might indicate misconfiguration or connectivity issues.
+By ensuring that the correct environment variables are set when launching your containers, whether through Docker Compose or manual commands, you can avoid authentication issues and ensure smooth operation between Elasticsearch and Kibana.
+

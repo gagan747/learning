@@ -1,0 +1,2 @@
+scp -i livekirtan.pem 'ubuntu@ec2-3-109-108-132.ap-south-1.compute.amazonaws.com:/home/ubuntu/liveKirtanAutomationYoutube/*.mov' .
+//this is th commdand to copy all mov files present in my ec2 to my local directory in which path the terminal is currently open
