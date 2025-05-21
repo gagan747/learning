@@ -158,3 +158,14 @@ To also maintain sequence while maintaining concurrency 1 we can use Promise.eac
 Also Promise.reduce don't accept concurrecy as hme pata h ki reduce ka kaam hi tb bnega jb wo synchronous chlega mtlb acc ka prev s relation hota h na to prev wale ko phele hi solve hona padega isliye wo bhii concurrency 1 ka saath chlta h by default
 ve ho jaega tb then chlega and wo jo return krega wo await ko as a resolved promise milega, or agr then or catch ne kux return nhi kiya to undefined as a resolved promise await ke left side ko milega or agr await lagae hi na to left hand side ko console kraega to promise pending dikhaega yani then or catch jb lge hote h to promise pending return krte h and jb then then or catch chl jate h and jo return krte h agr uske age then ki nai chaining nhi h (yani then ek promisee instance return krta h tabhi to dustra then usko pakad skta h ) to await usko as a resolved promise return krega left hand side ho or haan agr catch se kux return hora h to bhi await ko as a resolved promise milega ,hme explicitly reject krna padhega catch se agr await k left hand side ko nhi dena h to ya to throw error krdo catch se or agr explicitly throw ya reject karwaenge to jo await kisi try catch m wrap hoga to us catch m jaega
 
+  setTimeout(socketInstance?.disconnect,500);
+  
+  //got error that can't call this.destroy(), socketInstance.disconnet m hogi ye line this.destroy but why this is undefined here? because we are giving a part(callback in isolation) of that instance(socketInstance) so it got raw function like function(){this.destroy} whose this can point to window object
+  
+  solution :- setTimeout(socketInstance?.disconnect.bind(socketInstwnce),500) as we are manually binding that raw function to sokcetIntance which works as a this for that raw function
+  
+  
+  why ye krna padha hm agr ese krte jo below kia h  to error na ata
+  setTimeout(()=>socketInstance?.disconnect,500);
+  kyuki ise hmne normal js likhi h socketInstance.disconnect to obviously socketIntance jo ki ek instnce h wo hi apne function ko call kr rha h to obviously this us instance ko hi point krega, ye t normal js behaviour h ,koi bhi class ka instance bnte h to instanceName.mehod() ese hi call krte h na or method ka this by default instanceName ko  hi point krega kyuki ye normal js behavious h , alag s duga ese instanceName.mehod settimeout ko to raw hi jaega
+

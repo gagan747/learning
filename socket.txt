@@ -1,0 +1,37 @@
+Question with Anser:- You're trying to emit a custom socket event (like 'customdisconnect') in the cleanup function of useEffect, but it's not actually being emitted.
+This is happening because of the timing of when React executes the cleanup function. When a component unmounts, React first triggers all cleanup functions, and then proceeds with unmounting. During this unmounting process, the socket connection might already be in the process of closing or disconnected by the time your 'customdisconnect' event tries to emit.
+Here's what's likely happening:
+
+Component starts unmounting
+React runs your cleanup function where you emit 'customdisconnect'
+The socket might already be in a disconnecting state or the connection is being torn down
+Your emit doesn't go through because the socket is no longer in a state to reliably send messages
+
+When a page refreshes or closes, React's component cleanup functions (useEffect return) might not have enough time to complete before the browser terminates the JavaScript execution. This is especially true for asynchronous operations like socket emissions.
+In contrast, the beforeunload event handler works better because:
+
+It's a browser-level event that fires before the page refresh/close process begins
+The browser specifically waits for synchronous code in beforeunload handlers to complete
+It has higher priority than React's cleanup processes
+
+Here's why your approach with handleBeforeUnload works better:
+javascriptuseEffect(() => {
+  // Set up the beforeunload handler
+  const handleBeforeUnload = () => {
+    // This runs synchronously and browser waits for it
+    socket.emit('customdisconnect', payload);
+  };
+  
+  window.addEventListener('beforeunload', handleBeforeUnload);
+  
+  return () => {
+    // This might not complete if page is refreshing
+    window.removeEventListener('beforeunload', handleBeforeUnload);
+    // This emission is even less likely to complete
+    socket.emit('customdisconnect'); // Often doesn't work
+  };
+}, []);
+The browser gives beforeunload handlers a chance to run to completion, while React's cleanup functions have no such guarantee during a page refresh. The socket library's automatic disconnect happens at the browser level and might preempt your React cleanup code.
+For handling socket disconnections reliably during page refreshes, the beforeunload event is the correct approach, as you've discovered.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

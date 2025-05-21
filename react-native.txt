@@ -1,39 +1,83 @@
-react-native m display:flex m default direction column hoti h joki hmne jo web css padi thi usse ulta h
+react-native m display:flex m default direction column hoti h 
+joki hmne jo web css padi thi usse ulta h
 
-react native m flexshrink nhi hota by default childs p to width/height ya percemt% m ho ya pixel m jaha h overflow hone ki naubat aaegi wrap ho jaega agr flexwrap property set h to or agr nhi h to hide hi hoga kyuki by default overflow hidden hota h react native m instead of scroll
-agr hm width/height ki jaga flex use kre sare childs m to impossible h ki overflow bhi ho kyuki flex property se kabhi overflow nhi hota
-agr manlo 80% jaga cover  h %/px se  or last k manlo do childs p width/height ki jaga flex 1/2/3/4... lagaya h to wo 20% total space m hi lagega yani phela preference px/%  ko milta h phir jitna bachta h usme flex wale childs cover hote h hn pr 80% m overflow nhi hua to baki k childs jismme flex laga h usme flex 100 bhi lagade kux iverflow nhi hoga kyuki flex property 20% m hi 100 ka ratio nikal legi pr agr width 100 krdeta last walo ki tb overflow hota
+react native m flexshrink nhi hota by default childs p 
+to width/height ya percemt% m ho ya pixel m jaha h overflow hone ki naubat aaegi 
+wrap ho jaega agr flexwrap property set h to 
+or agr nhi h to hide hi hoga kyuki by default overflow hidden hota h react native m instead of scroll
+
+agr hm width/height ki jaga flex use kre sare childs m to impossible h ki overflow bhi ho 
+kyuki flex property se kabhi overflow nhi hota
+agr manlo 80% jaga cover h %/px se  
+or last k manlo do childs p width/height ki jaga flex 1/2/3/4... lagaya h 
+to wo 20% total space m hi lagega 
+yani phela preference px/% ko milta h 
+phir jitna bachta h usme flex wale childs cover hote h 
+hn pr 80% m overflow nhi hua to baki k childs jismme flex laga h 
+usme flex 100 bhi lagade kux iverflow nhi hoga 
+kyuki flex property 20% m hi 100 ka ratio nikal legi 
+pr agr width 100 krdeta last walo ki tb overflow hota
 
 flex column m width 100% hojati h and height auto
 flex row m height 100% ho jati h and width auto 
-flex wrap k sath alignContent use hota h align item nhi agr align item or flex wrap saath lage h to align itemsko alignContent s replace krdio
+flex wrap k sath alignContent use hota h align item nhi 
+agr align item or flex wrap saath lage h to align itemsko alignContent s replace krdio
 
-
-
-jese tujhe pata hi h ki flex shrik active hone pr overflow nhi hoti width auto ya percent(flex row) m or pixel p flex shrink kaam nhi krta to same cheej react native m bhi h pixel m kaam nhi krti shrink but auto ya percent m krti h bs isme manually flex shrink on krna padega kyuki by default off hota h or ye scenerail same uske h jb hm flex property child k detet h to wo kabhi overflow nhi krta to ese hi width percent m  dene se and flex shrink 1 krne se same scenario create ho jaega  
-agr flex wrap true h to chahe flex shrink hi kyu na laga ho child p or width percent m bhale hi kyu na ho flex wrap ko preference milegi and wrapping hogi 
+jese tujhe pata hi h ki flex shrik active hone pr overflow nhi hoti 
+width auto ya percent(flex row) m or pixel p flex shrink kaam nhi krta 
+to same cheej react native m bhi h pixel m kaam nhi krti shrink 
+but auto ya percent m krti h bs isme manually flex shrink on krna padega 
+kyuki by default off hota h 
+or ye scenerail same uske h jb hm flex property child k detet h 
+to wo kabhi overflow nhi krta 
+to ese hi width percent m dene se and flex shrink 1 krne se same scenario create ho jaega  
+agr flex wrap true h to chahe flex shrink hi kyu na laga ho child p 
+or width percent m bhale hi kyu na ho flex wrap ko preference milegi and wrapping hogi 
 
 Flexbox works the same way in React Native as it does in CSS on the web, 
 with a few exceptions. The defaults are different,
 1. with flexDirection defaulting to column instead of row,
 2. alignContent defaulting to flex-start instead of stretch, 
-3. flexShrink defaulting to 0 instead of 1,(which means agr height/width auto h abhi bhi shrink nhi hoga no shrinking ya to overflow krega ya agr wrap laga h to wrap pr hm explicitly flex shrink 1 kr skte h  hn pr flex:1 laga h ya flex:2 alag alag child p to shrink hi honge kyuki flex:(any number) wale expand nhi hote kyuki jese ek child ka flex :1 h or dusre ka 3 yani 1+3 yani phele wale ko 1/4 milegi and dusre ko 3/4 
+3. flexShrink defaulting to 0 instead of 1,
+   (which means agr height/width auto h abhi bhi shrink nhi hoga no shrinking 
+   ya to overflow krega ya agr wrap laga h to wrap pr hm explicitly flex shrink 1 kr skte h  
+   hn pr flex:1 laga h ya flex:2 alag alag child p to shrink hi honge 
+   kyuki flex:(any number) wale expand nhi hote 
+   kyuki jese ek child ka flex :1 h or dusre ka 3 yani 1+3 
+   yani phele wale ko 1/4 milegi and dusre ko 3/4 
 4. the flex parameter only supporting a single number.
 
 react m jese react fraggment hota na 
 eg :-
 return(<ReactFragment> //<></> or div wgera bhi use krte h
 </reactFragment>)
-to ye sb child ka parent hota h mtlb hm ek wrapper jo dete h na react m wese hi react native m generally View as a wrapper dete h
+to ye sb child ka parent hota h 
+mtlb hm ek wrapper jo dete h na react m 
+wese hi react native m generally View as a wrapper dete h
 eg:-
 return(<View></View>)
-pr react native m ye hota h ki internally View ka bhi ek parent hoga jispe ye css hogi:-
+pr react native m ye hota h ki internally View ka bhi ek parent hoga 
+jispe ye css hogi:-
 View(wrapper) ka parent{
 display:flex;
 flexDirection:column;
 }
-ab tu dekh skta h parent k flex ki direction column h to wrapper View (flex child) uski width 100% ho jaegi ( jese flex row m child ki height 100% ho jati h and width auto wese hi  flex column child m width 100% height auto) and height auto so wrapper view ko flex :1 krne pr height full ho jaegi or manke chal ki y eklota child h or wrapper ko wese hi iklota hi rakhna padta h to iklote hone k karan flex:1 se height 100% ho jaegi or with to 100% h hi to yani poori screen cover kr dega chahe android ho ya ios
-flex shrink auto ya percent wale child k sath hi hota h px k sath nhi pr width/height auto ya percent krke bhi dekhle tabhi bhi shrink nhi honge react native m kyuki isme by default flex shrink 0 rheta h shrink krne k lie explicitly flex shrink 1 krne padenge
+ab tu dekh skta h parent k flex ki direction column h 
+to wrapper View (flex child) uski width 100% ho jaegi 
+( jese flex row m child ki height 100% ho jati h and width auto 
+wese hi flex column child m width 100% height auto) 
+and height auto 
+so wrapper view ko flex :1 krne pr height full ho jaegi 
+or manke chal ki y eklota child h 
+or wrapper ko wese hi iklota hi rakhna padta h 
+to iklote hone k karan flex:1 se height 100% ho jaegi 
+or with to 100% h hi 
+to yani poori screen cover kr dega chahe android ho ya ios
+
+flex shrink auto ya percent wale child k sath hi hota h px k sath nhi 
+pr width/height auto ya percent krke bhi dekhle tabhi bhi shrink nhi honge react native m 
+kyuki isme by default flex shrink 0 rheta h 
+shrink krne k lie explicitly flex shrink 1 krne padenge
 
 View m inbuilt css hoti h joki h{
           display:flex;
@@ -43,15 +87,31 @@ View m inbuilt css hoti h joki h{
           overflow:hidden
           //childs m flex shrink 0
           //no implicit justify content/align items
-} //wese css wale flex m yet=hota h agr shrink nhi hua manlo child pixel m the ya flex shrink 0 tha  to overflow hota hi h pr isme overflow hidden h (android and ios m )
+} 
+//wese css wale flex m yet=hota h agr shrink nhi hua 
+manlo child pixel m the ya flex shrink 0 tha  
+to overflow hota hi h 
+pr isme overflow hidden h (android and ios m )
 
-*hm  text k lie jada tar text Component use krte h jese textComponent m kux ache props hote h (html m jinko attributes khete h wo react inbuilt components m props khelate h ) jese ek h :-numberOfLines jisse hm number of lines ko control kr skte h jese 1 krne pr height or increase nhi hogi balkki last m ... aa jaega
+*hm text k lie jada tar text Component use krte h 
+jese textComponent m kux ache props hote h 
+(html m jinko attributes khete h wo react inbuilt components m props khelate h ) 
+jese ek h :-numberOfLines 
+jisse hm number of lines ko control kr skte h 
+jese 1 krne pr height or increase nhi hogi balkki last m ... aa jaega
 
-
-*agr react fragment m View ki jaga safereaView use kreneg to usse ye faeda hogi ki text battery/tme icons s collapse nhi krega use padding top  extra inbuilt hoti h  view k comparison m but only works for ios to android m iska fix ye h ki:-
+*agr react fragment m View ki jaga safereaView use kreneg 
+to usse ye faeda hogi ki text battery/tme icons s collapse nhi krega 
+use padding top extra inbuilt hoti h view k comparison m 
+but only works for ios 
+to android m iska fix ye h ki:-
 <safeAreaView  style={{paddingTop:Platform.OS === 'android' ? Statusbar.currentHeight : 0}} />
 
-*<Image /> tag images klie use krte h jisme source naam ka prop hota h jisme require krte h static image ko or agr img url s aa rhi h to ese ,source={{uri:'urilink',width:'',height:''}}
+*<Image /> tag images klie use krte h 
+jisme source naam ka prop hota h 
+jisme require krte h static image ko 
+or agr img url s aa rhi h to ese ,
+source={{uri:'urilink',width:'',height:''}}
 
 *Alert.alert is used for prompting alerts as window is not in react native
 e.g:-Alert.alert("title",'message',[
@@ -59,16 +119,26 @@ e.g:-Alert.alert("title",'message',[
 ]//buttons array
 )
 similarly for alert.prompt:-
-Alert.prompt('title','message',()=>{}//callback executed after prompt closed or ok) //only for ios
+Alert.prompt('title','message',()=>{}//callback executed after prompt closed or ok) 
+//only for ios
 
-stylesheet.create m styles create krne s koi style ka syntax error hoga to bta diya jaega but pr inline style s css ka syntax error nhi ata  h 
-inline style m multi=ple styles bhi add kr skte h eg:-style={{[styles.container,meow]}} const meow={backgroundColor:'green'}
+stylesheet.create m styles create krne s koi style ka syntax error hoga 
+to bta diya jaega 
+but pr inline style s css ka syntax error nhi ata h 
+inline style m multi=ple styles bhi add kr skte h 
+eg:-style={{[styles.container,meow]}} 
+const meow={backgroundColor:'green'}
 
-react native m px likhne ki jarurat nhi hoti bina unit ki values constants hi hoti h react native m ,% values alag chij ha
+react native m px likhne ki jarurat nhi hoti 
+bina unit ki values constants hi hoti h react native m ,% values alag chij ha
 
-api for getting device size :-Dimensions.get('screen') //not for orientation changes
-so to also detect orientation changes(landscape/portrait) we use inbuilt react native hooks useDimension/useDeviceorientation which renders component when device orientation changes
-useimension return Dimensions of the device,when device rotates it renders component with updated Dimensions
+api for getting device size :-Dimensions.get('screen') 
+//not for orientation changes
+so to also detect orientation changes(landscape/portrait) 
+we use inbuilt react native hooks useDimension/useDeviceorientation 
+which renders component when device orientation changes
+useimension return Dimensions of the device,
+when device rotates it renders component with updated Dimensions
 similarly useDeviceorientation return {
           landscspe:true,
           portrati:false
@@ -80,21 +150,44 @@ const style={{
 }}
 pr in hooks ko work karane k lie app.json m orientation propert ko defaulr krna padega
 
-ab koi view agr container h or usme overflow:scroll lagana h to overflow:scroll react native m hota nhi h isliye hm scrollableView component ko replace kredenge us view s or agr koi style laga hua tha view p to wo style scrollble view ko dediyo kyuki scrollable view ek view hi h bs usme overflow scroll extra internal property hota h 
+ab koi view agr container h or usme overflow:scroll lagana h 
+to overflow:scroll react native m hota nhi h 
+isliye hm scrollableView component ko replace kredenge us view s 
+or agr koi style laga hua tha view p 
+to wo style scrollble view ko dediyo 
+kyuki scrollable view ek view hi h 
+bs usme overflow scroll extra internal property hota h 
 
-ek confusion thi ki setState web api m jata h pr asliyat m setState to synchronous h baki usse hone wali ui rendering web api   m jati  h to agr manlo mene dispatch lagaya h and uske just neeche setstate likha h to phele dispatch synchronous chlega and jb reducer state set krdega tb subscriber ki jo re rendering honi thi wo web pi m jaegi and tb setstate chlega kyuki dispatch k niche setstate tha or uski rerendering bhi web api m jaegi or ab ki baar screenn do baar rendering hogi naki ek baar jese do sestate hote h to dono bundle hoke 1 hi rendering krte h pr dispatch or setstate ke saath 2 baar rendering hogi
+ek confusion thi ki setState web api m jata h 
+pr asliyat m setState to synchronous h 
+baki usse hone wali ui rendering web api m jati h 
+to agr manlo mene dispatch lagaya h 
+and uske just neeche setstate likha h 
+to phele dispatch synchronous chlega 
+and jb reducer state set krdega 
+tb subscriber ki jo re rendering honi thi wo web pi m jaegi 
+and tb setstate chlega 
+kyuki dispatch k niche setstate tha 
+or uski rerendering bhi web api m jaegi 
+or ab ki baar screenn do baar rendering hogi naki ek baar 
+jese do sestate hote h to dono bundle hoke 1 hi rendering krte h 
+pr dispatch or setstate ke saath 2 baar rendering hogi
 
 react native m bs overflow visible ya hidden hota h scroll wgera nhi
 
-*dispatch synchronous hota h yani reducer tk jane ka and global state setting processing ka safar synchronous hota h but rendering async hoti h and call stack empty hone k baad hi hoti h
- chahe beech m redux thunk middleware hi kyun na ho reducer tk to synchronous hi hota h  ,wo alag baat alag h ki agr thunk middleware m fetch api ya async task h to tb whi s event loop m jaega and task poora hone k baad jo dispatch hoga wo synchronous reducer tk jaega but state set krne k baad rendering to async hi hogi
+*dispatch synchronous hota h 
+yani reducer tk jane ka and global state setting processing ka safar synchronous hota h 
+but rendering async hoti h and call stack empty hone k baad hi hoti h
+chahe beech m redux thunk middleware hi kyun na ho 
+reducer tk to synchronous hi hota h  
+,wo alag baat alag h ki agr thunk middleware m fetch api ya async task h 
+to tb whi s event loop m jaega 
+and task poora hone k baad jo dispatch hoga wo synchronous reducer tk jaega 
+but state set krne k baad rendering to async hi hogi
  
- 
- 
- 
- **
- setting Text component's inner HTML in react native example
- import React, { useRef } from 'react';
+**
+setting Text component's inner HTML in react native example
+import React, { useRef } from 'react';
 import { View, Text, Button } from 'react-native';
 
 const IncrementButton = () => {
@@ -116,13 +209,13 @@ const IncrementButton = () => {
 
 export default IncrementButton;
 
-
-*****mene socha thun ki kya jarurat h apna hi thunk ki tara ek cheej bana leta hu or wo chl bhi gya :---
- React.useEffect(() => {
+*****mene socha thun ki kya jarurat h apna hi thunk ki tara ek cheej bana leta hu 
+or wo chl bhi gya :---
+React.useEffect(() => {
     dispatch(getAllProducts())
-  }, [])
-  
-  export const getAllProducts = () => {
+}, [])
+
+export const getAllProducts = () => {
   return dispatch => {
     dispatch(getProducts());
     fetch(API_URL)
@@ -139,11 +232,9 @@ export default IncrementButton;
 //yha tk to jo code likha h wo basic thunk ka tha
 ab niche mene bina thunk k action m hi api call ki h ,ch gya pr thunk redux deta h to chlo thunk hi use krlo
 
-
- React.useEffect(async () => {
+React.useEffect(async () => {
     dispatch(await getAllProducts(dispatch))
-  }, [])
-
+}, [])
 
 export const getAllProducts = async dispatch => {
   dispatch(getProducts());
@@ -153,6 +244,147 @@ export const getAllProducts = async dispatch => {
   return getProductsSuccess(products)
 };
 
+in React NAtive, negative margins are not supported, also capital color names are not supported
 
+in react native absolute positin elemnts take their parent who have position relative not static which is same as web
+but in react native absolute positioned also take their parent to elemnt with transform property, means absolute positioned work relative to nearest ancestor who has either position relative or has transform property
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you need to scale the image dynamically (i.e. via flex), you may need to manually set {width: undefined, height: undefined} on the style attribute.
+
+The cleanup function in your `useEffect` with [] isn't being triggered when switching tabs in bottom/top navigator because the component isn't actually unmounting - it's just being hidden from view.
+When you use Bottom/top Tab Navigator, components aren't unmounted when switching tabs; they're kept in memory and just visually hidden. 
+
+Here's how to fix this issue:
+
+1. First, let's use the navigation lifecycle events to detect when your component is focused or blurred (when switching tabs)
+2. We'll use the `useIsFocused` hook from React Navigation to pause audio when not focused
+
+Here's how to modify your code:
+
+I've updated your MusicScreen component to handle tab navigation properly. Here are the key changes I made:
+
+### 1. Added `useIsFocused` hook
+```javascript
+import { useIsFocused } from '@react-navigation/native';
+// ...
+const isFocused = useIsFocused(); // This tells us if the screen is currently focused
+```
+
+### 2. Added an effect to pause audio when tab loses focus
+```javascript
+// Pause audio when tab is not focused
+useEffect(() => {
+  if (!isFocused && isPlaying) {
+    console.log('Tab not focused, pausing audio');
+    setIsPlaying(false);
+  }
+}, [isFocused]);
+```
+
+### 3. Modified the Video component to respect tab focus
+```javascript
+<Video
+  ref={videoRef}
+  source={{ uri: audios[audio]?.url }}
+  paused={!isPlaying || !isFocused} // Pause when not playing OR when screen is not focused
+  // other props...
+  playInBackground={false} // Changed to false so it doesn't play in background
+/>
+```
+
+### Why this works:
+- Bottom Tab Navigator keeps all screens mounted but only one is focused
+- The `useIsFocused` hook detects when your screen is visible or hidden
+- We pause playback when the screen loses focus
+- Setting `playInBackground={false}` prevents the audio from playing when your component isn't the active screen
+
+This approach ensures your audio will pause when switching to other tabs, and the component will properly manage its resources even though it's not being fully unmounted.
+
+Great question! Unlike Bottom Tab Navigator, Stack Navigator actually unmounts the screens when you navigate away from them by default. Let me explain the differences:
+
+### Stack Navigator Behavior
+
+When you navigate from Screen A to Screen B using Stack Navigator:
+- Screen A is removed from the DOM (unmounted)
+- Screen B is mounted and displayed
+- When you go back to Screen A, it's remounted from scratch
+
+This means:
+- Your `useEffect` cleanup functions will run when navigating away
+- Components will reinitialize and reset state when you return
+- Any audio or background processes would naturally stop
+
+### Bottom Tab Navigator Behavior
+
+When you switch tabs in Bottom Tab Navigator:
+- All screens remain mounted in memory
+- The inactive screens are simply hidden from view
+- No unmounting/remounting occurs when switching tabs
+
+### Important Stack Navigator Options
+
+You can modify Stack Navigator's default unmounting behavior with:
+
+```javascript
+<Stack.Navigator
+  detachInactiveScreens={false} // Prevents unmounting (default is true)
+  screenOptions={{
+    unmountOnBlur: false // Another way to control unmounting in some cases
+  }}
+>
+```
+
+This would make Stack Navigator keep screens in memory, similar to Tab Navigator.
+
+### Differences in Practice
+
+For your audio player:
+- With Stack Navigator: Your cleanup function (`useEffect` return) would run naturally when navigating away
+- With Tab Navigator: You had to use `useIsFocused` to manually handle audio pausing
+
+If you're using Stack Navigator and your cleanup function still isn't running, check if you might have disabled the default unmounting behavior with one of the options mentioned above.
+
+For Upper Tab Navigator (also known as Top Tab Navigator or Material Top Tab Navigator in React Navigation), the behavior is the same as Bottom Tab Navigator:
+
+### Upper/Top Tab Navigator Behavior
+
+- Screens are **not unmounted** when switching tabs
+- All screens remain mounted in memory simultaneously
+- Only one tab is visible at a time, but others are still in the component tree
+- `useEffect` cleanup functions **will not run** when switching tabs
+
+This means:
+- Like Bottom Tab Navigator, you'll need to use `useIsFocused` to handle audio pausing
+- The same solution we applied to your Bottom Tab Navigator code would work for Upper Tab Navigator
+- State is preserved across tab switches
+
+The key similarity between Upper Tab Navigator and Bottom Tab Navigator is that they both keep all screens mounted for performance reasons - this allows for smooth animations and instant tab switching without the overhead of unmounting and remounting components.
+
+If you need your audio to pause when switching between tabs in Upper Tab Navigator, you'll need the same `useIsFocused` implementation I provided earlier:
+
+```javascript
+import { useIsFocused } from '@react-navigation/native';
+
+// In your component
+const isFocused = useIsFocused();
+
+// Effect to handle tab changes
+useEffect(() => {
+  if (!isFocused && isPlaying) {
+    pauseSound();
+  }
+}, [isFocused]);
+
+// In your Video component
+<Video
+  // ... other props
+  paused={!isPlaying || !isFocused}
+  // ... other props
+/>
+```
+
+This approach works consistently across both Bottom and Upper Tab Navigators.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

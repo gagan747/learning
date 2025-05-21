@@ -1,0 +1,55 @@
+Great question! Let me clarify exactly when io.use() middleware runs:
+io.use() runs ONLY during connection establishment
+io.use() middleware runs before io.on('connection') but NOT before individual event listeners like your meow event.
+Here's the exact flow:
+javascript// Server side
+io.use((socket, next) => {
+  console.log('1. io.use middleware - runs ONLY during connection');
+  next();
+});
+
+io.on('connection', (socket) => {
+  console.log('2. Connection established');
+  
+  socket.on('meow', (data) => {
+    console.log('3. Meow event handler - io.use does NOT run before this');
+  });
+});
+javascript// Client side
+const socket = io();
+// 1. io.use middleware runs here
+// 2. connection event fires
+
+socket.emit('meow', 'data'); // io.use does NOT run here
+For per-event middleware, use socket.use()
+If you want middleware to run before every event (including your meow event), use socket.use():
+javascriptio.use((socket, next) => {
+  console.log('Connection middleware');
+  next();
+});
+
+io.on('connection', (socket) => {
+  // This runs before EVERY event on this socket
+  socket.use((packet, next) => {
+    console.log('Event middleware - runs before meow, bark, etc.');
+    console.log('Event name:', packet[0]); // 'meow'
+    console.log('Event data:', packet[1]); // your data
+    next();
+  });
+  
+  socket.on('meow', (data) => {
+    console.log('Meow handler');
+  });
+  
+  socket.on('bark', (data) => {
+    console.log('Bark handler');
+  });
+});
+Complete timeline:
+
+Client connects → io.use() middleware runs
+Connection accepted → io.on('connection') callback runs
+Client emits 'meow' → socket.use() middleware runs → socket.on('meow') handler runs
+Client emits 'bark' → socket.use() middleware runs → socket.on('bark') handler runs
+
+So to answer your question directly: io.use() does NOT run before your meow listener's callback. It only runs once during the initial connection handshake.

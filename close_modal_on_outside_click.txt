@@ -1,0 +1,7 @@
+To close a modal when clicking outside of it in React, you typically add an event listener to the document for the "mousedown", "mouseup", or "click" events. Then, you check if the click target is outside your modal element using a ref and the .contains() method.
+
+Common approach:
+
+Listen for "mousedown" or "click" events on the document.
+
+If the event target is not inside the modal (i.e., !modalRef.current.contains(event.target)), close the modal.

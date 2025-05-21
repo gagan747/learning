@@ -1,0 +1,10 @@
+  setTimeout(socketInstance?.disconnect,500);
+  
+  //got error that can't call this.destroy(), socketInstance.disconnet m hogi ye line this.destroy but why this is undefined here? because we are giving a part(callback in isolation) of that instance(socketInstance) so it got raw function like function(){this.destroy} whose this can point to window object
+  
+  solution :- setTimeout(socketInstance?.disconnect.bind(socketInstwnce),500) as we are manually binding that raw function to sokcetIntance which works as a this for that raw function
+  
+  
+  why ye krna padha hm agr ese krte jo below kia h  to error na ata
+  setTimeout(()=>socketInstance?.disconnect,500);
+  kyuki ise hmne normal js likhi h socketInstance.disconnect to obviously socketIntance jo ki ek instnce h wo hi apne function ko call kr rha h to obviously this us instance ko hi point krega, ye t normal js behaviour h ,koi bhi class ka instance bnte h to instanceName.mehod() ese hi call krte h na or method ka this by default instanceName ko  hi point krega kyuki ye normal js behavious h , alag s duga ese instanceName.mehod settimeout ko to raw hi jaega
