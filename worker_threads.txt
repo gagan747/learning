@@ -1,0 +1,150 @@
+we know that nodejs is single threaded and follow concurrency not parallelism as in js, concurrency m spearate threads to hote h pr ant m callback execute single thread hi krta h but parallism m callback bhi execute multi thread apne ap krlegi
+
+
+node js m worker thread create krke multi threading la skte h matlab multi core of CPU utlize kr skte h 
+
+
+ab agr worker thread m console kru or agr main thread block h to console nhi hoga bs console abhi bhi main thread hi execute krta h pr baki k kaam worker thread kr skta h even if maain thread block ho jese fs.writeFileSync , also worker thread ka apna event loop hota h mtlb worker thread apne app m concurrency model follow krega, uske event loop stakeholder k lie main thread worker thread wali hogi
+
+EG;-cetae file meow.js
+// fs-write-demo.js
+const { Worker } = require('worker_threads');
+const fs = require('fs');
+const path = require('path');
+
+// Create a temp directory for our files
+const tempDir = path.join(__dirname, 'temp_files');
+if (!fs.existsSync(tempDir)) {
+  fs.mkdirSync(tempDir);
+}
+
+// Clean any existing files
+fs.readdirSync(tempDir)
+  .filter(file => file.startsWith('worker-file-'))
+  .forEach(file => fs.unlinkSync(path.join(tempDir, file)));
+
+console.log(`Main thread: Starting at ${new Date().toISOString()}`);
+console.log(`Main thread: Created temp directory at ${tempDir}`);
+
+// Create worker from worker file
+const worker = new Worker(path.join(__dirname, 'worker.js'), {
+  workerData: { tempDir }
+});
+
+worker.on('message', (message) => {
+  console.log(`Main thread received: ${message}`);
+});
+
+// Block the main thread immediately for 10 seconds
+console.log(`Main thread: Blocking for 10 seconds... at ${new Date().toISOString()}`);
+const startTime = Date.now();
+while (Date.now() - startTime < 100000) {
+  // Intentionally blocking the event loop
+}
+
+// Check what files were created during the blocking
+console.log(`Main thread: Unblocked at ${new Date().toISOString()}`);
+const filesCreated = fs.readdirSync(tempDir)
+  .filter(file => file.startsWith('worker-file-'))
+  .sort();
+
+console.log('Main thread: Files created while main thread was blocked:');
+filesCreated.forEach(file => {
+  const stats = fs.statSync(path.join(tempDir, file));
+  console.log(`- ${file} (created at ${stats.mtime.toISOString()})`);
+});
+
+console.log('Main thread: Now processing queued messages from worker');
+
+
+
+
+
+Now crete file worker.js
+// fs-writer-worker.js
+const { parentPort, workerData } = require('worker_threads');
+const fs = require('fs');
+const path = require('path');
+
+const { tempDir } = workerData;
+
+console.log(`Worker: Started at ${new Date().toISOString()}`);
+
+// Create 10 files, one second apart
+for (let i = 1; i <= 10; i++) {
+  const filename = `worker-file-${i.toString().padStart(2, '0')}.txt`;
+  const filepath = path.join(tempDir, filename);
+  const timestamp = new Date().toISOString();
+  
+  // Write to file synchronously
+  fs.writeFileSync(
+    filepath, 
+    `This file was created by the worker thread at ${timestamp} while the main thread was blocked.\n` +
+    `File ${i} of 10`
+  );
+  
+  // Send a message to main thread (will be queued until main thread unblocks)
+  parentPort.postMessage(`Created ${filename} at ${timestamp}`);
+  
+  console.log(`Worker: Created file ${filename} at ${timestamp}`);
+  
+  // Wait for 1 second
+  const delay = Date.now() + 1000;
+  while (Date.now() < delay) {
+    // Small delay
+  }
+}
+
+console.log(`Worker: Finished creating all files at ${new Date().toISOString()}`);
+
+
+
+
+
+Output:-Main thread: Starting at 2025-05-21T21:20:11.199Z
+Main thread: Created temp directory at /home/gagan/Downloads/KirtanConnect/temp_files
+Main thread: Blocking for 10 seconds... at 2025-05-21T21:20:11.205Z
+Main thread: Unblocked at 2025-05-21T21:21:51.205Z
+Main thread: Files created while main thread was blocked:
+- worker-file-01.txt (created at 2025-05-21T21:20:11.225Z)
+- worker-file-02.txt (created at 2025-05-21T21:20:12.225Z)
+- worker-file-03.txt (created at 2025-05-21T21:20:13.225Z)
+- worker-file-04.txt (created at 2025-05-21T21:20:14.225Z)
+- worker-file-05.txt (created at 2025-05-21T21:20:15.225Z)
+- worker-file-06.txt (created at 2025-05-21T21:20:16.225Z)
+- worker-file-07.txt (created at 2025-05-21T21:20:17.225Z)
+- worker-file-08.txt (created at 2025-05-21T21:20:18.225Z)
+- worker-file-09.txt (created at 2025-05-21T21:20:19.225Z)
+- worker-file-10.txt (created at 2025-05-21T21:20:20.225Z)
+Main thread: Now processing queued messages from worker
+Worker: Started at 2025-05-21T21:20:11.225Z
+Worker: Created file worker-file-01.txt at 2025-05-21T21:20:11.225Z
+Worker: Created file worker-file-02.txt at 2025-05-21T21:20:12.226Z
+Worker: Created file worker-file-03.txt at 2025-05-21T21:20:13.226Z
+Worker: Created file worker-file-04.txt at 2025-05-21T21:20:14.226Z
+Worker: Created file worker-file-05.txt at 2025-05-21T21:20:15.226Z
+Worker: Created file worker-file-06.txt at 2025-05-21T21:20:16.226Z
+Worker: Created file worker-file-07.txt at 2025-05-21T21:20:17.226Z
+Worker: Created file worker-file-08.txt at 2025-05-21T21:20:18.226Z
+Worker: Created file worker-file-09.txt at 2025-05-21T21:20:19.226Z
+Worker: Created file worker-file-10.txt at 2025-05-21T21:20:20.226Z
+Worker: Finished creating all files at 2025-05-21T21:20:21.226Z
+Main thread received: Created worker-file-01.txt at 2025-05-21T21:20:11.225Z
+Main thread received: Created worker-file-02.txt at 2025-05-21T21:20:12.226Z
+Main thread received: Created worker-file-03.txt at 2025-05-21T21:20:13.226Z
+Main thread received: Created worker-file-04.txt at 2025-05-21T21:20:14.226Z
+Main thread received: Created worker-file-05.txt at 2025-05-21T21:20:15.226Z
+Main thread received: Created worker-file-06.txt at 2025-05-21T21:20:16.226Z
+Main thread received: Created worker-file-07.txt at 2025-05-21T21:20:17.226Z
+Main thread received: Created worker-file-08.txt at 2025-05-21T21:20:18.226Z
+Main thread received: Created worker-file-09.txt at 2025-05-21T21:20:19.226Z
+Main thread received: Created worker-file-10.txt at 2025-05-21T21:20:20.226Z
+
+
+starting m bs ye 3 logs aae 
+ain thread: Starting at 2025-05-21T21:20:11.199Z
+Main thread: Created temp directory at /home/gagan/Downloads/KirtanConnect/temp_files
+Main thread: Blocking for 10 seconds... at 2025-05-21T21:20:11.205Z
+
+kyuki console main thread m hi ata h andmain thread block thi but mene observe kia ki files phele hi banke tyyar hogyi or main thread baad m unblock hui, mtlb fs.writeFileSync jo main thread chalata h ab worker thread k main thread n chala di(worker thread ka main mtlb worker itself)
+

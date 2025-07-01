@@ -98,3 +98,19 @@ eg3:- see gurman_proj repo where i have given min height and max height of child
 *kitni baar esa hota h modal banana padta h or background ko opacity deni padti h pr manlo banckground ko opacity dene se modal ko bhi opacity lag jati h kyuki modal jisko opacity di h uska child niklata h to iska solution ye h ki gurman_proj (kaleere) me product description wala component jo ki ek modal h usko dekhamene kya kiya h (mene rgba(255,255,255,0.8 ka use kiya h ,vistar k lie jo code mene bola h wo dekh))
 
 *flex wrap k sath alignContent use hota h align item nhi agr align item or flex wrap saath lage h to align itemsko alignContent s replace krdio
+
+
+
+If you use appendChild() on a DOM element that already exists in the document, it will be removed from its current position and appended as the last child of the specified parent node. This means the element will no longer exist in its original position; it will only appear at the end of the new parent’s child list.
+
+For example, if you move a list item from one list to another, or even within the same parent, the element is physically moved—not cloned—so it cannot exist in two places at once. The DOM ensures a node can only have one parent at a time, and appendChild() handles the removal and re-attachment automatically.
+
+"If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position — there is no requirement to remove the node from its parent node before appending it to some other node. This means that a node can't be in two points of the document simultaneously
+
+So, after calling appendChild() with an existing element:
+
+The element is removed from its old location.
+
+It is appended as the last child of the new parent.
+
+It only appears in the new position, not both the old and new places.
